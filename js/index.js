@@ -7,6 +7,12 @@ const displayStep = 12;
 let filteredVideos = [];
 let loadedBatches = 0;
 let displayedCount = 0;
+let currentFilters = {
+  year: null,
+  month: null,
+  tag: null,
+  search: ''
+};
 
 // DOM元素引用
 const filterInput = document.getElementById('filter');
@@ -203,37 +209,78 @@ function showError(message) {
 }
 
 // 清除导航栏激活状态
+// 替换现有的 clearActiveNav 函数
 function clearActiveNav() {
   document.querySelectorAll('#sidebar li.active').forEach(li => li.classList.remove('active'));
+  currentFilters = {
+    year: null,
+    month: null, 
+    tag: null,
+    search: ''
+  };
+  filterInput.value = '';
+  filteredVideos = [...allVideos];
+  resetAndLoad();
 }
 
 // 分类点击处理
 function onCategoryClick(type, value, element) {
-  if (type === "year") {
-    filteredVideos = allVideos.filter(v => v.date && v.date.startsWith(value));
-  } else if (type === "month") {
-    filteredVideos = allVideos.filter(v => v.date && v.date.substring(5, 7) === value);
-  } else if (type === "tag") {
-    filteredVideos = allVideos.filter(v => v.tags && v.tags.includes(value));
+  // 如果点击已激活的项目，则取消该筛选
+  if (element.classList.contains('active')) {
+    currentFilters[type] = null;
+    element.classList.remove('active');
+  } else {
+    // 否则设置新的筛选条件
+    currentFilters[type] = value;
+    // 清除同类型的其他激活状态
+    document.querySelectorAll(`#${type}List li.active`).forEach(li => li.classList.remove('active'));
+    element.classList.add('active');
   }
+  
+  applyFilters();
+}
 
-  filterInput.value = "";
-  clearActiveNav();
-  element.classList.add('active');
+// 新增函数：应用所有筛选条件
+function applyFilters() {
+  filteredVideos = allVideos.filter(video => {
+    // 年份筛选
+    if (currentFilters.year && (!video.date || !video.date.startsWith(currentFilters.year))) {
+      return false;
+    }
+    
+    // 月份筛选
+    if (currentFilters.month && (!video.date || video.date.substring(5, 7) !== currentFilters.month)) {
+      return false;
+    }
+    
+    // 标签筛选
+    if (currentFilters.tag && (!video.tags || !video.tags.includes(currentFilters.tag))) {
+      return false;
+    }
+    
+    // 搜索文本筛选
+    if (currentFilters.search) {
+      const searchText = currentFilters.search.toLowerCase();
+      const matchTitle = (video.title && video.title.toLowerCase().includes(searchText)) ||
+                        (video.displayTitle && video.displayTitle.toLowerCase().includes(searchText));
+      const matchDesc = video.description && video.description.toLowerCase().includes(searchText);
+      const matchTags = video.tags && video.tags.some(tag => tag.toLowerCase().includes(searchText));
+      
+      if (!matchTitle && !matchDesc && !matchTags) {
+        return false;
+      }
+    }
+    
+    return true;
+  });
+  
   resetAndLoad();
 }
 
 // 搜索过滤
 function handleSearch() {
-  const text = filterInput.value.trim().toLowerCase();
-  filteredVideos = allVideos.filter(v =>
-    (v.title && v.title.toLowerCase().includes(text)) ||
-    (v.displayTitle && v.displayTitle.toLowerCase().includes(text)) ||
-    (v.description && v.description.toLowerCase().includes(text)) ||
-    (v.tags && v.tags.some(tag => tag.toLowerCase().includes(text)))
-  );
-  clearActiveNav();
-  resetAndLoad();
+  currentFilters.search = filterInput.value.trim();
+  applyFilters();
 }
 
 // 滚动加载处理
