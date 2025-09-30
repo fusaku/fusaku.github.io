@@ -1,0 +1,40 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,00:00:00.07,00:00:08.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}こんばんは！
+Dialogue: 3,00:00:00.49,00:00:08.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}こんばんは！
+Dialogue: 3,00:00:01.12,00:00:09.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}こんばんは！
+Dialogue: 3,00:00:01.97,00:00:09.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}写真集買うねー
+Dialogue: 3,00:00:02.54,00:00:10.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,90,-54,90)}おめでとう🎊
+Dialogue: 3,00:00:02.79,00:00:10.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}かわいい！
+Dialogue: 3,00:00:03.30,00:00:11.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}こんばんは！
+Dialogue: 3,00:00:03.48,00:00:11.48,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,144,-54,144)}こんばんは！
+Dialogue: 3,00:00:03.88,00:00:11.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}こんばんは！
+Dialogue: 3,00:00:04.83,00:00:12.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,180,-54,180)}こんばんは〜
+Dialogue: 3,00:00:04.91,00:00:12.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,198,-54,198)}こんばんは！
+Dialogue: 3,00:00:05.38,00:00:13.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,216,-54,216)}こんばんは！
+Dialogue: 3,00:00:06.47,00:00:14.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,234,-144,234)}おめでとうございます🎉🎂✨🎁✨🎊
+Dialogue: 3,00:00:07.18,00:00:15.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,252,-54,252)}こんばんは！
+Dialogue: 3,00:00:07.22,00:00:15.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,270,-54,270)}こんばんは！
+Dialogue: 3,00:00:07.51,00:00:15.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,288,-54,288)}かわいい！
+Dialogue: 3,00:00:09.66,00:00:17.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}こんばんは！
+Dialogue: 3,00:00:09.75,00:00:17.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}こんばんは！
+Dialogue: 3,00:00:09.92,00:00:17.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}こんばんは！
+Dialogue: 3,00:00:10.06,00:00:18.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}こんばんは！
+Dialogue: 3,00:00:10.92,00:00:18.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}写真集おめでとう㊗️
+Dialogue: 3,00:00:11.06,00:00:19.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}こんばんは！
+Dialogue: 3,00:00:11.84,00:00:19.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}こんばんは！
+Dialogue: 3,00:00:12.78,00:00:20.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,144,-54,144)}こんばんは！
+Dialogue: 3,00:00:14.04,00:00:22.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}こんばんは！
+Dialogue: 3,00:00:15.27,00:00:23.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,180,-54,180)}こんばんは！
+Dialogue: 3,00:00:15.58,00:00:23.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,198,-54,198)}こんばんは！
+Dialogue: 3,00:00:15.82,00:00:23.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,216,-54,216)}こんばんは！
