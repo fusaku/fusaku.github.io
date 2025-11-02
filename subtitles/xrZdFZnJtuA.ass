@@ -1,0 +1,49 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,00:00:00.51,00:00:08.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}こんばんは！
+Dialogue: 3,00:00:00.60,00:00:08.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}かわいい！
+Dialogue: 3,00:00:00.87,00:00:08.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}こんばんは！
+Dialogue: 3,00:00:01.03,00:00:09.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}こんばんは！
+Dialogue: 3,00:00:02.97,00:00:10.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,90,-54,90)}こんばんは！
+Dialogue: 3,00:00:03.14,00:00:11.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}こんばんは！
+Dialogue: 3,00:00:03.50,00:00:11.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}こんばんは！
+Dialogue: 3,00:00:04.47,00:00:12.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,144,-36,144)}はるー
+Dialogue: 3,00:00:05.12,00:00:13.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}こんばんは！
+Dialogue: 3,00:00:05.54,00:00:13.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,180,-54,180)}こんばんは！
+Dialogue: 3,00:00:05.82,00:00:13.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,198,-72,198)}かわいい🥹🫶💕
+Dialogue: 3,00:00:06.44,00:00:14.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,216,-54,216)}こんばんは！
+Dialogue: 3,00:00:08.28,00:00:16.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,234,-54,234)}こんばんは！
+Dialogue: 3,00:00:08.68,00:00:16.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}こんばんは！
+Dialogue: 3,00:00:08.75,00:00:16.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}こんばんは！
+Dialogue: 3,00:00:08.83,00:00:16.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,252,-54,252)}こんばんは！
+Dialogue: 3,00:00:10.45,00:00:18.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}こんばんは！
+Dialogue: 3,00:00:11.21,00:00:19.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}こんばんは！
+Dialogue: 3,00:00:12.60,00:00:20.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,90,-54,90)}こんばんは！
+Dialogue: 3,00:00:13.10,00:00:21.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}こんばんは！
+Dialogue: 3,00:00:14.24,00:00:22.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}かわいい！
+Dialogue: 3,00:00:14.56,00:00:22.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,144,-54,144)}こんばんは！
+Dialogue: 3,00:00:15.41,00:00:23.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}こんばんは！
+Dialogue: 3,00:00:15.45,00:00:23.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,180,-90,180)}こんばんはるpyon
+Dialogue: 3,00:00:15.46,00:00:23.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,198,-54,198)}こんばんは
+Dialogue: 3,00:00:15.93,00:00:23.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,216,-90,216)}公演お疲れ様でした
+Dialogue: 3,00:00:16.69,00:00:24.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}こんばんは！
+Dialogue: 3,00:00:16.88,00:00:24.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}はるぴょん匂う。😉
+Dialogue: 3,00:00:17.30,00:00:25.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,234,-54,234)}こんばんは！
+Dialogue: 3,00:00:17.57,00:00:25.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,252,-54,252)}こんばんは！
+Dialogue: 3,00:00:18.46,00:00:26.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}こんばんは！
+Dialogue: 3,00:00:18.84,00:00:26.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,270,-18,270)}☆
+Dialogue: 3,00:00:20.05,00:00:28.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}こんばんは！
+Dialogue: 3,00:00:20.22,00:00:28.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,288,-54,288)}こんばんは！
+Dialogue: 3,00:00:21.20,00:00:29.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}劇場公演お疲れ様～
+Dialogue: 3,00:00:21.76,00:00:29.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}こんばんは！
+Dialogue: 3,00:00:22.86,00:00:30.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}こんばんは！
