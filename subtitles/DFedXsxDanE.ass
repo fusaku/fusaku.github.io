@@ -1,0 +1,17 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,00:00:00.78,00:00:08.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}またね〜
+Dialogue: 3,00:00:01.54,00:00:09.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,36,-18,36)}👋
+Dialogue: 3,00:00:05.66,00:00:13.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}おやすみなさい
+Dialogue: 3,00:00:06.08,00:00:14.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}おやすみ〜
+Dialogue: 3,00:00:07.12,00:00:15.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,90,-36,90)}ぴーちゅ
