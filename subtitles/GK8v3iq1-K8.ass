@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,00:00:00.13,00:00:08.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}おやすみずみんです！
+Dialogue: 3,00:00:00.68,00:00:08.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}おやすみずみん
+Dialogue: 3,00:00:00.70,00:00:08.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}またしてねー
+Dialogue: 3,00:00:00.96,00:00:08.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}bye bye 👋 😘
+Dialogue: 3,00:00:01.20,00:00:09.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}おやすみずみん！
+Dialogue: 3,00:00:01.37,00:00:09.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,108,-18,108)}おや
+Dialogue: 3,00:00:01.61,00:00:09.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,126,-144,126)}お疲れさま～～～ありがと～～～
+Dialogue: 3,00:00:02.43,00:00:10.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,144,-72,144)}おやすみずみ〜ん
+Dialogue: 3,00:00:02.79,00:00:10.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,162,-72,162)}おやすみずみん
+Dialogue: 3,00:00:03.71,00:00:11.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,180,-90,180)}寝落ちしないでねー
+Dialogue: 3,00:00:03.79,00:00:11.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,198,-54,198)}おつかれいー
+Dialogue: 3,00:00:03.85,00:00:11.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,216,-54,216)}ありがとう！
+Dialogue: 3,00:00:05.06,00:00:13.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,234,-54,234)}ばいばーい
+Dialogue: 3,00:00:05.31,00:00:13.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,252,-54,252)}こんばんは！
+Dialogue: 3,00:00:05.55,00:00:13.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,270,-36,270)}おやすみ
+Dialogue: 3,00:00:05.67,00:00:13.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,288,-72,288)}おやすみずみん💤
+Dialogue: 3,00:00:06.03,00:00:14.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,306,-72,306)}おやすみずみん
+Dialogue: 3,00:00:06.60,00:00:14.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,324,-36,324)}おやすみ
+Dialogue: 3,00:00:08.29,00:00:16.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}お疲れ様でした〜😀
