@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,00:00:00.79,00:00:08.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}バイバイ
+Dialogue: 3,00:00:01.24,00:00:09.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}おやすみなさい～
+Dialogue: 3,00:00:01.76,00:00:09.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,54,-18,54)}ww
+Dialogue: 3,00:00:01.89,00:00:09.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}ばいばーい！！
+Dialogue: 3,00:00:01.00,00:00:09.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}Telop: 【元気に歌います】
+Dialogue: 3,00:00:02.44,00:00:10.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,108,-72,108)}おやすみなさい
+Dialogue: 3,00:00:02.62,00:00:10.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,126,-36,126)}またね
+Dialogue: 3,00:00:02.79,00:00:10.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,144,-198,144)}bye bye r u mi.  j ung
+Dialogue: 3,00:00:02.83,00:00:10.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,162,-90,162)}きっちゃダメよ！笑
+Dialogue: 3,00:00:03.05,00:00:11.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,180,-36,180)}さいなら
+Dialogue: 3,00:00:03.22,00:00:11.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,198,-54,198)}おやすみ〜
