@@ -1,0 +1,27 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,00:00:00.39,00:00:08.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}ぉやすみぃ～
+Dialogue: 3,00:00:01.88,00:00:09.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}バイバイ
+Dialogue: 3,00:00:02.78,00:00:10.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}ばいばーい
+Dialogue: 3,00:00:03.83,00:00:11.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}気をつけよ
+Dialogue: 3,00:00:03.97,00:00:11.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}またね(´▽`)ﾉ
+Dialogue: 3,00:00:05.86,00:00:13.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,108,-144,108)}Telop: 【イーブイの日】
+Dialogue: 3,00:00:09.15,00:00:17.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}おやすみ～
+Dialogue: 3,00:00:09.29,00:00:17.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,126,-72,126)}荒ぶってるww
+Dialogue: 3,00:00:09.34,00:00:17.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,144,-36,144)}またね～
+Dialogue: 3,00:00:10.28,00:00:18.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}ハルぴょんさん、ありがとう
+Dialogue: 3,00:00:10.82,00:00:18.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,54,-36,54)}ぽやー
+Dialogue: 3,00:00:11.58,00:00:19.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}あらかわいい
+Dialogue: 3,00:00:11.88,00:00:19.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,72,-126,72)}どぼんLIVE、楽しみ👻👻👻
+Dialogue: 3,00:00:12.16,00:00:20.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,90,-36,90)}かわいい
+Dialogue: 3,00:00:14.75,00:00:22.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,108,-36,108)}おやすみ
