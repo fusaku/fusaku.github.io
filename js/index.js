@@ -130,26 +130,39 @@ function createVideoItem(video) {
 
 // 加载下一批视频数据
 function loadNextBatch() {
-  showLoading();
-  return new Promise(resolve => {
-    setTimeout(() => {
-      loadedBatches++;
-      hideLoading();
-      resolve();
-    }, 300);
+  // 既然是本地数据筛选，不需要模拟网络延迟，直接返回已完成
+  return Promise.resolve().then(() => {
+    loadedBatches++;
   });
 }
 
 // 显示更多视频
+// 显示更多视频 (优化版：使用 DocumentFragment 减少重绘)
 function showMoreVideos() {
   const totalLoadedVideos = loadedBatches * batchSize;
+  
+  // 检查是否还有数据
   if (displayedCount >= filteredVideos.length) return;
-  if (displayedCount >= totalLoadedVideos) return;
+  // 检查是否超过当前批次限制（如果是一次性加载全部则不需要这行，但保留逻辑也没错）
+  // 注意：由于我们移除了 setTimeout，逻辑可以简化，只要有数据就渲染
+  
+  const nextCount = Math.min(displayedCount + displayStep, filteredVideos.length);
+  
+  // 如果没有新数据要显示，直接返回
+  if (nextCount <= displayedCount) return;
 
-  const nextCount = Math.min(displayedCount + displayStep, totalLoadedVideos, filteredVideos.length);
+  // === 核心优化开始 ===
+  // 创建一个文档片段，把所有新卡片先放到这里
+  const fragment = document.createDocumentFragment();
+  
   for (let i = displayedCount; i < nextCount; i++) {
-    videoGrid.appendChild(createVideoItem(filteredVideos[i]));
+    fragment.appendChild(createVideoItem(filteredVideos[i]));
   }
+  
+  // 一次性将所有卡片插入页面，只触发一次重绘
+  videoGrid.appendChild(fragment);
+  // === 核心优化结束 ===
+
   displayedCount = nextCount;
 }
 
@@ -322,7 +335,7 @@ function bindEvents() {
   });
 
   // 滚动加载事件
-  mainContent.addEventListener('scroll', throttle(handleScroll, 200));
+  mainContent.addEventListener('scroll', handleScroll);
 
   // 键盘快捷键
   document.addEventListener('keydown', (e) => {
