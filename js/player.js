@@ -532,9 +532,6 @@ function displayCurrentSubtitle(currentTime) {
           if (!div.parentNode) return;
 
           const now = performance.now();
-
-          // 关键修改:每次都从全局变量读取最新速度
-          const currentRate = playbackRate;
           const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * playbackState.rate;
           const progress = Math.min(elapsed / parseFloat(div.dataset.baseDuration), 1);
 
@@ -604,12 +601,9 @@ function displayCurrentSubtitle(currentTime) {
 
         // 开始动画
         function animateSubtitle() {
-          if (!div.parentNode) return; // 元素已移除
+          if (!div.parentNode) return;
 
           const now = performance.now();
-
-          // 关键修改:每次都从全局变量读取最新速度
-          const currentRate = playbackRate;
           const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * playbackState.rate;
           const progress = Math.min(elapsed / parseFloat(div.dataset.baseDuration), 1);
 
@@ -711,10 +705,9 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
   console.log('Player state changed:', event.data);
-  // 添加这几行 - 监听播放速度变化
   if (player && typeof player.getPlaybackRate === 'function') {
     playbackState.rate = player.getPlaybackRate();
-    console.log('Playback rate:', playbackRate);
+    console.log('Playback rate:', playbackState.rate); // 改这里
   }
   if (event.data === YT.PlayerState.PLAYING) {
     startSubtitleUpdate();
@@ -813,8 +806,8 @@ function startSubtitleUpdate() {
         // 添加这几行 - 持续监听播放速度变化
         if (typeof player.getPlaybackRate === 'function') {
           const newRate = player.getPlaybackRate();
-          if (newRate !== playbackRate) {
-            console.log(`Playback rate changed: ${playbackRate} -> ${newRate}`);
+          if (newRate !== playbackState.rate) {
+            console.log(`Playback rate changed: ${playbackState.rate} -> ${newRate}`);
             playbackState.rate = newRate;
           }
         }
