@@ -532,7 +532,10 @@ function displayCurrentSubtitle(currentTime) {
           if (!div.parentNode) return;
 
           const now = performance.now();
-          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * playbackRate;
+
+          // 关键修改:每次都从全局变量读取最新速度
+          const currentRate = playbackRate;
+          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * currentRate;
           const progress = Math.min(elapsed / parseFloat(div.dataset.baseDuration), 1);
 
           const currentX = parseFloat(div.dataset.startX) +
@@ -604,7 +607,10 @@ function displayCurrentSubtitle(currentTime) {
           if (!div.parentNode) return; // 元素已移除
 
           const now = performance.now();
-          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * playbackRate; // 应用播放速度
+
+          // 关键修改:每次都从全局变量读取最新速度
+          const currentRate = playbackRate;
+          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * currentRate;
           const progress = Math.min(elapsed / parseFloat(div.dataset.baseDuration), 1);
 
           const currentX = parseFloat(div.dataset.startX) +
