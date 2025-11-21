@@ -98,55 +98,34 @@ function generateCategories() {
   ).join('');
 }
 
-// 创建视频项目元素
+// 创建视频项目元素 (已优化：使用缩略图，移除实时抓取)
 function createVideoItem(video) {
   const div = document.createElement('div');
   div.className = 'video-item';
 
   // 格式化日期
   const dateStr = video.date ? new Date(video.date).toLocaleDateString(window.i18n.currentLang) : '';
+  
+  // 获取 YouTube 缩略图 (mqdefault 是中等质量，加载快)
+  // 如果你想更清晰，可以用 'hqdefault.jpg'，但 'mqdefault.jpg' 即使有黑边也能保证加载
+  const thumbnailUrl = `https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`;
 
+  // 注意：这里把 iframe 换成了 img，并移除了 fetchYouTubeTitle 的调用
   div.innerHTML = `
-    <iframe src="https://www.youtube.com/embed/${video.id}" allowfullscreen></iframe>
-    <div class="video-title" title="${video.displayTitle || video.title || window.i18n.t('loading.text', '加载中...')}">${video.displayTitle || video.title || window.i18n.t('loading.text', '加载中...')}</div>
+    <div class="video-thumbnail">
+      <img src="${thumbnailUrl}" alt="${video.title}" loading="lazy">
+      <div class="play-icon">▶</div>
+    </div>
+    <div class="video-title" title="${video.title}">${video.title || window.i18n.t('video.untitled', '无标题视频')}</div>
     ${dateStr ? `<div class="video-date">${dateStr}</div>` : ''}
   `;
 
-  // 添加点击事件跳转到播放页面
+  // 点击整个卡片跳转
   div.addEventListener('click', () => {
     window.location.href = `player.html?v=${video.id}`;
   });
 
-  // 如果还没有获取到真实标题，就去获取
-  if (!video.displayTitle) {
-    fetchYouTubeTitle(video.id).then(realTitle => {
-      if (realTitle) {
-        video.displayTitle = realTitle;
-        const titleElement = div.querySelector('.video-title');
-        if (titleElement) {
-          titleElement.textContent = realTitle;
-          titleElement.title = realTitle;
-        }
-      }
-    });
-  }
-
   return div;
-}
-
-// 获取 YouTube 视频真实标题
-async function fetchYouTubeTitle(videoId) {
-  try {
-    // 使用 YouTube oEmbed API 获取视频信息
-    const response = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`);
-    if (response.ok) {
-      const data = await response.json();
-      return data.title;
-    }
-  } catch (error) {
-    console.warn(`无法获取视频 ${videoId} 的标题:`, error);
-  }
-  return null;
 }
 
 // 加载下一批视频数据
@@ -249,8 +228,15 @@ function applyFilters() {
     }
     
     // 月份筛选
-    if (currentFilters.month && (!video.date || video.date.substring(5, 7) !== currentFilters.month)) {
-      return false;
+    if (currentFilters.month) {
+      if (!video.date) return false;
+      const vDate = new Date(video.date);
+      // 获取月份 (0-11)，需要 +1，并转为字符串比较
+      const vMonth = (vDate.getMonth() + 1).toString(); 
+      // 比较：确保 "8" 和 "08" 都能匹配 (将两者都转为数字或都转为无前导零字符串)
+      if (parseInt(vMonth) !== parseInt(currentFilters.month)) {
+        return false;
+      }
     }
     
     // 标签筛选
@@ -298,6 +284,19 @@ function handleScroll() {
   }
 }
 
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
 // 事件绑定
 function bindEvents() {
   // 搜索框事件
@@ -323,7 +322,7 @@ function bindEvents() {
   });
 
   // 滚动加载事件
-  mainContent.addEventListener('scroll', handleScroll);
+  mainContent.addEventListener('scroll', throttle(handleScroll, 200));
 
   // 键盘快捷键
   document.addEventListener('keydown', (e) => {
