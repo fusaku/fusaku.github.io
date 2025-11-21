@@ -19,7 +19,7 @@ let activeSubtitles = new Set();
 let subtitleElements = new Map(); // 存储字幕元素的引用
 let displayedSubtitles = new Map(); // 记录每个时间点已显示过的字幕行：Map<时间戳, Set<字幕索引>>
 let processedSubtitles = new Set(); // 跟踪已经处理过的字幕，防止重复
-let playbackRate = 1.0; // 添加这行,跟踪播放速度
+let playbackState = { rate: 1.0 }; // 使用对象,确保引用传递
 
 // 初始化多语言
 async function initializeI18n() {
@@ -535,7 +535,7 @@ function displayCurrentSubtitle(currentTime) {
 
           // 关键修改:每次都从全局变量读取最新速度
           const currentRate = playbackRate;
-          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * currentRate;
+          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * playbackState.rate;
           const progress = Math.min(elapsed / parseFloat(div.dataset.baseDuration), 1);
 
           const currentX = parseFloat(div.dataset.startX) +
@@ -610,7 +610,7 @@ function displayCurrentSubtitle(currentTime) {
 
           // 关键修改:每次都从全局变量读取最新速度
           const currentRate = playbackRate;
-          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * currentRate;
+          const elapsed = (now - parseFloat(div.dataset.startAnimTime)) * playbackState.rate;
           const progress = Math.min(elapsed / parseFloat(div.dataset.baseDuration), 1);
 
           const currentX = parseFloat(div.dataset.startX) +
@@ -703,7 +703,7 @@ function onPlayerReady(event) {
   console.log('YouTube player ready');
   // 添加这几行 - 获取初始播放速度
   if (player && typeof player.getPlaybackRate === 'function') {
-    playbackRate = player.getPlaybackRate();
+    playbackState.rate = player.getPlaybackRate();
   }
   showSuccess();
   startSubtitleUpdate();
@@ -713,7 +713,7 @@ function onPlayerStateChange(event) {
   console.log('Player state changed:', event.data);
   // 添加这几行 - 监听播放速度变化
   if (player && typeof player.getPlaybackRate === 'function') {
-    playbackRate = player.getPlaybackRate();
+    playbackState.rate = player.getPlaybackRate();
     console.log('Playback rate:', playbackRate);
   }
   if (event.data === YT.PlayerState.PLAYING) {
@@ -815,7 +815,7 @@ function startSubtitleUpdate() {
           const newRate = player.getPlaybackRate();
           if (newRate !== playbackRate) {
             console.log(`Playback rate changed: ${playbackRate} -> ${newRate}`);
-            playbackRate = newRate;
+            playbackState.rate = newRate;
           }
         }
         const currentTime = player.getCurrentTime();
@@ -1031,7 +1031,7 @@ function cleanupResources() {
 // 暴露全局函数供HTML调用
 window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 window.retryLoad = retryLoad;
-
+window.getPlaybackState = () => playbackState;
 // 页面卸载时清理资源
 window.addEventListener('beforeunload', cleanupResources);
 
