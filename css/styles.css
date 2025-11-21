@@ -209,11 +209,60 @@ body {
   border-color: #1890ff;
 }
 
-.video-item iframe {
+/* 新增样式：视频缩略图容器 */
+.video-thumbnail {
+  position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  pointer-events: none;
+  padding-top: 56.25%; /* 16:9 比例 */
+  background-color: #000;
+  overflow: hidden;
+  border-radius: 8px; /* 可选：圆角 */
+}
+
+/* 图片填满容器 */
+.video-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+/* 鼠标悬停时图片变暗一点 */
+.video-item:hover .video-thumbnail img {
+  opacity: 0.8;
+}
+
+/* 播放图标 */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  pointer-events: none; /* 让点击穿透到父元素 */
+  transition: transform 0.2s;
+}
+
+/* 鼠标悬停时图标放大 */
+.video-item:hover .play-icon {
+  background: #f00; /* YouTube 红 */
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* 让整个卡片变成手指光标 */
+.video-item {
+  cursor: pointer;
 }
 
 .video-title {
