@@ -13,6 +13,8 @@ let currentFilters = {
   tag: null,
   search: ''
 };
+let isLoading = false; // 新增：防止重复触发加载
+
 
 // DOM元素引用
 const filterInput = document.getElementById('filter');
@@ -284,15 +286,23 @@ function handleSearch() {
 
 // 滚动加载处理
 function handleScroll() {
+  if (isLoading) return; // 如果正在加载，直接退出，防止重复触发
+
   const scrollTop = mainContent.scrollTop;
   const scrollHeight = mainContent.scrollHeight;
   const clientHeight = mainContent.clientHeight;
 
-  if (scrollTop + clientHeight >= scrollHeight - 100) {
-    if (displayedCount >= loadedBatches * batchSize && displayedCount < filteredVideos.length) {
-      loadNextBatch().then(showMoreVideos);
-    } else {
-      showMoreVideos();
+  // 这里的 400 是预加载距离，让用户还没到底就开始加载，体验更流畅
+  if (scrollTop + clientHeight >= scrollHeight - 400) {
+    
+    // 如果还有未显示的视频
+    if (displayedCount < filteredVideos.length) {
+      isLoading = true; // 上锁
+      
+      loadNextBatch().then(() => {
+        showMoreVideos();
+        isLoading = false; // 解锁
+      });
     }
   }
 }
