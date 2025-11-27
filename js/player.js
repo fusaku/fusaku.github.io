@@ -230,9 +230,6 @@ function checkHorizontalOverlap(startX, y, textWidth, textHeight, padding, line,
 
         // 计算左边缘与屏幕右边缘的距离
         const distanceFromRightEdge = startX - currentLeft; // startX 就是屏幕右边缘
-
-        console.log(`同行检测 - 前字幕左边缘: ${currentLeft}, 屏幕右边: ${startX}, 距离: ${distanceFromRightEdge}, 需要: ${minDistance}`);
-
         // 如果距离不够，就有冲突
         if (distanceFromRightEdge < minDistance) {
           return true; // 有冲突，需要换行
