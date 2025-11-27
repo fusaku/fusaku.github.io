@@ -807,7 +807,7 @@ function startSubtitleUpdate() {
         if (typeof player.getPlaybackRate === 'function') {
           const newRate = player.getPlaybackRate();
           if (newRate !== playbackState.rate) {
-            console.log(`Playback rate changed: ${playbackState.rate} -> ${newRate}`);
+            console.log(`🎬 播放速度变化: ${playbackState.rate} -> ${newRate}`);
             playbackState.rate = newRate;
           }
         }
