@@ -377,6 +377,13 @@ async function loadSubtitles(videoId) {
 
 // 字幕显示函数
 function displayCurrentSubtitle(currentTime) {
+  if (player && typeof player.getPlaybackRate === 'function') {
+    const newRate = player.getPlaybackRate();
+    if (newRate !== playbackState.rate) {
+      console.log(`⏱️ 字幕表示直前の速度修正: ${playbackState.rate} -> ${newRate}`);
+      playbackState.rate = newRate;
+    }
+  }
   const padding = 15;
   const lineHeight = window.innerWidth > 768 ? 20 : 10;
   const textHeight = window.innerWidth > 768 ? 20 : 16;
