@@ -141,9 +141,6 @@ function checkHorizontalOverlap(startX, y, textWidth, textHeight, padding, line,
 
         // 计算左边缘与屏幕右边缘的距离
         const distanceFromRightEdge = startX - currentLeft; // startX 就是屏幕右边缘
-
-        console.log(`同行检测 - 前字幕左边缘: ${currentLeft}, 屏幕右边: ${startX}, 距离: ${distanceFromRightEdge}, 需要: ${minDistance}`);
-
         // 如果距离不够，就有冲突
         if (distanceFromRightEdge < minDistance) {
           return true; // 有冲突，需要换行
@@ -288,6 +285,15 @@ async function loadSubtitles(videoId) {
 
 // 字幕显示函数
 function displayCurrentSubtitle(currentTime) {
+  if (typeof player !== 'undefined' && player && typeof player.getPlaybackRate === 'function') {
+    const newRate = player.getPlaybackRate();
+    // 速度が変更されている場合のみ更新（ログの重複を避けるため）
+    if (newRate !== playbackState.rate) {
+      console.log(`⏱️ 字幕表示直前の速度修正: ${playbackState.rate} -> ${newRate}`);
+      playbackState.rate = newRate;
+    }
+  }
+
   const padding = 15;
   const lineHeight = window.innerWidth > 768 ? 20 : 10;
   const textHeight = window.innerWidth > 768 ? 20 : 16;
