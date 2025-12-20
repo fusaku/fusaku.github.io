@@ -29,29 +29,79 @@ async function initializeI18n() {
   window.i18n.updatePageTexts();
 }
 
-// 从外部JSON文件加载视频数据
+// 从外部jsonl文件加载视频数据
+// 修改后的加载函数
 async function loadVideoData() {
   try {
     showLoading();
-    // 尝试加载 videos.json 文件
-    const response = await fetch('../videos.json');
+    // 1. 获取 fetch 的响应流
+    const response = await fetch('../videos.jsonl'); 
     if (!response.ok) {
       throw new Error(window.i18n.t('error.dataLoadFailed', '无法加载视频数据'));
     }
-    const data = await response.json();
-    allVideos = data.videos || [];
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let partialLine = ''; 
+    allVideos = [];
+    let initialRenderDone = false; // 标记是否进行了首屏渲染
+
+    // 2. 循环读取流数据
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      // 解码当前块并合并上一块残留的文本
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = (partialLine + chunk).split('\n');
+
+      // 最后一行可能是不完整的，保留到下一轮处理
+      partialLine = lines.pop();
+
+      for (const line of lines) {
+        const trimmedLine = line.trim();
+        if (trimmedLine) {
+          try {
+            const video = JSON.parse(trimmedLine);
+            allVideos.push(video);
+
+            // 优化：当加载到第一批(batchSize)数据时，立刻渲染，提升首屏速度
+            if (!initialRenderDone && allVideos.length >= batchSize) {
+              filteredVideos = [...allVideos];
+              generateCategories(); // 提前生成分类
+              resetAndLoad();       // 提前渲染首屏
+              initialRenderDone = true;
+            }
+          } catch (e) {
+            console.error('解析JSONL行失败:', e, trimmedLine);
+          }
+        }
+      }
+    }
+
+    // 处理最后残留的行
+    if (partialLine.trim()) {
+      try {
+        allVideos.push(JSON.parse(partialLine));
+      } catch (e) {
+        console.error('解析最后一行失败:', e);
+      }
+    }
+
+    // 3. 最终同步状态
     filteredVideos = [...allVideos];
-
-    // 动态生成分类导航
-    generateCategories();
-
-    // 开始显示视频
-    resetAndLoad();
+    generateCategories(); // 确保分类包含所有数据
+    
+    // 如果文件太小没触发 batchSize 逻辑，则在这里进行最终渲染
+    if (!initialRenderDone) {
+      resetAndLoad();
+    }
+    
     hideLoading();
+
   } catch (error) {
     console.error('加载视频数据失败:', error);
     hideLoading();
-    // 如果加载失败，使用示例数据
     loadFallbackData();
   }
 }
@@ -107,7 +157,7 @@ function createVideoItem(video) {
 
   // 格式化日期
   const dateStr = video.date ? new Date(video.date).toLocaleDateString(window.i18n.currentLang) : '';
-  
+
   // 获取 YouTube 缩略图 (mqdefault 是中等质量，加载快)
   // 如果你想更清晰，可以用 'hqdefault.jpg'，但 'mqdefault.jpg' 即使有黑边也能保证加载
   const thumbnailUrl = `https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`;
@@ -142,25 +192,25 @@ function loadNextBatch() {
 // 显示更多视频 (优化版：使用 DocumentFragment 减少重绘)
 function showMoreVideos() {
   const totalLoadedVideos = loadedBatches * batchSize;
-  
+
   // 检查是否还有数据
   if (displayedCount >= filteredVideos.length) return;
   // 检查是否超过当前批次限制（如果是一次性加载全部则不需要这行，但保留逻辑也没错）
   // 注意：由于我们移除了 setTimeout，逻辑可以简化，只要有数据就渲染
-  
+
   const nextCount = Math.min(displayedCount + displayStep, filteredVideos.length);
-  
+
   // 如果没有新数据要显示，直接返回
   if (nextCount <= displayedCount) return;
 
   // === 核心优化开始 ===
   // 创建一个文档片段，把所有新卡片先放到这里
   const fragment = document.createDocumentFragment();
-  
+
   for (let i = displayedCount; i < nextCount; i++) {
     fragment.appendChild(createVideoItem(filteredVideos[i]));
   }
-  
+
   // 一次性将所有卡片插入页面，只触发一次重绘
   videoGrid.appendChild(fragment);
   // === 核心优化结束 ===
@@ -208,7 +258,7 @@ function clearActiveNav() {
   document.querySelectorAll('#sidebar li.active').forEach(li => li.classList.remove('active'));
   currentFilters = {
     year: null,
-    month: null, 
+    month: null,
     tag: null,
     search: ''
   };
@@ -230,7 +280,7 @@ function onCategoryClick(type, value, element) {
     document.querySelectorAll(`#${type}List li.active`).forEach(li => li.classList.remove('active'));
     element.classList.add('active');
   }
-  
+
   applyFilters();
 }
 
@@ -241,40 +291,40 @@ function applyFilters() {
     if (currentFilters.year && (!video.date || !video.date.startsWith(currentFilters.year))) {
       return false;
     }
-    
+
     // 月份筛选
     if (currentFilters.month) {
       if (!video.date) return false;
       const vDate = new Date(video.date);
       // 获取月份 (0-11)，需要 +1，并转为字符串比较
-      const vMonth = (vDate.getMonth() + 1).toString(); 
+      const vMonth = (vDate.getMonth() + 1).toString();
       // 比较：确保 "8" 和 "08" 都能匹配 (将两者都转为数字或都转为无前导零字符串)
       if (parseInt(vMonth) !== parseInt(currentFilters.month)) {
         return false;
       }
     }
-    
+
     // 标签筛选
     if (currentFilters.tag && (!video.tags || !video.tags.includes(currentFilters.tag))) {
       return false;
     }
-    
+
     // 搜索文本筛选
     if (currentFilters.search) {
       const searchText = currentFilters.search.toLowerCase();
       const matchTitle = (video.title && video.title.toLowerCase().includes(searchText)) ||
-                        (video.displayTitle && video.displayTitle.toLowerCase().includes(searchText));
+        (video.displayTitle && video.displayTitle.toLowerCase().includes(searchText));
       const matchDesc = video.description && video.description.toLowerCase().includes(searchText);
       const matchTags = video.tags && video.tags.some(tag => tag.toLowerCase().includes(searchText));
-      
+
       if (!matchTitle && !matchDesc && !matchTags) {
         return false;
       }
     }
-    
+
     return true;
   });
-  
+
   resetAndLoad();
 }
 
@@ -294,11 +344,11 @@ function handleScroll() {
 
   // 这里的 400 是预加载距离，让用户还没到底就开始加载，体验更流畅
   if (scrollTop + clientHeight >= scrollHeight - 400) {
-    
+
     // 如果还有未显示的视频
     if (displayedCount < filteredVideos.length) {
       isLoading = true; // 上锁
-      
+
       loadNextBatch().then(() => {
         showMoreVideos();
         isLoading = false; // 解锁
@@ -309,7 +359,7 @@ function handleScroll() {
 
 function throttle(func, limit) {
   let inThrottle;
-  return function() {
+  return function () {
     const args = arguments;
     const context = this;
     if (!inThrottle) {
