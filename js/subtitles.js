@@ -314,28 +314,36 @@ function setupPlaybackRateListener() {
 
 // 更新所有活跃弹幕的动画速度
 function updateActiveSubtitlesSpeeds(playbackRate) {
-  const currentTime = document.querySelector('video')?.currentTime || 0;
+  const video = document.querySelector('video');
+  if (!video) return;
+  
+  const currentTime = video.currentTime;
 
   subtitleElements.forEach((element, subId) => {
     if (!element || !element.parentNode) return;
 
     const startTime = parseFloat(element.dataset.startTime);
     const endTime = parseFloat(element.dataset.endTime);
+    const animationStartTime = parseFloat(element.dataset.animationStartTime);
+    
+    // 计算从动画开始到现在经过了多少视频时间
+    const videoElapsed = currentTime - animationStartTime;
+    
+    // 计算原始动画总时长(视频时间)
     const originalDuration = endTime - startTime;
+    
+    // 计算还剩多少视频时间
+    const videoRemaining = originalDuration - videoElapsed;
 
-    // 计算剩余时间
-    const elapsed = currentTime - startTime;
-    const remaining = originalDuration - elapsed;
-
-    if (remaining > 0) {
+    if (videoRemaining > 0) {
       // 获取当前位置
       const computedStyle = window.getComputedStyle(element);
       const currentLeft = parseFloat(computedStyle.left);
 
-      // 计算新的动画时长(剩余时间 / 播放速度)
-      const newDuration = remaining / playbackRate;
+      // 计算新的动画时长(真实世界时间) = 剩余视频时间 / 播放速度
+      const newDuration = videoRemaining / playbackRate;
 
-      // 移除旧的transition,设置当前位置
+      // 移除旧的transition,固定在当前位置
       element.style.transition = 'none';
       element.style.left = `${currentLeft}px`;
 
@@ -346,12 +354,12 @@ function updateActiveSubtitlesSpeeds(playbackRate) {
       requestAnimationFrame(() => {
         element.style.transition = `left ${newDuration}s linear`;
 
-        // 获取目标位置(通常是负值,让弹幕完全移出屏幕)
+        // 获取目标位置(让弹幕完全移出屏幕)
         const textWidth = element.offsetWidth || 100;
         element.style.left = `-${textWidth + 50}px`;
       });
 
-      console.log(`更新弹幕 ${subId} 速度: 剩余${remaining.toFixed(1)}s -> ${newDuration.toFixed(1)}s (${playbackRate}x)`);
+      console.log(`更新弹幕 "${element.textContent.substring(0,15)}..." - 视频剩余${videoRemaining.toFixed(1)}s -> 真实${newDuration.toFixed(1)}s (${playbackRate}x速)`);
     }
   });
 }
@@ -441,6 +449,7 @@ function displayCurrentSubtitle(currentTime) {
       div.dataset.subtitleId = subId;
       div.dataset.startTime = sub.start;
       div.dataset.endTime = sub.end;
+      div.dataset.animationStartTime = currentTime;
 
       // 存储元素引用
       subtitleElements.set(subId, div);
@@ -500,6 +509,8 @@ function displayCurrentSubtitle(currentTime) {
         // 设置初始位置
         div.style.left = `${startX}px`;
         div.style.top = `${startY}px`;
+        div.dataset.animationStartTime = currentTime;
+        div.dataset.animationDuration = finalDuration;
         div.style.transition = `all ${duration}s linear`;
 
         // 开始动画
