@@ -8,7 +8,10 @@ function parseASSTime(timeStr) {
 
 // 新增：rAF 渲染引擎，让字幕位移实时匹配视频倍速
 function animateSubtitleManual(element) {
-  if (!element || !element.parentNode) return;
+  if (!element || !element.parentNode) {
+        console.log("【动画停止】元素已从DOM移除");
+        return;
+    }
 
   const now = performance.now();
   // 从 player.js 的全局变量或直接从 video 标签获取倍速
@@ -40,6 +43,7 @@ function animateSubtitleManual(element) {
   element.style.left = `${currentX}px`;
   element.style.top = `${currentY}px`;
 
+  if (Math.random() > 0.95) console.log("进度:", element.dataset.animProgress);
   if (progress < 1 && subtitlesVisible) {
     requestAnimationFrame(() => animateSubtitleManual(element));
   }
@@ -48,20 +52,17 @@ function animateSubtitleManual(element) {
 // 获取视频播放速度
 function getVideoPlaybackRate() {
     let rate = 1.0;
-    // 尝试寻找页面上所有的 video 标签（兼容某些播放器框架）
-    const videos = document.getElementsByTagName('video');
-    if (videos.length > 0) {
-        rate = videos[0].playbackRate;
-    } 
-    // 尝试 YouTube API
-    else if (window.player && typeof window.player.getPlaybackRate === 'function') {
+    const video = document.querySelector('video');
+    
+    if (video) {
+        rate = video.playbackRate;
+    } else if (window.player && typeof window.player.getPlaybackRate === 'function') {
         rate = window.player.getPlaybackRate();
     }
+
+    // 无论如何都打印一次，看看这个函数到底有没有被执行
+    console.log("【检查倍速】当前检测值:", rate, "视频元素是否存在:", !!video);
     
-    // 调试用：如果速度不是1，就在控制台打印，确认逻辑生效
-    if (rate !== 1) {
-        console.log("当前捕捉到的倍速:", rate); 
-    }
     return rate || 1.0;
 }
 
