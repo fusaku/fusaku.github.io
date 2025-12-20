@@ -6,8 +6,49 @@ function parseASSTime(timeStr) {
     parseInt(match[3]) + parseInt(match[4]) / 100;
 }
 
+// 新增：rAF 渲染引擎，让字幕位移实时匹配视频倍速
+function animateSubtitleManual(element) {
+  if (!element || !element.parentNode) return;
+
+  const now = performance.now();
+  // 从 player.js 的全局变量或直接从 video 标签获取倍速
+  const playbackRate = (typeof playbackState !== 'undefined') ? playbackState.rate : getVideoPlaybackRate();
+
+  if (!element.dataset.lastFrameTime) {
+    element.dataset.lastFrameTime = now;
+  }
+
+  const deltaTime = (now - parseFloat(element.dataset.lastFrameTime)) / 1000;
+  element.dataset.lastFrameTime = now;
+
+  let progress = parseFloat(element.dataset.animProgress || 0);
+  const baseDuration = parseFloat(element.dataset.baseDuration);
+
+  // 核心：进度增加量随倍速实时变化
+  progress += (deltaTime * playbackRate) / baseDuration;
+  element.dataset.animProgress = progress;
+
+  const startX = parseFloat(element.dataset.startX);
+  const endX = parseFloat(element.dataset.endX);
+  const startY = parseFloat(element.dataset.startY);
+  const endY = parseFloat(element.dataset.endY);
+
+  const currentX = startX + (endX - startX) * Math.min(progress, 1);
+  const currentY = startY + (endY - startY) * Math.min(progress, 1);
+
+  element.style.left = `${currentX}px`;
+  element.style.top = `${currentY}px`;
+
+  if (progress < 1 && subtitlesVisible) {
+    requestAnimationFrame(() => animateSubtitleManual(element));
+  }
+}
+
 // 获取视频播放速度
 function getVideoPlaybackRate() {
+  if (window.player && typeof window.player.getPlaybackRate === 'function') {
+    return window.player.getPlaybackRate();
+  }
   const video = document.querySelector('video');
   return video ? video.playbackRate : 1.0;
 }
@@ -47,7 +88,6 @@ function parseASSSubtitles(assContent) {
       }
     }
   }
-
   return subtitleLines.sort((a, b) => a.start - b.start);
 }
 
@@ -294,78 +334,10 @@ async function loadSubtitles(videoId) {
     return false;
   }
 }
-// 监听视频播放速度变化
-function setupPlaybackRateListener() {
-  const video = document.querySelector('video');
-  if (!video) {
-    console.warn('Video element not found');
-    return;
-  }
 
-  video.addEventListener('ratechange', () => {
-    const newRate = video.playbackRate;
-    console.log(`播放速度改变为: ${newRate}x`);
-
-    // 更新所有正在播放的弹幕速度
-    updateActiveSubtitlesSpeeds(newRate);
-  });
-
-  console.log('Playback rate listener setup complete');
-}
-
-// 更新所有活跃弹幕的动画速度
-function updateActiveSubtitlesSpeeds(playbackRate) {
-  console.log("正在同步活跃弹幕速度, 倍速:", playbackRate);
-  
-  subtitleElements.forEach((element, subId) => {
-    if (!element || !element.parentNode) return;
-
-    // 1. 获取当前实时位置
-    const computedStyle = window.getComputedStyle(element);
-    const currentLeft = parseFloat(computedStyle.left);
-    
-    // 2. 立即停止当前动画
-    element.style.transition = 'none';
-    element.style.left = `${currentLeft}px`;
-    
-    // 强制浏览器重绘 (关键步骤)
-    element.offsetHeight; 
-
-    // 3. 读取终点位置，如果读取不到则手动补算一个
-    let targetLeft = parseFloat(element.dataset.targetLeft);
-    if (isNaN(targetLeft)) {
-      targetLeft = -(element.offsetWidth + 50);
-    }
-
-    // 4. 计算剩余路程
-    const remainingDistance = currentLeft - targetLeft;
-
-    if (remainingDistance > 0) {
-      // 5. 根据新倍速计算剩余时间
-      const baseSpeed = window.innerWidth > 768 ? 180 : 150;
-      const actualSpeed = baseSpeed * playbackRate;
-      const newDuration = remainingDistance / actualSpeed;
-
-      // 6. 重新应用动画
-      requestAnimationFrame(() => {
-        element.style.transition = `left ${newDuration}s linear`;
-        element.style.left = `${targetLeft}px`;
-      });
-    }
-  });
-}
 // 字幕显示函数
 function displayCurrentSubtitle(currentTime) {
   const padding = 15;
-
-  // 清理过期的时间记录（超过当前时间10秒的记录）
-  for (const [timeKey, lineSet] of displayedSubtitles.entries()) {
-    const recordTime = parseFloat(timeKey);
-    if (currentTime - recordTime > 10) {
-      displayedSubtitles.delete(timeKey);
-    }
-  }
-
   const overlay = document.getElementById('subtitle-overlay');
 
   // 确保容器有有效的高度
@@ -481,7 +453,6 @@ function displayCurrentSubtitle(currentTime) {
         const containerWidth = overlay.offsetWidth || (window.innerWidth > 768 ? 1200 : window.innerWidth);
         const containerHeight = overlay.offsetHeight || (window.innerWidth > 768 ? 675 : window.innerHeight * 0.6);
         const playbackRate = getVideoPlaybackRate();
-        const duration = (sub.end - sub.start) / playbackRate;
 
         // 移动端适配：使用更小的基准分辨率
         const baseWidth = window.innerWidth > 768 ? 640 : 360;
@@ -493,21 +464,22 @@ function displayCurrentSubtitle(currentTime) {
         const startX = Math.max(0, Math.min(moveData.x1 * scaleX, containerWidth - 100));
         const startY = Math.max(0, Math.min(moveData.y1 * scaleY, containerHeight - 30));
         const endX = Math.max(-200, Math.min(moveData.x2 * scaleX, containerWidth));
-        const endY = Math.max(0, Math.min(moveData.y2 * scaleY, containerHeight - 30)); 
+        const endY = Math.max(0, Math.min(moveData.y2 * scaleY, containerHeight - 30));
 
         // 设置初始位置
         div.style.left = `${startX}px`;
         div.style.top = `${startY}px`;
-        div.style.transition = `all ${duration}s linear`;
-        div.dataset.targetLeft = endX;
-        div.dataset.targetTop = endY;
-        div.dataset.isMoveEffect = "true";
+        // 关键修改：存入数据供 animateSubtitleManual 使用
+        div.dataset.startX = startX;
+        div.dataset.startY = startY;
+        div.dataset.endX = endX;
+        div.dataset.endY = endY;
+        div.dataset.animProgress = 0;
+        div.dataset.baseDuration = (sub.end - sub.start); // 使用原始秒数
+        div.dataset.endTime = sub.end;
 
-        // 开始动画
-        requestAnimationFrame(() => {
-          div.style.left = `${endX}px`;
-          div.style.top = `${endY}px`;
-        });
+        // 启动手动动画
+        requestAnimationFrame(() => animateSubtitleManual(div));
       } else {
         // 默认弹幕处理 - 从右到左移动
         const containerWidth = overlay.offsetWidth || (window.innerWidth > 768 ? 1200 : window.innerWidth);
@@ -551,21 +523,20 @@ function displayCurrentSubtitle(currentTime) {
         });
 
         // 设置初始样式和位置
-        const targetLeft = -(textWidth + 50);
-        
+        div.dataset.startX = containerWidth;
+        div.dataset.endX = -(textWidth + 50);
+        div.dataset.startY = position.y;
+        div.dataset.endY = position.y;
+        div.dataset.animProgress = 0;
+        div.dataset.baseDuration = baseDuration; // 存储不含倍速的原始耗时
+        div.dataset.endTime = sub.end;
+
         div.style.fontSize = `${fontSize}px`;
-        div.style.left = `${containerWidth}px`; // 从右边开始
-        div.style.top = `${position.y}px`;
-        div.dataset.targetLeft = -(textWidth + 50);
-        div.dataset.targetLeft = targetLeft;
-        div.style.transition = `left ${finalDuration}s linear`;
+        div.style.left = `${div.dataset.startX}px`;
+        div.style.top = `${div.dataset.startY}px`;
 
-        console.log(`弹幕 "${cleanTextForMeasure.substring(0, 20)}..." - 行: ${position.line}, 起始X: ${containerWidth}, 宽度: ${textWidth}, 时长: ${finalDuration.toFixed(1)}s`);
-
-        // 开始从右到左的动画
-        requestAnimationFrame(() => {
-          div.style.left = `${targetLeft}px`; // 移动到左边完全消失
-        });
+        // 启动手动逐帧动画
+        requestAnimationFrame(() => animateSubtitleManual(div));
       }
 
       // 处理文本样式标签
