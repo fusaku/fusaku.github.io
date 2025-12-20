@@ -12,7 +12,7 @@ function animateSubtitleManual(element) {
 
   const now = performance.now();
   // 从 player.js 的全局变量或直接从 video 标签获取倍速
-  const playbackRate = (typeof playbackState !== 'undefined') ? playbackState.rate : getVideoPlaybackRate();
+  const playbackRate = getVideoPlaybackRate();
 
   if (!element.dataset.lastFrameTime) {
     element.dataset.lastFrameTime = now;
@@ -46,11 +46,19 @@ function animateSubtitleManual(element) {
 
 // 获取视频播放速度
 function getVideoPlaybackRate() {
+  // 1. 如果是 YouTube API 模式，直接问 player 对象
   if (window.player && typeof window.player.getPlaybackRate === 'function') {
     return window.player.getPlaybackRate();
   }
+  
+  // 2. 如果是普通 HTML5 video 标签
   const video = document.querySelector('video');
-  return video ? video.playbackRate : 1.0;
+  if (video) {
+    return video.playbackRate;
+  }
+
+  // 3. 兜底返回 1.0
+  return 1.0;
 }
 
 function parseASSSubtitles(assContent) {
