@@ -257,6 +257,10 @@ function findNonOverlappingPosition(textWidth, textHeight, containerWidth, conta
 
 // 改进的字幕加载
 async function loadSubtitles(videoId) {
+  if (!window.playbackRateListenerSetup) {
+    setTimeout(() => setupPlaybackRateListener(), 500);
+    window.playbackRateListenerSetup = true;
+  }
   try {
     console.log('Loading subtitles for:', videoId);
     const response = await fetch(`../subtitles/${videoId}.ass`);
@@ -289,7 +293,68 @@ async function loadSubtitles(videoId) {
     return false;
   }
 }
+// 监听视频播放速度变化
+function setupPlaybackRateListener() {
+  const video = document.querySelector('video');
+  if (!video) {
+    console.warn('Video element not found');
+    return;
+  }
 
+  video.addEventListener('ratechange', () => {
+    const newRate = video.playbackRate;
+    console.log(`播放速度改变为: ${newRate}x`);
+
+    // 更新所有正在播放的弹幕速度
+    updateActiveSubtitlesSpeeds(newRate);
+  });
+
+  console.log('Playback rate listener setup complete');
+}
+
+// 更新所有活跃弹幕的动画速度
+function updateActiveSubtitlesSpeeds(playbackRate) {
+  const currentTime = document.querySelector('video')?.currentTime || 0;
+
+  subtitleElements.forEach((element, subId) => {
+    if (!element || !element.parentNode) return;
+
+    const startTime = parseFloat(element.dataset.startTime);
+    const endTime = parseFloat(element.dataset.endTime);
+    const originalDuration = endTime - startTime;
+
+    // 计算剩余时间
+    const elapsed = currentTime - startTime;
+    const remaining = originalDuration - elapsed;
+
+    if (remaining > 0) {
+      // 获取当前位置
+      const computedStyle = window.getComputedStyle(element);
+      const currentLeft = parseFloat(computedStyle.left);
+
+      // 计算新的动画时长(剩余时间 / 播放速度)
+      const newDuration = remaining / playbackRate;
+
+      // 移除旧的transition,设置当前位置
+      element.style.transition = 'none';
+      element.style.left = `${currentLeft}px`;
+
+      // 强制重排
+      element.offsetHeight;
+
+      // 设置新的transition和目标位置
+      requestAnimationFrame(() => {
+        element.style.transition = `left ${newDuration}s linear`;
+
+        // 获取目标位置(通常是负值,让弹幕完全移出屏幕)
+        const textWidth = element.offsetWidth || 100;
+        element.style.left = `-${textWidth + 50}px`;
+      });
+
+      console.log(`更新弹幕 ${subId} 速度: 剩余${remaining.toFixed(1)}s -> ${newDuration.toFixed(1)}s (${playbackRate}x)`);
+    }
+  });
+}
 // 字幕显示函数
 function displayCurrentSubtitle(currentTime) {
   const padding = 15;
