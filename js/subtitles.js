@@ -356,101 +356,277 @@ function updateActiveSubtitlesSpeeds(playbackRate) {
 }
 // 字幕显示函数
 function displayCurrentSubtitle(currentTime) {
-  if (!subtitlesVisible || !subtitles.length) return;
+  const padding = 15;
 
-  const container = document.getElementById('subtitle-container');
-  if (!container) return;
+  // 清理过期的时间记录（超过当前时间10秒的记录）
+  for (const [timeKey, lineSet] of displayedSubtitles.entries()) {
+    const recordTime = parseFloat(timeKey);
+    if (currentTime - recordTime > 10) {
+      displayedSubtitles.delete(timeKey);
+    }
+  }
 
-  const playbackRate = getVideoPlaybackRate();
+  const overlay = document.getElementById('subtitle-overlay');
 
-  subtitles.forEach((subtitle, index) => {
-    // 检查时间是否匹配，且该弹幕未在显示中
-    if (currentTime >= subtitle.startTime && currentTime <= subtitle.endTime && !activeSubtitles.has(index)) {
-      
+  // 确保容器有有效的高度
+  if (!overlay || overlay.offsetHeight === 0) {
+    return;
+  }
+  if (!subtitlesVisible || subtitles.length === 0) {
+    // 清除所有字幕
+    overlay.innerHTML = '';
+    activeSubtitles.clear();
+    subtitleElements.clear();
+    return;
+  }
+
+  // 检测时间跳跃，清理过时的显示记录
+  if (typeof displayCurrentSubtitle.lastTime === 'undefined') {
+    displayCurrentSubtitle.lastTime = currentTime;
+  }
+
+  const timeDiff = Math.abs(currentTime - displayCurrentSubtitle.lastTime);
+  if (timeDiff > 1) { // 降低到1秒阈值
+    console.log(`Time jump detected: ${displayCurrentSubtitle.lastTime} -> ${currentTime}`);
+    displayedSubtitles.clear();
+  }
+  displayCurrentSubtitle.lastTime = currentTime;
+
+  // 获取当前应该显示的字幕
+  const currentSubs = subtitles.filter(sub =>
+    currentTime >= sub.start && currentTime <= sub.end
+  );
+
+  // 创建当前应该显示的字幕ID集合
+  const currentSubIds = new Set();
+
+  currentSubs.forEach((sub, index) => {
+    const lines = sub.text.split('\n');
+    lines.forEach((line, lineIndex) => {
+      if (!line.trim()) return;
+
+      // 使用字幕在原数组中的真实索引作为唯一标识
+      const realSubIndex = subtitles.indexOf(sub);
+      const subId = `sub_${realSubIndex}_${lineIndex}_${sub.start}_${sub.end}`;
+      const timeKey = `${sub.start.toFixed(1)}`; // 更准确的时间表示
+
+      currentSubIds.add(subId);
+
+      // 检查这个时间点的这一行字幕是否已经显示过
+      if (!displayedSubtitles.has(timeKey)) {
+        displayedSubtitles.set(timeKey, new Set());
+      }
+
+      const displayedAtTime = displayedSubtitles.get(timeKey);
+      const lineKey = `${realSubIndex}_${lineIndex}`;
+
+      // 如果字幕已经存在或这一行在这个时间点已经显示过，跳过创建
+      if (activeSubtitles.has(subId) || displayedAtTime.has(lineKey)) {
+        return;
+      }
+
+      // 标记这一行字幕在这个时间点已显示
+      displayedAtTime.add(lineKey);
+      // 标记为已处理
+      processedSubtitles.add(subId);
+      // 标记为活跃字幕
+      activeSubtitles.add(subId);
+
+      // 创建字幕元素
       const div = document.createElement('div');
       div.className = 'danmaku-subtitle';
-      div.id = `sub-${index}`;
-      
-      // 处理 ASS 特效代码 (去除 {\...} 标签)
-      const cleanText = subtitle.text.replace(/\{[^}]+\}/g, '');
-      div.textContent = cleanText;
+      div.dataset.subtitleId = subId;
+      div.dataset.startTime = sub.start;
+      div.dataset.endTime = sub.end;
+      div.dataset.animationStartTime = currentTime;
 
-      // 应用样式
-      if (subtitle.color) div.style.color = subtitle.color;
-      if (subtitle.fontSize) div.style.fontSize = `${subtitle.fontSize}px`;
-      
-      container.appendChild(div);
+      // 存储元素引用
+      subtitleElements.set(subId, div);
 
-      const containerWidth = container.offsetWidth;
-      const containerHeight = container.offsetHeight;
-      const textWidth = div.offsetWidth;
-      const textHeight = div.offsetHeight || 30;
+      // 解析ASS标签
+      let cleanText = line;
+      let moveData = null;
 
-      // --- 关键逻辑 1: 处理 \move 特效坐标 ---
-      const moveMatch = subtitle.text.match(/\\move\(([\d.-]+),([\d.-]+),([\d.-]+),([\d.-]+)/);
-      let targetLeft, finalDuration, startY;
+      // 提取移动标签
+      const moveMatch = line.match(/\\move\((\d+),(\d+),(\d+),(\d+)\)/);
+      const alphaMatch = line.match(/\\alpha&H([0-9A-Fa-f]+)&/);
 
       if (moveMatch) {
-        // ASS 坐标系转换逻辑
-        const scaleX = containerWidth / 384; 
-        const scaleY = containerHeight / 288;
-        const startX = parseFloat(moveMatch[1]) * scaleX;
-        startY = parseFloat(moveMatch[2]) * scaleY;
-        const endX = parseFloat(moveMatch[3]) * scaleX;
-        const endY = parseFloat(moveMatch[4]) * scaleY;
+        moveData = {
+          x1: parseInt(moveMatch[1]),
+          y1: parseInt(moveMatch[2]),
+          x2: parseInt(moveMatch[3]),
+          y2: parseInt(moveMatch[4])
+        };
+      }
 
+      // 设置基本样式
+      div.style.position = 'absolute';
+      div.style.color = '#fff';
+      div.style.fontSize = '16px';
+      div.style.fontWeight = '600';
+      div.style.textShadow = '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 3px rgba(0,0,0,0.8)';
+      div.style.whiteSpace = 'nowrap';
+      div.style.pointerEvents = 'none';
+      div.style.zIndex = '100';
+
+      // 设置透明度
+      if (alphaMatch) {
+        const alpha = parseInt(alphaMatch[1], 16);
+        div.style.opacity = (255 - alpha) / 255;
+      }
+
+      if (moveData) {
+        // 弹幕动画：使用ASS坐标系统
+        const containerWidth = overlay.offsetWidth || (window.innerWidth > 768 ? 1200 : window.innerWidth);
+        const containerHeight = overlay.offsetHeight || (window.innerWidth > 768 ? 675 : window.innerHeight * 0.6);
+        const playbackRate = getVideoPlaybackRate();
+        const duration = (sub.end - sub.start) / playbackRate;
+
+        // 移动端适配：使用更小的基准分辨率
+        const baseWidth = window.innerWidth > 768 ? 640 : 360;
+        const baseHeight = window.innerWidth > 768 ? 360 : 200;
+
+        const scaleX = containerWidth / baseWidth;
+        const scaleY = containerHeight / baseHeight;
+
+        const startX = Math.max(0, Math.min(moveData.x1 * scaleX, containerWidth - 100));
+        const startY = Math.max(0, Math.min(moveData.y1 * scaleY, containerHeight - 30));
+        const endX = Math.max(-200, Math.min(moveData.x2 * scaleX, containerWidth));
+        const endY = Math.max(0, Math.min(moveData.y2 * scaleY, containerHeight - 30)); 
+
+        // 设置初始位置
         div.style.left = `${startX}px`;
         div.style.top = `${startY}px`;
-        
-        targetLeft = endX;
+        div.style.transition = `all ${duration}s linear`;
         div.dataset.targetLeft = endX;
         div.dataset.targetTop = endY;
         div.dataset.isMoveEffect = "true";
-        
-        // 特效弹幕的时间由字幕本身起止差决定，同时受倍速影响
-        finalDuration = (subtitle.endTime - subtitle.startTime) / playbackRate;
+
+        // 开始动画
+        requestAnimationFrame(() => {
+          div.style.left = `${endX}px`;
+          div.style.top = `${endY}px`;
+        });
       } else {
-        // --- 关键逻辑 2: 普通滚动弹幕 (带防重叠) ---
-        // 寻找不重叠的行号 (y坐标)
-        const position = findAvailablePosition(textWidth, textHeight, containerWidth, containerHeight, subtitle.endTime);
-        startY = position.y;
+        // 默认弹幕处理 - 从右到左移动
+        const containerWidth = overlay.offsetWidth || (window.innerWidth > 768 ? 1200 : window.innerWidth);
+        const fontSize = window.innerWidth > 768 ? 16 : 14;
+
+        // 计算字幕文本宽度
+        const cleanTextForMeasure = line.replace(/\{[^}]*\}/g, '').trim();
+        const textWidth = calculateSubtitleWidth(cleanTextForMeasure, fontSize);
+
+        // 计算移动参数
+        const totalMoveDistance = containerWidth + textWidth + 50; // 完全移出屏幕的距离
+        const pixelsPerSecond = window.innerWidth > 768 ? 180 : 150; // 恒定速度
+        const calculatedDuration = totalMoveDistance / pixelsPerSecond;
+
+        // 限制动画时间
+        const playbackRate = getVideoPlaybackRate();
+        const originalDuration = sub.end - sub.start;
+        const minDuration = Math.max(3, originalDuration * 0.8);
+        const maxDuration = originalDuration * 2.5;
+        const baseDuration = Math.max(minDuration, Math.min(maxDuration, calculatedDuration));
+        // 根据播放速度调整动画时长
+        const finalDuration = baseDuration / playbackRate;
+
+        // 计算移动速度 (像素/秒)
+        const moveSpeed = totalMoveDistance / finalDuration;
+
+        // 查找可用的行位置（传入移动速度）
+        const position = findAvailablePosition(currentTime, textWidth, containerWidth, moveSpeed);
+
+        // 记录字幕占用的区域和结束时间
+        const endTime = currentTime + finalDuration;
+        // 记录字幕移动轨迹占用的空间
+        activeSubtitleAreas.set(subId, {
+          x: containerWidth, // 起始位置
+          y: position.y,
+          width: textWidth + padding,
+          height: (window.innerWidth > 768 ? 20 : 16) + 10,
+          endTime: endTime,
+          line: position.line,
+          subId: subId // 添加subId，用于查找DOM元素
+        });
+
+        // 设置初始样式和位置
+        const targetLeft = -(textWidth + 50);
         
-        div.style.top = `${startY}px`;
-        div.style.left = `${containerWidth}px`; // 从右侧进入
-
-        targetLeft = -(textWidth + 100); // 飞出左侧
+        div.style.fontSize = `${fontSize}px`;
+        div.style.left = `${containerWidth}px`; // 从右边开始
+        div.style.top = `${position.y}px`;
+        div.dataset.targetLeft = -(textWidth + 50);
         div.dataset.targetLeft = targetLeft;
-        div.dataset.isMoveEffect = "false";
+        div.style.transition = `left ${finalDuration}s linear`;
 
-        // 计算普通滚动弹幕的时间 (基准速度 180px/s)
-        const baseSpeed = window.innerWidth > 768 ? 180 : 150;
-        const actualSpeed = baseSpeed * playbackRate;
-        const totalDistance = containerWidth + textWidth + 100;
-        finalDuration = totalDistance / actualSpeed;
+        console.log(`弹幕 "${cleanTextForMeasure.substring(0, 20)}..." - 行: ${position.line}, 起始X: ${containerWidth}, 宽度: ${textWidth}, 时长: ${finalDuration.toFixed(1)}s`);
 
-        // 记录区域信息，用于下一条弹幕的碰撞检测
-        activeSubtitleAreas.set(index, {
-          x: containerWidth,
-          y: startY,
-          width: textWidth,
-          height: textHeight,
-          endTime: subtitle.endTime,
-          line: position.line
+        // 开始从右到左的动画
+        requestAnimationFrame(() => {
+          div.style.left = `${targetLeft}px`; // 移动到左边完全消失
         });
       }
 
-      // --- 关键逻辑 3: 启动动画 ---
-      div.dataset.endTime = subtitle.endTime;
-      activeSubtitles.add(index);
-      subtitleElements.set(index, div);
+      // 处理文本样式标签
+      cleanText = line.replace(/\{[^}]*\}/g, (match) => {
+        if (match.includes('\\b1')) div.style.fontWeight = 'bold';
+        if (match.includes('\\i1')) div.style.fontStyle = 'italic';
+        if (match.includes('\\u1')) div.style.textDecoration = 'underline';
+        if (match.includes('\\s1')) div.style.textDecoration = 'line-through';
 
-      requestAnimationFrame(() => {
-        div.style.transition = `all ${finalDuration}s linear`;
-        div.style.left = `${targetLeft}px`;
-        if (div.dataset.isMoveEffect === "true") {
-          div.style.top = `${div.dataset.targetTop}px`;
+        // 颜色标签
+        const colorMatch = match.match(/\\c&H([0-9A-Fa-f]{6})&/);
+        if (colorMatch) {
+          const color = colorMatch[1];
+          const r = parseInt(color.substr(4, 2), 16);
+          const g = parseInt(color.substr(2, 2), 16);
+          const b = parseInt(color.substr(0, 2), 16);
+          div.style.color = `rgb(${r}, ${g}, ${b})`;
         }
+
+        return '';
       });
+
+      div.textContent = cleanText.trim();
+      overlay.appendChild(div);
+    });
+  });
+
+  // 清除真正过期的字幕（基于时间判断，而不是当前显示状态）
+  const subtitlesToRemove = [];
+  activeSubtitles.forEach(subId => {
+    const element = subtitleElements.get(subId);
+    if (element) {
+      const endTime = parseFloat(element.dataset.endTime);
+      // 只有当字幕真正结束时才移除，给一点缓冲时间
+      if (currentTime > endTime + 0.5) {
+        if (element.parentNode) {
+          element.parentNode.removeChild(element);
+        }
+        subtitlesToRemove.push(subId);
+      }
+    }
+  });
+
+  // 从集合中移除已删除的字幕
+  subtitlesToRemove.forEach(subId => {
+    activeSubtitles.delete(subId);
+    subtitleElements.delete(subId);
+    processedSubtitles.delete(subId); // 清理已处理记录，允许重新播放
+
+    // 清理区域记录
+    activeSubtitleAreas.delete(subId);
+    // 清理速度记录
+    const area = activeSubtitleAreas.get(subId);
+    if (area && area.line !== undefined) {
+      // 检查这一行是否还有其他活跃字幕
+      const hasOtherActiveOnLine = Array.from(activeSubtitleAreas.values())
+        .some(otherArea => otherArea.line === area.line && otherArea.subId !== subId);
+
+      if (!hasOtherActiveOnLine) {
+        lineMoveSpeeds.delete(area.line);
+      }
     }
   });
 }
