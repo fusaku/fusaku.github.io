@@ -257,8 +257,9 @@ function findNonOverlappingPosition(textWidth, textHeight, containerWidth, conta
 
 // 改进的字幕加载
 async function loadSubtitles(videoId) {
-  if (!window.playbackRateListenerSetup) {
-    setTimeout(() => setupPlaybackRateListener(), 500);
+  const video = document.querySelector('video');
+  if (video && !window.playbackRateListenerSetup) {
+    setupPlaybackRateListener(); // 直接挂载，不需要 wait
     window.playbackRateListenerSetup = true;
   }
   try {
@@ -314,52 +315,42 @@ function setupPlaybackRateListener() {
 
 // 更新所有活跃弹幕的动画速度
 function updateActiveSubtitlesSpeeds(playbackRate) {
-  const video = document.querySelector('video');
-  if (!video) return;
-  
-  const currentTime = video.currentTime;
-
   subtitleElements.forEach((element, subId) => {
     if (!element || !element.parentNode) return;
 
-    const startTime = parseFloat(element.dataset.startTime);
-    const endTime = parseFloat(element.dataset.endTime);
-    const animationStartTime = parseFloat(element.dataset.animationStartTime);
+    // 1. 冻结当前位置
+    const computedStyle = window.getComputedStyle(element);
+    const currentLeft = parseFloat(computedStyle.left);
+    const currentTop = parseFloat(computedStyle.top);
+
+    element.style.transition = 'none';
+    element.style.left = `${currentLeft}px`;
+    element.style.top = `${currentTop}px`;
+    element.offsetHeight; // 强制重绘，确保浏览器停止之前的动画
+
+    // 2. 获取目标位置
+    const targetLeft = parseFloat(element.dataset.targetLeft);
+    const targetTop = parseFloat(element.dataset.targetTop);
     
-    // 计算从动画开始到现在经过了多少视频时间
-    const videoElapsed = currentTime - animationStartTime;
-    
-    // 计算原始动画总时长(视频时间)
-    const originalDuration = endTime - startTime;
-    
-    // 计算还剩多少视频时间
-    const videoRemaining = originalDuration - videoElapsed;
+    // 3. 计算剩余距离
+    // 对于普通弹幕，主要计算 X 轴；对于 move 弹幕，计算矢量距离
+    const distanceX = targetLeft - currentLeft;
+    const distanceY = (element.dataset.isMoveEffect === "true") ? (targetTop - currentTop) : 0;
+    const remainingDistance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
-    if (videoRemaining > 0) {
-      // 获取当前位置
-      const computedStyle = window.getComputedStyle(element);
-      const currentLeft = parseFloat(computedStyle.left);
+    if (remainingDistance > 5) { // 距离太小就不处理了
+      const baseSpeed = window.innerWidth > 768 ? 180 : 150;
+      const actualSpeed = baseSpeed * playbackRate;
+      const newDuration = remainingDistance / actualSpeed;
 
-      // 计算新的动画时长(真实世界时间) = 剩余视频时间 / 播放速度
-      const newDuration = videoRemaining / playbackRate;
-
-      // 移除旧的transition,固定在当前位置
-      element.style.transition = 'none';
-      element.style.left = `${currentLeft}px`;
-
-      // 强制重排
-      element.offsetHeight;
-
-      // 设置新的transition和目标位置
       requestAnimationFrame(() => {
-        element.style.transition = `left ${newDuration}s linear`;
-
-        // 获取目标位置(让弹幕完全移出屏幕)
-        const textWidth = element.offsetWidth || 100;
-        element.style.left = `-${textWidth + 50}px`;
+        // 重新应用动画
+        element.style.transition = `all ${newDuration}s linear`;
+        element.style.left = `${targetLeft}px`;
+        if (element.dataset.isMoveEffect === "true") {
+          element.style.top = `${targetTop}px`;
+        }
       });
-
-      console.log(`更新弹幕 "${element.textContent.substring(0,15)}..." - 视频剩余${videoRemaining.toFixed(1)}s -> 真实${newDuration.toFixed(1)}s (${playbackRate}x速)`);
     }
   });
 }
@@ -509,9 +500,10 @@ function displayCurrentSubtitle(currentTime) {
         // 设置初始位置
         div.style.left = `${startX}px`;
         div.style.top = `${startY}px`;
-        div.dataset.animationStartTime = currentTime;
-        div.dataset.animationDuration = finalDuration;
         div.style.transition = `all ${duration}s linear`;
+        div.dataset.targetLeft = endX;
+        div.dataset.targetTop = endY;
+        div.dataset.isMoveEffect = "true";
 
         // 开始动画
         requestAnimationFrame(() => {
@@ -565,6 +557,7 @@ function displayCurrentSubtitle(currentTime) {
         div.style.left = `${containerWidth}px`; // 从右边开始
         div.style.top = `${position.y}px`;
         div.style.transition = `left ${finalDuration}s linear`;
+        div.dataset.targetLeft = `-${textWidth + 50}`;
 
         console.log(`弹幕 "${cleanTextForMeasure.substring(0, 20)}..." - 行: ${position.line}, 起始X: ${containerWidth}, 宽度: ${textWidth}, 时长: ${finalDuration.toFixed(1)}s`);
 
