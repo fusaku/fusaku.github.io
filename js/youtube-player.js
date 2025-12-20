@@ -52,10 +52,14 @@ function initializeYouTubePlayer() {
       events: {
         'onReady': onPlayerReady,
         'onStateChange': onPlayerStateChange,
-        'onError': onPlayerError
+        'onError': onPlayerError,
+        'onPlaybackRateChange': (event) => {
+          console.log("YouTube 倍速改变为:", event.data);
+          if (window.playbackState) window.playbackState.rate = event.data;
+        }
       }
     });
-
+    window.player = player;
     loadingTimeout = setTimeout(() => {
       console.log('YouTube player timeout, trying fallback');
       tryFallbackPlayer();

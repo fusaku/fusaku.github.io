@@ -51,19 +51,23 @@ function animateSubtitleManual(element) {
 
 // 获取视频播放速度
 function getVideoPlaybackRate() {
-    let rate = 1.0;
-    const video = document.querySelector('video');
-    
-    if (video) {
-        rate = video.playbackRate;
-    } else if (window.player && typeof window.player.getPlaybackRate === 'function') {
-        rate = window.player.getPlaybackRate();
+    // 1. 优先检查全局 playbackState (如果 player.js 里定义了)
+    if (window.playbackState && window.playbackState.rate) {
+        return window.playbackState.rate;
     }
 
-    // 无论如何都打印一次，看看这个函数到底有没有被执行
-    console.log("【检查倍速】当前检测值:", rate, "视频元素是否存在:", !!video);
-    
-    return rate || 1.0;
+    // 2. 直接调用 YouTube 播放器的 API (最准确)
+    if (window.player && typeof window.player.getPlaybackRate === 'function') {
+        try {
+            const rate = window.player.getPlaybackRate();
+            // console.log("从 API 获取到倍速:", rate); // 取消注释可以调试
+            return rate;
+        } catch (e) {
+            return 1.0;
+        }
+    }
+
+    return 1.0;
 }
 
 function parseASSSubtitles(assContent) {
