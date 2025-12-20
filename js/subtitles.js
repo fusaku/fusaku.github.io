@@ -315,48 +315,39 @@ function setupPlaybackRateListener() {
 
 // 更新所有活跃弹幕的动画速度
 function updateActiveSubtitlesSpeeds(playbackRate) {
+  // 确保使用当前作用域内的字幕元素 Map
   subtitleElements.forEach((element, subId) => {
     if (!element || !element.parentNode) return;
 
+    // 1. 获取当前弹幕在屏幕上的实时位置
     const computedStyle = window.getComputedStyle(element);
     const currentLeft = parseFloat(computedStyle.left);
-    const currentTop = parseFloat(computedStyle.top);
-
-    // 【关键修改】如果拿不到 targetLeft，根据当前宽度推算一个，防止 NaN 导致逻辑中断
-    let targetLeft = parseFloat(element.dataset.targetLeft);
-    if (isNaN(targetLeft)) {
-        targetLeft = -(element.offsetWidth + 50);
-    }
-
+    
+    // 2. 立即停止当前动画
     element.style.transition = 'none';
     element.style.left = `${currentLeft}px`;
-    element.style.top = `${currentTop}px`;
-    element.offsetHeight; // 强制重绘
-
-    // 计算 X 轴的剩余距离
-    const distanceX = currentLeft - targetLeft; // 注意：currentLeft (正数) -> targetLeft (负数)
     
-    // 如果是 move 特效
-    let distanceY = 0;
-    let targetTop = currentTop;
-    if (element.dataset.isMoveEffect === "true") {
-        targetTop = parseFloat(element.dataset.targetTop) || currentTop;
-        distanceY = targetTop - currentTop;
-    }
+    // 关键：触发浏览器重绘，让它意识到动画停在了这里
+    element.offsetHeight; 
 
-    const remainingDistance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+    // 3. 获取我们在创建弹幕时保存的终点
+    const targetLeft = parseFloat(element.dataset.targetLeft);
+    if (isNaN(targetLeft)) return;
 
-    if (remainingDistance > 1) { 
+    // 4. 计算剩余路程（因为是从右往左，currentLeft 是正数，targetLeft 是负数）
+    const remainingDistance = currentLeft - targetLeft;
+
+    if (remainingDistance > 0) {
+      // 5. 计算新速度下的剩余时间
+      // 这里的 180 必须和你 displayCurrentSubtitle 里的 pixelsPerSecond 一致
       const baseSpeed = window.innerWidth > 768 ? 180 : 150;
-      const actualSpeed = baseSpeed * playbackRate;
+      const actualSpeed = baseSpeed * playbackRate; 
       const newDuration = remainingDistance / actualSpeed;
 
+      // 6. 重新启动动画
       requestAnimationFrame(() => {
-        element.style.transition = `all ${newDuration}s linear`;
+        element.style.transition = `left ${newDuration}s linear`;
         element.style.left = `${targetLeft}px`;
-        if (element.dataset.isMoveEffect === "true") {
-          element.style.top = `${targetTop}px`;
-        }
       });
     }
   });
@@ -563,14 +554,15 @@ function displayCurrentSubtitle(currentTime) {
         div.style.fontSize = `${fontSize}px`;
         div.style.left = `${containerWidth}px`; // 从右边开始
         div.style.top = `${position.y}px`;
-        div.style.transition = `left ${finalDuration}s linear`;
         div.dataset.targetLeft = -(textWidth + 50);
+        div.dataset.targetLeft = targetLeft;
+        div.style.transition = `left ${finalDuration}s linear`;
 
         console.log(`弹幕 "${cleanTextForMeasure.substring(0, 20)}..." - 行: ${position.line}, 起始X: ${containerWidth}, 宽度: ${textWidth}, 时长: ${finalDuration.toFixed(1)}s`);
 
         // 开始从右到左的动画
         requestAnimationFrame(() => {
-          div.style.left = `-${textWidth + 50}px`; // 移动到左边完全消失
+          div.style.left = `${targetLeft}px`; // 移动到左边完全消失
         });
       }
 
