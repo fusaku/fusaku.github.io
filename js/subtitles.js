@@ -318,33 +318,40 @@ function updateActiveSubtitlesSpeeds(playbackRate) {
   subtitleElements.forEach((element, subId) => {
     if (!element || !element.parentNode) return;
 
-    // 1. 冻结当前位置
     const computedStyle = window.getComputedStyle(element);
     const currentLeft = parseFloat(computedStyle.left);
     const currentTop = parseFloat(computedStyle.top);
 
+    // 【关键修改】如果拿不到 targetLeft，根据当前宽度推算一个，防止 NaN 导致逻辑中断
+    let targetLeft = parseFloat(element.dataset.targetLeft);
+    if (isNaN(targetLeft)) {
+        targetLeft = -(element.offsetWidth + 50);
+    }
+
     element.style.transition = 'none';
     element.style.left = `${currentLeft}px`;
     element.style.top = `${currentTop}px`;
-    element.offsetHeight; // 强制重绘，确保浏览器停止之前的动画
+    element.offsetHeight; // 强制重绘
 
-    // 2. 获取目标位置
-    const targetLeft = parseFloat(element.dataset.targetLeft);
-    const targetTop = parseFloat(element.dataset.targetTop);
+    // 计算 X 轴的剩余距离
+    const distanceX = currentLeft - targetLeft; // 注意：currentLeft (正数) -> targetLeft (负数)
     
-    // 3. 计算剩余距离
-    // 对于普通弹幕，主要计算 X 轴；对于 move 弹幕，计算矢量距离
-    const distanceX = targetLeft - currentLeft;
-    const distanceY = (element.dataset.isMoveEffect === "true") ? (targetTop - currentTop) : 0;
+    // 如果是 move 特效
+    let distanceY = 0;
+    let targetTop = currentTop;
+    if (element.dataset.isMoveEffect === "true") {
+        targetTop = parseFloat(element.dataset.targetTop) || currentTop;
+        distanceY = targetTop - currentTop;
+    }
+
     const remainingDistance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
-    if (remainingDistance > 5) { // 距离太小就不处理了
+    if (remainingDistance > 1) { 
       const baseSpeed = window.innerWidth > 768 ? 180 : 150;
       const actualSpeed = baseSpeed * playbackRate;
       const newDuration = remainingDistance / actualSpeed;
 
       requestAnimationFrame(() => {
-        // 重新应用动画
         element.style.transition = `all ${newDuration}s linear`;
         element.style.left = `${targetLeft}px`;
         if (element.dataset.isMoveEffect === "true") {
@@ -495,7 +502,7 @@ function displayCurrentSubtitle(currentTime) {
         const startX = Math.max(0, Math.min(moveData.x1 * scaleX, containerWidth - 100));
         const startY = Math.max(0, Math.min(moveData.y1 * scaleY, containerHeight - 30));
         const endX = Math.max(-200, Math.min(moveData.x2 * scaleX, containerWidth));
-        const endY = Math.max(0, Math.min(moveData.y2 * scaleY, containerHeight - 30)); ß
+        const endY = Math.max(0, Math.min(moveData.y2 * scaleY, containerHeight - 30)); 
 
         // 设置初始位置
         div.style.left = `${startX}px`;
@@ -557,7 +564,7 @@ function displayCurrentSubtitle(currentTime) {
         div.style.left = `${containerWidth}px`; // 从右边开始
         div.style.top = `${position.y}px`;
         div.style.transition = `left ${finalDuration}s linear`;
-        div.dataset.targetLeft = `-${textWidth + 50}`;
+        div.dataset.targetLeft = -(textWidth + 50);
 
         console.log(`弹幕 "${cleanTextForMeasure.substring(0, 20)}..." - 行: ${position.line}, 起始X: ${containerWidth}, 宽度: ${textWidth}, 时长: ${finalDuration.toFixed(1)}s`);
 
