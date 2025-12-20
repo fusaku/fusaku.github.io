@@ -6,6 +6,12 @@ function parseASSTime(timeStr) {
     parseInt(match[3]) + parseInt(match[4]) / 100;
 }
 
+// 获取视频播放速度
+function getVideoPlaybackRate() {
+  const video = document.querySelector('video');
+  return video ? video.playbackRate : 1.0;
+}
+
 function parseASSSubtitles(assContent) {
   const lines = assContent.split('\n');
   const subtitleLines = [];
@@ -411,7 +417,8 @@ function displayCurrentSubtitle(currentTime) {
         // 弹幕动画：使用ASS坐标系统
         const containerWidth = overlay.offsetWidth || (window.innerWidth > 768 ? 1200 : window.innerWidth);
         const containerHeight = overlay.offsetHeight || (window.innerWidth > 768 ? 675 : window.innerHeight * 0.6);
-        const duration = sub.end - sub.start;
+        const playbackRate = getVideoPlaybackRate();
+        const duration = (sub.end - sub.start) / playbackRate;
 
         // 移动端适配：使用更小的基准分辨率
         const baseWidth = window.innerWidth > 768 ? 640 : 360;
@@ -450,10 +457,13 @@ function displayCurrentSubtitle(currentTime) {
         const calculatedDuration = totalMoveDistance / pixelsPerSecond;
 
         // 限制动画时间
+        const playbackRate = getVideoPlaybackRate();
         const originalDuration = sub.end - sub.start;
         const minDuration = Math.max(3, originalDuration * 0.8);
         const maxDuration = originalDuration * 2.5;
-        const finalDuration = Math.max(minDuration, Math.min(maxDuration, calculatedDuration));
+        const baseDuration = Math.max(minDuration, Math.min(maxDuration, calculatedDuration));
+        // 根据播放速度调整动画时长
+        const finalDuration = baseDuration / playbackRate;
 
         // 计算移动速度 (像素/秒)
         const moveSpeed = totalMoveDistance / finalDuration;
