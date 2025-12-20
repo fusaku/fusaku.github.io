@@ -43,7 +43,7 @@ function animateSubtitleManual(element) {
   element.style.left = `${currentX}px`;
   element.style.top = `${currentY}px`;
 
-  if (Math.random() > 0.95) console.log("进度:", element.dataset.animProgress);
+  // if (Math.random() > 0.95) console.log("进度:", element.dataset.animProgress);
   if (progress < 1 && subtitlesVisible) {
     requestAnimationFrame(() => animateSubtitleManual(element));
   }
