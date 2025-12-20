@@ -22,7 +22,7 @@ function animateSubtitleManual(element) {
   element.dataset.lastFrameTime = now;
 
   let progress = parseFloat(element.dataset.animProgress || 0);
-  const baseDuration = parseFloat(element.dataset.baseDuration);
+  const baseDuration = parseFloat(element.dataset.baseDuration) || 5; // 如果拿不到，默认5秒
 
   // 核心：进度增加量随倍速实时变化
   progress += (deltaTime * playbackRate) / baseDuration;
@@ -36,6 +36,7 @@ function animateSubtitleManual(element) {
   const currentX = startX + (endX - startX) * Math.min(progress, 1);
   const currentY = startY + (endY - startY) * Math.min(progress, 1);
 
+  element.style.transition = 'none';
   element.style.left = `${currentX}px`;
   element.style.top = `${currentY}px`;
 
@@ -46,19 +47,22 @@ function animateSubtitleManual(element) {
 
 // 获取视频播放速度
 function getVideoPlaybackRate() {
-  // 1. 如果是 YouTube API 模式，直接问 player 对象
-  if (window.player && typeof window.player.getPlaybackRate === 'function') {
-    return window.player.getPlaybackRate();
-  }
-  
-  // 2. 如果是普通 HTML5 video 标签
-  const video = document.querySelector('video');
-  if (video) {
-    return video.playbackRate;
-  }
-
-  // 3. 兜底返回 1.0
-  return 1.0;
+    let rate = 1.0;
+    // 尝试寻找页面上所有的 video 标签（兼容某些播放器框架）
+    const videos = document.getElementsByTagName('video');
+    if (videos.length > 0) {
+        rate = videos[0].playbackRate;
+    } 
+    // 尝试 YouTube API
+    else if (window.player && typeof window.player.getPlaybackRate === 'function') {
+        rate = window.player.getPlaybackRate();
+    }
+    
+    // 调试用：如果速度不是1，就在控制台打印，确认逻辑生效
+    if (rate !== 1) {
+        console.log("当前捕捉到的倍速:", rate); 
+    }
+    return rate || 1.0;
 }
 
 function parseASSSubtitles(assContent) {
