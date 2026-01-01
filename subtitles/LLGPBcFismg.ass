@@ -1,0 +1,17 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:15.00,0:00:23.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}おっと！
+Dialogue: 3,0:00:15.96,0:00:23.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こっそり配信
+Dialogue: 3,0:00:23.13,0:00:31.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,18,-342,18)}Telop: 【#やっぱ18期やなっ】
+Dialogue: 3,0:00:26.88,0:00:34.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}延長？
+Dialogue: 3,0:00:29.09,0:00:37.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}配信できてるよ
