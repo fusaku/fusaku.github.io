@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="playerTitle">视频播放 - 字幕播放器</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/summary.css">
 </head>
 
 <body class="player-page" style="height: 100vh; display: flex; flex-direction: column;">
@@ -40,13 +41,27 @@
       <div id="subtitle-overlay"></div>
     </div>
   </div>
-
+  <!-- AI总结功能 -->
+  <div id="video-actions">
+    <button id="summary-button">
+      <div class="button-left">
+        <span class="icon">📝</span>
+        <span class="text" data-i18n="summary.button">AI总结</span>
+      </div>
+      <span class="arrow">▼</span>
+    </button>
+    <div id="summary-content">
+      <div class="content-inner"></div>
+    </div>
+  </div>
+  
   <script src="js/config.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/subtitles.js"></script>
   <script src="js/youtube-player.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/i18n.js"></script>
+  <script src="js/summary.js"></script>
   <script src="js/main.js"></script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
