@@ -6,6 +6,7 @@
   margin: 20px auto 0;
   padding: 0 20px;
   display: none; /* 默认隐藏，检查后显示 */
+  box-sizing: border-box;
 }
 
 /* 总结按钮 */
@@ -24,6 +25,7 @@
   font-weight: 500;
   color: #333;
   transition: background 0.2s ease;
+  box-sizing: border-box;
 }
 
 #summary-button:hover {
@@ -93,6 +95,7 @@
 /* 移动端适配 */
 @media (max-width: 768px) {
   #video-actions {
+    max-width: 100%;
     padding: 0 10px;
     margin: 10px auto 0;
   }
