@@ -18,7 +18,8 @@ async function initializePage() {
     // 并行加载视频标题和字幕
     const [title] = await Promise.all([
       fetchVideoTitle(currentVideoId),
-      loadSubtitles(currentVideoId)
+      loadSubtitles(currentVideoId),
+      initializeSummary(currentVideoId)
     ]);
 
     document.getElementById('video-title').textContent = title;
