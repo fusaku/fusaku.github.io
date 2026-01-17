@@ -88,5 +88,12 @@
     "example": "Sample",
     "hot": "Hot",
     "normal": "Normal"
+  },
+  
+  "summary": {
+    "button": "AI Summary",
+    "loading": "Loading...",
+    "error": "Load failed",
+    "notFound": "No summary"
   }
 }

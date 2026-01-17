@@ -88,5 +88,12 @@
     "example": "サンプル",
     "hot": "人気",
     "normal": "通常"
+  },
+  
+  "summary": {
+    "button": "AI要約",
+    "loading": "読み込み中...",
+    "error": "読み込み失敗",
+    "notFound": "要約なし"
   }
 }

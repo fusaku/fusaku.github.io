@@ -88,5 +88,12 @@
     "example": "示例",
     "hot": "热门", 
     "normal": "普通"
+  },
+  
+    "summary": {
+    "button": "AI总结",
+    "loading": "加载中...",
+    "error": "加载失败",
+    "notFound": "暂无总结"
   }
 }
