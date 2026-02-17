@@ -1,0 +1,51 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}やっほー、ゆいちゃん！
+Dialogue: 3,0:00:12.54,0:00:20.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:14.05,0:00:22.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,54,-144,54)}おつかれさまです
+Dialogue: 3,0:00:15.99,0:00:23.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,72,-162,72)}リミスタありがとう
+Dialogue: 3,0:00:16.25,0:00:24.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}さっほー
+Dialogue: 3,0:00:20.15,0:00:28.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}RESET公演の帰り道〜！
+Dialogue: 3,0:00:21.18,0:00:29.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}やっほー
+Dialogue: 3,0:00:21.43,0:00:29.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,108,-162,108)}22日握手会行くよ
+Dialogue: 3,0:00:24.86,0:00:32.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,54,-324,54)}Telop: 【急配信っ少しだけっ】
+Dialogue: 3,0:00:25.58,0:00:33.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:25.82,0:00:33.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}やっほー！
+Dialogue: 3,0:00:26.33,0:00:34.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:00:26.56,0:00:34.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:00:27.68,0:00:35.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,162,-270,162)}さっきぶり〜ツインゆいちゃん！
+Dialogue: 3,0:00:27.90,0:00:35.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,180,-108,180)}こんばんは！
+Dialogue: 3,0:00:32.54,0:00:40.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:36.83,0:00:44.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}リミスタ癒されたー！
+Dialogue: 3,0:00:37.04,0:00:45.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:38.46,0:00:46.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}おつかれ〜
+Dialogue: 3,0:00:45.41,0:00:53.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:46.75,0:00:54.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:47.14,0:00:55.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}ながーい！
+Dialogue: 3,0:00:47.53,0:00:55.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}2枚書いてくれてありがとー！
+Dialogue: 3,0:00:51.51,0:00:59.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,90,-306,90)}公演だったから見れなかったリミスタ
+Dialogue: 3,0:00:55.39,0:01:03.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}可愛いよ🥰
+Dialogue: 3,0:00:56.61,0:01:04.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}ツインテールカワイイヨー
+Dialogue: 3,0:00:57.52,0:01:05.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}見ていたよ(^^)
+Dialogue: 3,0:00:59.09,0:01:07.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}可愛い〜
+Dialogue: 3,0:01:00.14,0:01:08.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:01:00.82,0:01:08.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}ツインテール
+Dialogue: 3,0:01:02.57,0:01:10.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:01:07.22,0:01:15.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:01:08.72,0:01:16.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:01:10.91,0:01:18.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}さっきはリミスタありがとう🎶
+Dialogue: 3,0:01:11.33,0:01:19.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:01:15.79,0:01:23.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,18,-396,18)}でもよっさんから見せてもらったありがとうね〜
+Dialogue: 3,0:01:20.22,0:01:28.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}見たかった　ファンイベで
+Dialogue: 3,0:01:22.05,0:01:30.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:01:23.78,0:01:31.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}誰か来た？
