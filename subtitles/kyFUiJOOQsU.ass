@@ -1,0 +1,45 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}ファンサありがとうござる
+Dialogue: 3,0:00:13.73,0:00:21.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:24.21,0:00:32.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}8位よ
+Dialogue: 3,0:00:29.32,0:00:37.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}おおきにー
+Dialogue: 3,0:00:30.29,0:00:38.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,54,-144,54)}88888888
+Dialogue: 3,0:00:30.73,0:00:38.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,72,-18,72)}🍓
+Dialogue: 3,0:00:32.00,0:00:40.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}おおきに～
+Dialogue: 3,0:00:38.46,0:00:46.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,18,-396,18)}おおきに〜まいど〜おおきに〜88888888
+Dialogue: 3,0:00:43.66,0:00:51.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:45.07,0:00:53.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}おおきに
+Dialogue: 3,0:00:45.74,0:00:53.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}おおきにー
+Dialogue: 3,0:00:51.65,0:00:59.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}おつかれさまです
+Dialogue: 3,0:00:53.68,0:01:01.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}優しいすぎて好きです
+Dialogue: 3,0:01:00.61,0:01:08.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}了解です🫡
+Dialogue: 3,0:01:01.25,0:01:09.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}おつかれさまー
+Dialogue: 3,0:01:01.54,0:01:09.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:01:03.60,0:01:11.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}ありがとう
+Dialogue: 3,0:01:04.15,0:01:12.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,90,-162,90)}ずんちゃん優しいね
+Dialogue: 3,0:01:09.25,0:01:17.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}(｀・ω・´)ゝ
+Dialogue: 3,0:01:10.61,0:01:18.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}優しい
+Dialogue: 3,0:01:10.67,0:01:18.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,72,-126,72)}おやすみなさい
+Dialogue: 3,0:01:12.59,0:01:20.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}おやすみなさい
+Dialogue: 3,0:01:12.90,0:01:20.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}おひさ〜
+Dialogue: 3,0:01:13.67,0:01:21.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,108,-90,108)}やさしさ～
+Dialogue: 3,0:01:16.15,0:01:24.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,126,-126,126)}おやすみなさい
+Dialogue: 3,0:01:18.41,0:01:26.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}またね～
+Dialogue: 3,0:01:19.79,0:01:27.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,54,-36,54)}りょ
+Dialogue: 3,0:01:21.47,0:01:29.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}またねー
+Dialogue: 3,0:01:22.76,0:01:30.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,72,-180,72)}ずんちゃんずんちゃん
+Dialogue: 3,0:01:24.62,0:01:32.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}またねー
+Dialogue: 3,0:01:25.08,0:01:33.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}またね
+Dialogue: 3,0:01:28.32,0:01:36.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}ばいばい
+Dialogue: 3,0:01:30.52,0:01:38.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}またな～ん
