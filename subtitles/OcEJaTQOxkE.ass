@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}エンタメ学園観たよー
+Dialogue: 3,0:00:12.04,0:00:20.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:12.30,0:00:20.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:13.64,0:00:21.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:14.33,0:00:22.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:00:15.63,0:00:23.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:15.97,0:00:23.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:00:16.53,0:00:24.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,144,-90,144)}こんばんは
+Dialogue: 3,0:00:17.87,0:00:25.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}こんばんは！
+Dialogue: 3,0:00:18.15,0:00:26.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,180,-108,180)}こんばんは！
+Dialogue: 3,0:00:18.26,0:00:26.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,198,-108,198)}こんばんは！
+Dialogue: 3,0:00:18.81,0:00:26.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,216,-36,216)}無音
+Dialogue: 3,0:00:19.72,0:00:27.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,234,-108,234)}こんばんは！
+Dialogue: 3,0:00:22.55,0:00:30.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}音？
+Dialogue: 3,0:00:28.00,0:00:36.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}がんばってください！
+Dialogue: 3,0:00:32.70,0:00:40.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}音出てないよ。
+Dialogue: 3,0:00:33.31,0:00:41.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:36.98,0:00:44.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:36.99,0:00:44.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:37.28,0:00:45.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:00:38.04,0:00:46.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:38.12,0:00:46.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}お父様
+Dialogue: 3,0:00:39.26,0:00:47.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:00:40.00,0:00:48.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}こんばんは！
+Dialogue: 3,0:00:44.07,0:00:52.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}聞こえない
+Dialogue: 3,0:00:44.52,0:00:52.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:47.17,0:00:55.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,36,-414,36)}エンタメ学園のドライブの良かったが惜しかったな
+Dialogue: 3,0:00:47.23,0:00:55.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}おっイイ女🎵
+Dialogue: 3,0:00:48.12,0:00:56.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}聞こえませんねえ
+Dialogue: 3,0:00:49.66,0:00:57.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,108,-72,108)}音無か？
+Dialogue: 3,0:00:49.81,0:00:57.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,126,-90,126)}初見です！
+Dialogue: 3,0:00:50.37,0:00:58.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:00:53.15,0:01:01.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:54.23,0:01:02.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}映ってます！
+Dialogue: 3,0:00:55.82,0:01:03.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:55.99,0:01:03.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:56.39,0:01:04.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:01:00.23,0:01:08.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:01:01.42,0:01:09.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}☆？
+Dialogue: 3,0:01:01.93,0:01:09.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:01:02.28,0:01:10.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}今日は早寝部するンゴ？
+Dialogue: 3,0:01:02.90,0:01:10.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:01:05.02,0:01:13.02,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:01:05.83,0:01:13.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
