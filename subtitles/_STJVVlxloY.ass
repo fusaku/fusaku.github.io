@@ -1,0 +1,22 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:13.49,0:00:21.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:13.75,0:00:21.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:13.75,0:00:21.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,72,-126,72)}きっかけ配信？
+Dialogue: 3,0:00:14.49,0:00:22.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:00:16.38,0:00:24.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:17.68,0:00:25.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,126,-180,126)}こんばんは｡◕‿◕｡
+Dialogue: 3,0:00:17.85,0:00:25.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}きっかけ配信
+Dialogue: 3,0:00:18.26,0:00:26.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}はーい
+Dialogue: 3,0:00:18.50,0:00:26.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,180,-54,180)}何これ
