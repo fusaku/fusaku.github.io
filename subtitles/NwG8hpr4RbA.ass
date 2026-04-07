@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:15.18,0:00:23.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:15.73,0:00:23.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1126,54,-486,54)}(っ’-’)╮--- 100✨ 🤍🕊️ ^ - ^)ノ
+Dialogue: 3,0:00:18.13,0:00:26.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}こんばんは
+Dialogue: 3,0:00:20.34,0:00:28.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:22.68,0:00:30.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:00:23.10,0:00:31.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,108,-72,108)}謎機能だ
+Dialogue: 3,0:00:28.22,0:00:36.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1342,36,-702,36)}各ルーム毎に、前月と今月の総視聴時間が6時間未満の視聴者はコメントできないのか
+Dialogue: 3,0:00:30.49,0:00:38.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:36.79,0:00:44.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:36.92,0:00:44.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:38.08,0:00:46.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:41.82,0:00:49.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}のちほどー
+Dialogue: 3,0:00:48.26,0:00:56.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:48.27,0:00:56.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:52.14,0:01:00.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}またね
+Dialogue: 3,0:00:53.83,0:01:01.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:56.84,0:01:04.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}あそびにきたよ！
