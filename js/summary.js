@@ -62,7 +62,12 @@ async function toggleSummary() {
     summaryContent = await loadSummaryContent(currentVideoId);
 
     // 显示内容
-    contentInner.textContent = summaryContent;
+    if (typeof marked !== 'undefined') {
+      contentInner.innerHTML = marked.parse(summaryContent);
+    } else {
+      // 兜底方案：如果库没加载成功，显示原始文本
+      contentInner.textContent = summaryContent;
+    }
     summaryLoaded = true;
 
   } catch (error) {
@@ -79,7 +84,7 @@ async function initializeSummary(videoId) {
     const exists = await checkSummaryExists(videoId);
     if (exists) {
       showSummaryButton();
-      
+
       // 绑定点击事件
       const button = document.getElementById('summary-button');
       if (button) {
