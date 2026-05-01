@@ -5,7 +5,8 @@
   max-width: 1200px;
   margin: 20px auto 0;
   padding: 0 20px;
-  display: none; /* 默认隐藏，检查后显示 */
+  display: none;
+  /* 默认隐藏，检查后显示 */
   box-sizing: border-box;
 }
 
@@ -125,4 +126,40 @@
   #summary-content.expanded {
     max-height: 300px;
   }
+}
+
+/* Markdown 样式修饰 */
+.content-inner h1,
+.content-inner h2,
+.content-inner h3 {
+  margin: 15px 0 10px 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.content-inner ul,
+.content-inner ol {
+  padding-left: 1.5em;
+  margin: 10px 0;
+  list-style: disc !important;
+  /* 确保显示圆点[cite: 1] */
+}
+
+.content-inner li {
+  margin-bottom: 5px;
+}
+
+.content-inner code {
+  background: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.content-inner blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 10px;
+  color: #666;
+  margin: 10px 0;
 }
