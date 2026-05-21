@@ -1,0 +1,1109 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:12.73,0:00:20.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1252,36,-612,36)}Hi Hachan~ Finally can live hahaha
+Dialogue: 3,0:00:14.69,0:00:22.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:17.30,0:00:25.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}hello Hachan 🌻
+Dialogue: 3,0:00:19.74,0:00:27.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,90,-54,90)}大丈夫
+Dialogue: 3,0:00:19.83,0:00:27.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:20.19,0:00:28.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:20.23,0:00:28.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:00:21.80,0:00:29.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:24.12,0:00:32.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,54,-144,54)}全然大丈夫だよ〜
+Dialogue: 3,0:00:24.52,0:00:32.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:00:25.26,0:00:33.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}こんばんは！
+Dialogue: 3,0:00:28.20,0:00:36.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:29.52,0:00:37.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,72,-306,72)}show room problem
+Dialogue: 3,0:00:33.90,0:00:41.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}え？！大丈夫？
+Dialogue: 3,0:00:37.96,0:00:45.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,18,-306,18)}大丈夫よ。いつもみんな優しいので。
+Dialogue: 3,0:00:40.55,0:00:48.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}hello Hachan 🌻
+Dialogue: 3,0:00:41.77,0:00:49.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:47.09,0:00:55.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,18,-360,18)}こんばんは　パンダTのおじさんです。ノシ
+Dialogue: 3,0:00:47.18,0:00:55.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,36,-342,36)}welcome back hachan
+Dialogue: 3,0:00:47.22,0:00:55.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:00:47.73,0:00:55.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,108,-90,108)}コメントも
+Dialogue: 3,0:00:54.33,0:01:02.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:54.72,0:01:02.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:57.04,0:01:05.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}お久しぶりです
+Dialogue: 3,0:00:57.86,0:01:05.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}昨日は公演お疲れ様～～～
+Dialogue: 3,0:01:00.91,0:01:08.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:01:01.05,0:01:09.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,108,-234,108)}はーちゃんの画面が真っ暗？
+Dialogue: 3,0:01:05.29,0:01:13.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,18,-414,18)}something wrong with it
+Dialogue: 3,0:01:06.07,0:01:14.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,36,-252,36)}hello Hachan 🌻
+Dialogue: 3,0:01:07.21,0:01:15.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}トラブルや
+Dialogue: 3,0:01:08.76,0:01:16.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:01:09.18,0:01:17.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:01:09.21,0:01:17.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:01:10.41,0:01:18.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:01:11.32,0:01:19.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,144,-54,144)}ノシw
+Dialogue: 3,0:01:17.81,0:01:25.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,18,-450,18)}Finally can live Hachan~~
+Dialogue: 3,0:01:19.26,0:01:27.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}Hello～～～～
+Dialogue: 3,0:01:19.65,0:01:27.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}hello
+Dialogue: 3,0:01:19.74,0:01:27.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}クロース
+Dialogue: 3,0:01:21.53,0:01:29.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,90,-324,90)}絵柄が影になっちゃうことよくあるよね
+Dialogue: 3,0:01:21.75,0:01:29.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:01:21.92,0:01:29.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:01:23.85,0:01:31.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,144,-360,144)}問題ないです。はーちゃんの笑顔があれば。
+Dialogue: 3,0:01:24.20,0:01:32.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}こんばんは！
+Dialogue: 3,0:01:25.01,0:01:33.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,180,-36,180)}妳好
+Dialogue: 3,0:01:26.29,0:01:34.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}でた！マレーシアのやつ！
+Dialogue: 3,0:01:29.81,0:01:37.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}herrrllooo
+Dialogue: 3,0:01:30.16,0:01:38.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:01:31.31,0:01:39.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,72,-180,72)}あ　見たことある背景
+Dialogue: 3,0:01:33.32,0:01:41.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,90,-342,90)}久々にはーちゃんの配信見れて、嬉しい♪
+Dialogue: 3,0:01:34.16,0:01:42.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:01:40.78,0:01:48.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,18,-378,18)}Xのポストみてマレーシア行ったのかと思った
+Dialogue: 3,0:01:42.15,0:01:50.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}UPーTラジオ、聴いたよーーーーー
+Dialogue: 3,0:01:47.20,0:01:55.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}nak sikit
+Dialogue: 3,0:01:47.52,0:01:55.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}ノシなっつ
+Dialogue: 3,0:01:50.32,0:01:58.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}久々に配信来れた～～～～
+Dialogue: 3,0:01:51.45,0:01:59.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}それ美味しいよね〜🍫
+Dialogue: 3,0:01:56.85,0:02:04.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}buy at airport？😂
+Dialogue: 3,0:01:58.27,0:02:06.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,72,-198,72)}beryl sedap
+Dialogue: 3,0:01:58.52,0:02:06.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:02:02.74,0:02:10.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:02:03.70,0:02:11.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:02:05.00,0:02:13.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:02:05.05,0:02:13.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,108,-198,108)}水、持ってきて良いよ〜
+Dialogue: 3,0:02:07.45,0:02:15.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}甘いの？
+Dialogue: 3,0:02:09.10,0:02:17.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}飲み物取りに行っても良いよ👍
+Dialogue: 3,0:02:09.61,0:02:17.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,126,-252,126)}this one sedap
+Dialogue: 3,0:02:16.30,0:02:24.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}ドバイチョコ？
+Dialogue: 3,0:02:19.91,0:02:27.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}Hachan sihat?
+Dialogue: 3,0:02:21.05,0:02:29.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,54,-144,54)}取ってきていいよ
+Dialogue: 3,0:02:22.51,0:02:30.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,72,-162,72)}いってらっしゃーい
+Dialogue: 3,0:02:22.51,0:02:30.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,90,-36,90)}氷氷
+Dialogue: 3,0:02:23.03,0:02:31.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,108,-126,108)}もっておいで！
+Dialogue: 3,0:02:23.24,0:02:31.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}どうぞ
+Dialogue: 3,0:02:24.31,0:02:32.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}konbanwa
+Dialogue: 3,0:02:30.42,0:02:38.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:02:34.29,0:02:42.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}マレーシアへ水取りに行くの？
+Dialogue: 3,0:02:41.17,0:02:49.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,36,-288,36)}いってらっしゃい。気を付けてなえ
+Dialogue: 3,0:02:50.24,0:02:58.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}久しぶりshowroom来た
+Dialogue: 3,0:02:53.51,0:03:01.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:02:55.67,0:03:03.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:03:04.57,0:03:12.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}いつものお部屋だね
+Dialogue: 3,0:03:07.21,0:03:15.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}はじめまして！
+Dialogue: 3,0:03:08.24,0:03:16.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:03:13.59,0:03:21.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}Hachan sihat?
+Dialogue: 3,0:03:15.27,0:03:23.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:03:16.11,0:03:24.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}お帰り
+Dialogue: 3,0:03:16.43,0:03:24.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:03:21.03,0:03:29.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,90,-306,90)}ただいまのタイムは…「31秒」笑笑
+Dialogue: 3,0:03:21.96,0:03:29.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}かわいいっ！
+Dialogue: 3,0:03:28.10,0:03:36.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}可愛い！
+Dialogue: 3,0:03:29.59,0:03:37.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}かわいいね
+Dialogue: 3,0:03:32.56,0:03:40.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:03:33.55,0:03:41.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}かわいい
+Dialogue: 3,0:03:34.16,0:03:42.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,90,-324,90)}はーちゃんこんばんは〜かわいいよ!!
+Dialogue: 3,0:03:34.96,0:03:42.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,108,-234,108)}Hachan sihat?
+Dialogue: 3,0:03:38.67,0:03:46.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}うまい！
+Dialogue: 3,0:03:39.59,0:03:47.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:03:40.63,0:03:48.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}字がどういう意味？
+Dialogue: 3,0:03:40.67,0:03:48.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,126,-216,126)}割らないようにしないとね
+Dialogue: 3,0:03:41.06,0:03:49.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,144,-198,144)}merdeka day
+Dialogue: 3,0:03:42.05,0:03:50.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}おしゃん✨
+Dialogue: 3,0:03:44.14,0:03:52.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,90,-252,90)}マレーシアっぽいものいっぱい
+Dialogue: 3,0:03:47.16,0:03:55.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}showroom久しぶり！
+Dialogue: 3,0:04:00.03,0:04:08.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:04:10.72,0:04:18.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,18,-450,18)}去年行った時、ちょうどそのころじゃなかったかなあ。
+Dialogue: 3,0:04:14.96,0:04:22.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}はーちゃんまだ少し鼻声さんだよね？
+Dialogue: 3,0:04:18.54,0:04:26.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:04:20.58,0:04:28.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:04:21.10,0:04:29.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,72,-216,72)}インディペンデント・デイ
+Dialogue: 3,0:04:23.80,0:04:31.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}ハイビスカス？
+Dialogue: 3,0:04:28.55,0:04:36.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,54,-216,54)}betul betul~
+Dialogue: 3,0:04:33.63,0:04:41.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}かわいいコップ👏
+Dialogue: 3,0:04:35.71,0:04:43.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}Yess
+Dialogue: 3,0:04:39.21,0:04:47.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:04:41.39,0:04:49.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}hibiscus
+Dialogue: 3,0:04:41.45,0:04:49.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,90,-216,90)}ラフレシアっぽくみえる！
+Dialogue: 3,0:04:42.98,0:04:50.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}そうです
+Dialogue: 3,0:04:43.61,0:04:51.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:04:46.33,0:04:54.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}あってる
+Dialogue: 3,0:04:47.68,0:04:55.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:04:47.99,0:04:55.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,126,-432,126)}yeah... rafflesia flower
+Dialogue: 3,0:04:48.94,0:04:56.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,144,-90,144)}腐った☆ね
+Dialogue: 3,0:04:53.15,0:05:01.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}残念な状態の時ねw
+Dialogue: 3,0:04:55.78,0:05:03.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}お土産ですか
+Dialogue: 3,0:04:56.76,0:05:04.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}ポケモンにもラフレシアって居るよ
+Dialogue: 3,0:04:58.29,0:05:06.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,72,-162,72)}Rafflesia
+Dialogue: 3,0:04:58.74,0:05:06.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,90,-288,90)}that's wau bulan
+Dialogue: 3,0:05:14.21,0:05:22.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}腐った　臭 い ね
+Dialogue: 3,0:05:17.83,0:05:25.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}幻の花だよね
+Dialogue: 3,0:05:18.39,0:05:26.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,54,-324,54)}ラフレシア、東南アジアにあるイメージ
+Dialogue: 3,0:05:21.04,0:05:29.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,72,-234,72)}こんばんは🐱チュロス社長😊
+Dialogue: 3,0:05:31.10,0:05:39.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:05:31.16,0:05:39.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}nasi lemak
+Dialogue: 3,0:05:34.30,0:05:42.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}klcc
+Dialogue: 3,0:05:36.40,0:05:44.40,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,72,-198,72)}ナシゴレンじゃないのね
+Dialogue: 3,0:05:41.69,0:05:49.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}ツインタワーもある
+Dialogue: 3,0:05:44.25,0:05:52.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:05:44.73,0:05:52.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,54,-306,54)}yeah...in Sarawak
+Dialogue: 3,0:05:47.77,0:05:55.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}アメリカヤマシギ
+Dialogue: 3,0:05:51.59,0:05:59.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:05:51.84,0:05:59.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,90,-18,90)}鳥
+Dialogue: 3,0:05:52.99,0:06:00.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}sarawak bird
+Dialogue: 3,0:05:56.29,0:06:04.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,54,-342,54)}はーちゃん物知りーーー！(それはそう)
+Dialogue: 3,0:06:07.39,0:06:15.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,18,-342,18)}Rhinoceros Hornbill
+Dialogue: 3,0:06:11.12,0:06:19.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,36,-324,36)}こっちに来て初の日でも見たじゃん^^
+Dialogue: 3,0:06:15.05,0:06:23.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:06:21.22,0:06:29.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:06:22.04,0:06:30.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1324,36,-684,36)}the name is burung enggang or hornbill
+Dialogue: 3,0:06:22.61,0:06:30.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:06:23.01,0:06:31.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:06:23.82,0:06:31.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}wau
+Dialogue: 3,0:06:32.03,0:06:40.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:06:32.53,0:06:40.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,36,-288,36)}動かない鳥ハシビロコウかと思った
+Dialogue: 3,0:06:33.45,0:06:41.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}バードパークででみたやつだ！
+Dialogue: 3,0:06:34.90,0:06:42.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,72,-180,72)}teh tarik!
+Dialogue: 3,0:06:38.90,0:06:46.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,90,-162,90)}teh tarik
+Dialogue: 3,0:06:40.67,0:06:48.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}maybe?
+Dialogue: 3,0:06:42.84,0:06:50.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:06:47.77,0:06:55.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1252,54,-612,54)}it like kite but we call wau bulan
+Dialogue: 3,0:06:55.01,0:07:03.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:06:56.44,0:07:04.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}おいしいやつ！
+Dialogue: 3,0:06:59.31,0:07:07.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}ビール？
+Dialogue: 3,0:07:16.57,0:07:24.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}美人さん♥️
+Dialogue: 3,0:07:29.33,0:07:37.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}what happen??
+Dialogue: 3,0:07:31.88,0:07:39.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}hang
+Dialogue: 3,0:07:32.57,0:07:40.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}飲んで飲んで
+Dialogue: 3,0:07:37.75,0:07:45.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}お水飲んで
+Dialogue: 3,0:07:39.85,0:07:47.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}what happen???
+Dialogue: 3,0:07:41.28,0:07:49.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}画面動いてないかも！
+Dialogue: 3,0:07:41.69,0:07:49.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,54,-324,54)}Wau bulan 月のタコ？カイト
+Dialogue: 3,0:07:43.80,0:07:51.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}ラジオ配信？
+Dialogue: 3,0:07:44.13,0:07:52.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:07:45.13,0:07:53.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}あれ？
+Dialogue: 3,0:07:48.73,0:07:56.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}画面止まってる
+Dialogue: 3,0:07:51.40,0:07:59.40,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}what happen??
+Dialogue: 3,0:07:51.47,0:07:59.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}音声だけ
+Dialogue: 3,0:07:51.96,0:07:59.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,72,-180,72)}lag a bit？
+Dialogue: 3,0:07:52.44,0:08:00.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,90,-126,90)}画面固まってる
+Dialogue: 3,0:07:56.42,0:08:04.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,108,-162,108)}声は聞こえてるよ〜
+Dialogue: 3,0:07:58.17,0:08:06.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}音は大丈夫
+Dialogue: 3,0:08:04.27,0:08:12.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}えーー
+Dialogue: 3,0:08:09.59,0:08:17.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}あ、うごいた！
+Dialogue: 3,0:08:09.67,0:08:17.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,54,-36,54)}eh
+Dialogue: 3,0:08:09.83,0:08:17.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}治ったよ
+Dialogue: 3,0:08:11.29,0:08:19.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}今動いた
+Dialogue: 3,0:08:12.24,0:08:20.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}動いた
+Dialogue: 3,0:08:12.55,0:08:20.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}hang
+Dialogue: 3,0:08:13.00,0:08:21.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}動いた
+Dialogue: 3,0:08:13.01,0:08:21.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,144,-216,144)}can see liao
+Dialogue: 3,0:08:13.01,0:08:21.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}動いた
+Dialogue: 3,0:08:13.26,0:08:21.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,180,-54,180)}動いた
+Dialogue: 3,0:08:13.84,0:08:21.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,198,-126,198)}治った！！！！
+Dialogue: 3,0:08:14.34,0:08:22.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,216,-108,216)}こんばんは！
+Dialogue: 3,0:08:14.95,0:08:22.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,234,-54,234)}動いた
+Dialogue: 3,0:08:15.61,0:08:23.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,252,-54,252)}動いた
+Dialogue: 3,0:08:15.90,0:08:23.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,270,-54,270)}直った
+Dialogue: 3,0:08:16.92,0:08:24.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,288,-90,288)}動いてるよ
+Dialogue: 3,0:08:20.93,0:08:28.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}where r u hachan
+Dialogue: 3,0:08:23.24,0:08:31.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}おカイリ
+Dialogue: 3,0:08:23.45,0:08:31.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}動いた！
+Dialogue: 3,0:08:23.69,0:08:31.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:08:25.68,0:08:33.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:08:25.88,0:08:33.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:08:27.84,0:08:35.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,126,-306,126)}マレシーアのミルクティーが好きだな
+Dialogue: 3,0:08:29.86,0:08:37.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}絶妙なタイミングで治った笑笑
+Dialogue: 3,0:08:37.97,0:08:45.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:08:38.98,0:08:46.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}なるほど
+Dialogue: 3,0:08:41.27,0:08:49.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1504,54,-864,54)}the design on mug is sarawak shield if not wrong
+Dialogue: 3,0:08:48.36,0:08:56.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:08:53.14,0:09:01.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,36,-342,36)}はーちゃん、６月はめっちゃ劇場出るやん
+Dialogue: 3,0:09:04.11,0:09:12.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,18,-378,18)}背景が見慣れた背景でめちゃくちゃ安心する🥺
+Dialogue: 3,0:09:04.59,0:09:12.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}おかえりちゃん
+Dialogue: 3,0:09:04.90,0:09:12.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}おかえりちゃん
+Dialogue: 3,0:09:08.57,0:09:16.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:09:09.06,0:09:17.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,90,-450,90)}おかえり〜how was hachan trip?
+Dialogue: 3,0:09:10.60,0:09:18.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,108,-288,108)}久しくぶりなので緊張してるのかな
+Dialogue: 3,0:09:11.42,0:09:19.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,126,-90,126)}ただいまー
+Dialogue: 3,0:09:21.42,0:09:29.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}お披露目の頃からしてるねー
+Dialogue: 3,0:09:26.86,0:09:34.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}どういう感情w
+Dialogue: 3,0:09:44.59,0:09:52.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}今度の日曜日28日に行くよ～
+Dialogue: 3,0:09:45.00,0:09:53.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}RESET職人だね🤘
+Dialogue: 3,0:09:50.53,0:09:58.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1468,54,-828,54)}you will be very busy next month gambatte neeh
+Dialogue: 3,0:09:52.10,0:10:00.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,72,-360,72)}オンライントークも楽しみだなー久しぶりに
+Dialogue: 3,0:09:52.64,0:10:00.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}当てて～ーー！劇場ーーー
+Dialogue: 3,0:09:53.45,0:10:01.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}現在、申し込み中
+Dialogue: 3,0:09:54.01,0:10:02.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:09:54.10,0:10:02.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,108,-288,108)}劇場いっぱい出てくれるの嬉しい😊
+Dialogue: 3,0:09:57.62,0:10:05.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:10:15.43,0:10:23.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}＞＜
+Dialogue: 3,0:10:16.41,0:10:24.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}24日の昼RESET行くね
+Dialogue: 3,0:10:17.06,0:10:25.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:10:19.12,0:10:27.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,72,-288,72)}見つけてね。うちわとペンライト！
+Dialogue: 3,0:10:20.91,0:10:28.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,90,-432,90)}6月は握手会行けないので劇場で宜しくお願いします
+Dialogue: 3,0:10:23.22,0:10:31.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,108,-162,108)}がんばってね〜^^
+Dialogue: 3,0:10:24.39,0:10:32.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}かっこいい発音！
+Dialogue: 3,0:10:35.41,0:10:43.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,18,-450,18)}Rrrrrrrrrrrrrrrrrrrrrrfff
+Dialogue: 3,0:10:46.57,0:10:54.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}9月の大阪でのお話会、久々じゃない？
+Dialogue: 3,0:10:58.68,0:11:06.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}(✯ᴗ✯)(✯ᴗ✯)
+Dialogue: 3,0:11:05.96,0:11:13.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1234,36,-594,36)}昨日の自己紹介MCが一番自然にキャッチフレーズ言えてたね（╹◡╹）
+Dialogue: 3,0:11:10.45,0:11:18.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}22日は当たりたい🙏🙇‍♀
+Dialogue: 3,0:11:10.83,0:11:18.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:11:13.95,0:11:21.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,72,-234,72)}9月の大阪個別が待ち遠しい
+Dialogue: 3,0:11:17.92,0:11:25.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}はーちゃんの進撃！
+Dialogue: 3,0:11:25.43,0:11:33.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:11:35.43,0:11:43.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}たこ焼きポーズしなきゃ🐙
+Dialogue: 3,0:11:50.95,0:11:58.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}コロナ前だよね？
+Dialogue: 3,0:11:51.59,0:11:59.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1324,36,-684,36)}今仕事終わったーーーっっ間に合った❣️(退勤する前からアプリ開いてた^_^)
+Dialogue: 3,0:11:57.03,0:12:05.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,54,-180,54)}こんばんはーちゃん！
+Dialogue: 3,0:11:59.79,0:12:07.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:12:00.79,0:12:08.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:12:05.30,0:12:13.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}yuhoo
+Dialogue: 3,0:12:10.10,0:12:18.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}hachan dah mkn?
+Dialogue: 3,0:12:15.02,0:12:23.02,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:12:15.28,0:12:23.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1342,54,-702,54)}コロナのころ、意を決して大阪握手会行こうとしたら中止だったのを思い出しました。
+Dialogue: 3,0:12:20.05,0:12:28.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}今日は背景緑色だね笑
+Dialogue: 3,0:12:22.56,0:12:30.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:12:23.91,0:12:31.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}止まった
+Dialogue: 3,0:12:24.83,0:12:32.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,54,-414,54)}ずっきーとだっけ？大阪の街で迷子になったの？笑
+Dialogue: 3,0:12:26.35,0:12:34.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}固まった？
+Dialogue: 3,0:12:29.69,0:12:37.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}画面止まった笑
+Dialogue: 3,0:12:30.85,0:12:38.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,72,-540,72)}柱ナイトで投稿読まれてよかったね(^_^)/　よっ！ネタ職人
+Dialogue: 3,0:12:31.65,0:12:39.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}また固まった
+Dialogue: 3,0:12:32.26,0:12:40.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:12:34.34,0:12:42.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:12:34.67,0:12:42.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}また固まってる〜
+Dialogue: 3,0:12:35.34,0:12:43.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,126,-126,126)}また固まってる
+Dialogue: 3,0:12:37.51,0:12:45.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,144,-126,144)}こんばんは～！
+Dialogue: 3,0:12:38.06,0:12:46.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,18,-342,18)}video stop again？ww
+Dialogue: 3,0:12:38.94,0:12:46.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:12:39.66,0:12:47.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,108,-144,108)}suka c☆e
+Dialogue: 3,0:12:44.98,0:12:52.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:12:46.01,0:12:54.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}Hang~
+Dialogue: 3,0:12:50.13,0:12:58.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}画面が止まって見えない
+Dialogue: 3,0:12:50.68,0:12:58.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,72,-180,72)}hang again
+Dialogue: 3,0:12:53.55,0:13:01.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}固まってる笑
+Dialogue: 3,0:12:59.86,0:13:07.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1234,18,-594,18)}hachan really love c☆e dayo ne~＞＜
+Dialogue: 3,0:13:00.49,0:13:08.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}Zero はやばい
+Dialogue: 3,0:13:00.70,0:13:08.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,72,-234,72)}hang again???
+Dialogue: 3,0:13:01.88,0:13:09.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1144,36,-504,36)}Hang with pretty Hachan face
+Dialogue: 3,0:13:01.90,0:13:09.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}WiFiの問題？
+Dialogue: 3,0:13:02.01,0:13:10.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:13:07.05,0:13:15.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,126,-234,126)}ずっと笑顔で止まってるよ笑
+Dialogue: 3,0:13:09.96,0:13:17.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}笑顔で止まってるね
+Dialogue: 3,0:13:10.21,0:13:18.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}撮るんかい
+Dialogue: 3,0:13:12.15,0:13:20.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}え？！怖いこと起きたの？大丈夫？
+Dialogue: 3,0:13:16.99,0:13:24.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}どうしたの？
+Dialogue: 3,0:13:25.68,0:13:33.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,18,-18,18)}w
+Dialogue: 3,0:13:26.22,0:13:34.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}何が起こってるの？
+Dialogue: 3,0:13:27.07,0:13:35.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}www
+Dialogue: 3,0:13:27.53,0:13:35.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1216,72,-576,72)}SHOWROOMさんも、世界に見られて緊張しているのかな？(笑)
+Dialogue: 3,0:13:30.82,0:13:38.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,90,-252,90)}what happen???
+Dialogue: 3,0:13:34.28,0:13:42.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}完全に止まった😅
+Dialogue: 3,0:13:36.76,0:13:44.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}一旦閉じる？
+Dialogue: 3,0:13:41.44,0:13:49.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,54,-18,54)}ど
+Dialogue: 3,0:13:48.06,0:13:56.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}あ、動いてる！
+Dialogue: 3,0:13:48.99,0:13:56.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}治った
+Dialogue: 3,0:13:49.27,0:13:57.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,72,-198,72)}こっちは何も見えてない
+Dialogue: 3,0:13:50.39,0:13:58.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}治った
+Dialogue: 3,0:13:50.72,0:13:58.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}怖い怖い
+Dialogue: 3,0:13:50.90,0:13:58.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,108,-90,108)}動いた～！
+Dialogue: 3,0:13:50.95,0:13:58.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,126,-144,126)}ok liao～
+Dialogue: 3,0:13:51.65,0:13:59.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,144,-72,144)}うごいた
+Dialogue: 3,0:13:52.16,0:14:00.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,162,-72,162)}hang
+Dialogue: 3,0:13:53.76,0:14:01.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,180,-54,180)}復活🌻
+Dialogue: 3,0:13:54.05,0:14:02.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,198,-306,198)}hachan makan apa?
+Dialogue: 3,0:13:56.35,0:14:04.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,18,-306,18)}どしゃ降りの音がするー、関西は大雨
+Dialogue: 3,0:13:56.55,0:14:04.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,216,-108,216)}こんばんは！
+Dialogue: 3,0:13:57.25,0:14:05.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:13:57.75,0:14:05.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:13:58.08,0:14:06.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,234,-108,234)}おかえりーー
+Dialogue: 3,0:13:58.75,0:14:06.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}すとれんジャーシングス、来た？
+Dialogue: 3,0:13:59.60,0:14:07.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,90,-126,90)}何があったの？
+Dialogue: 3,0:13:59.66,0:14:07.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,108,-162,108)}もぐもぐはーちゃん
+Dialogue: 3,0:14:00.02,0:14:08.02,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,126,-198,126)}いきなり食べてる(笑)
+Dialogue: 3,0:14:02.13,0:14:10.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:14:03.54,0:14:11.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,162,-144,162)}|´-`)ﾁﾗｯ
+Dialogue: 3,0:14:05.48,0:14:13.48,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:14:06.56,0:14:14.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}ハロー！
+Dialogue: 3,0:14:07.11,0:14:15.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,54,-180,54)}はるかにくろーするw
+Dialogue: 3,0:14:07.53,0:14:15.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:14:08.35,0:14:16.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}また通知来た笑笑
+Dialogue: 3,0:14:08.82,0:14:16.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,108,-234,108)}復活したらなにか食べてた笑
+Dialogue: 3,0:14:09.89,0:14:17.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,126,-216,126)}動いたらなんか食べてたw
+Dialogue: 3,0:14:09.96,0:14:17.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,180,-180,180)}こんばんはーちゃん！
+Dialogue: 3,0:14:11.36,0:14:19.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,144,-144,144)}配信されてるよー
+Dialogue: 3,0:14:12.33,0:14:20.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,162,-288,162)}C☆e を言ったらすぐ固まったw
+Dialogue: 3,0:14:12.87,0:14:20.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,198,-108,198)}こんばんは！
+Dialogue: 3,0:14:15.06,0:14:23.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:14:18.65,0:14:26.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:14:19.98,0:14:27.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,54,-216,54)}止めた間にたくさん食べた
+Dialogue: 3,0:14:22.28,0:14:30.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}やっほー
+Dialogue: 3,0:14:28.73,0:14:36.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}ずっきーのラジオ聴いたよ
+Dialogue: 3,0:14:29.45,0:14:37.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:14:32.33,0:14:40.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}はーちゃん夜ご飯食べたー❓
+Dialogue: 3,0:14:33.52,0:14:41.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}大丈夫？
+Dialogue: 3,0:14:35.20,0:14:43.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,90,-252,90)}みんな大好き！チョコレート！
+Dialogue: 3,0:14:35.39,0:14:43.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,108,-162,108)}こんばんはーちゃん
+Dialogue: 3,0:14:36.93,0:14:44.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}ops daijoubu ka
+Dialogue: 3,0:14:38.84,0:14:46.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,36,-252,36)}恐怖ごとの中でよく食べたね笑
+Dialogue: 3,0:14:39.49,0:14:47.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,126,-252,126)}ウィッチャーもみて欲しいな。
+Dialogue: 3,0:14:43.68,0:14:51.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,54,-216,54)}はーちゃんちょっと鼻声?
+Dialogue: 3,0:14:48.28,0:14:56.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,18,-378,18)}はーちゃんも、壁にすいこまれるよーーーーー
+Dialogue: 3,0:14:54.21,0:15:02.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}(*」＞д＜)」ドクター笑
+Dialogue: 3,0:14:54.86,0:15:02.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:14:57.10,0:15:05.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:14:58.68,0:15:06.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,72,-360,72)}はーちゃん腕時計つけたら似合いそうなのに
+Dialogue: 3,0:15:00.56,0:15:08.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:15:06.71,0:15:14.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}初見です！
+Dialogue: 3,0:15:11.93,0:15:19.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,36,-414,36)}ずっきー初地上波ドラマ主演おめでとうございます
+Dialogue: 3,0:15:17.92,0:15:25.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}緑！？
+Dialogue: 3,0:15:18.68,0:15:26.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}端末がおかしくなったかな？
+Dialogue: 3,0:15:30.53,0:15:38.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}こわ
+Dialogue: 3,0:15:32.11,0:15:40.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}こわw
+Dialogue: 3,0:15:33.64,0:15:41.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}きゃー
+Dialogue: 3,0:15:34.58,0:15:42.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}バグってるね
+Dialogue: 3,0:15:35.05,0:15:43.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,90,-54,90)}こわっ
+Dialogue: 3,0:15:38.60,0:15:46.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}😂😂
+Dialogue: 3,0:15:38.96,0:15:46.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,108,-90,108)}再起動だね
+Dialogue: 3,0:15:39.07,0:15:47.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}わ～！(汗)
+Dialogue: 3,0:15:44.67,0:15:52.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1198,36,-558,36)}来月RESET公演にいっぱい出るから？緑色になった説だと思う笑
+Dialogue: 3,0:15:46.03,0:15:54.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:15:47.27,0:15:55.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,18,-342,18)}暗夜、だね～ーーーー。１６期コンテンツ
+Dialogue: 3,0:15:50.37,0:15:58.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,72,-162,72)}WiFiバグった？
+Dialogue: 3,0:15:51.53,0:15:59.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,90,-270,90)}大丈夫、みんながついてる(笑)
+Dialogue: 3,0:15:51.63,0:15:59.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}😨😨😨
+Dialogue: 3,0:15:52.10,0:16:00.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,126,-306,126)}なぜずっきーの祝福をここに書くねん
+Dialogue: 3,0:15:54.97,0:16:02.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:15:58.54,0:16:06.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}ehhh
+Dialogue: 3,0:15:59.85,0:16:07.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}それはこわい😨
+Dialogue: 3,0:16:04.26,0:16:12.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}だいぶ怖かった
+Dialogue: 3,0:16:04.26,0:16:12.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}www
+Dialogue: 3,0:16:05.06,0:16:13.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,90,-36,90)}貞子
+Dialogue: 3,0:16:06.67,0:16:14.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:16:06.94,0:16:14.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}arhhhh
+Dialogue: 3,0:16:07.98,0:16:15.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}ホラーや
+Dialogue: 3,0:16:07.98,0:16:15.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,126,-378,126)}タブレットの中身が腐食してるのかな？怖い😅
+Dialogue: 3,0:16:08.30,0:16:16.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}見たことない
+Dialogue: 3,0:16:12.66,0:16:20.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}🤯🤯🤯
+Dialogue: 3,0:16:14.64,0:16:22.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}リング
+Dialogue: 3,0:16:16.67,0:16:24.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}virus detected 🤣
+Dialogue: 3,0:16:16.98,0:16:24.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}こわっ
+Dialogue: 3,0:16:17.10,0:16:25.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,90,-126,90)}おそろしや～！
+Dialogue: 3,0:16:22.19,0:16:30.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,36,-270,36)}劇場MCのネタが一つ出来たね笑
+Dialogue: 3,0:16:29.31,0:16:37.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}ハッキングされてませんか😱
+Dialogue: 3,0:16:29.80,0:16:37.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}こわいー
+Dialogue: 3,0:16:30.56,0:16:38.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,36,-18,36)}犬
+Dialogue: 3,0:16:31.27,0:16:39.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}それは謎😅
+Dialogue: 3,0:16:31.84,0:16:39.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1126,90,-486,90)}急に真っ暗になったからびっくりしたけど、治って良かった
+Dialogue: 3,0:16:33.45,0:16:41.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}うん〜
+Dialogue: 3,0:16:37.13,0:16:45.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}わん🐶
+Dialogue: 3,0:16:42.15,0:16:50.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}わんわん飼ってるんだっけ？
+Dialogue: 3,0:16:43.73,0:16:51.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:16:45.50,0:16:53.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}霊も配信見に来たのかな
+Dialogue: 3,0:16:46.00,0:16:54.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}ないよ
+Dialogue: 3,0:16:49.28,0:16:57.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:16:53.33,0:17:01.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}いいですよ～
+Dialogue: 3,0:17:04.43,0:17:12.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}マロンくん？
+Dialogue: 3,0:17:05.34,0:17:13.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}わん
+Dialogue: 3,0:17:06.15,0:17:14.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}犬もビックリ！
+Dialogue: 3,0:17:08.65,0:17:16.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}おりん🐶かも？笑
+Dialogue: 3,0:17:16.03,0:17:24.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,18,-342,18)}ミニチュアダックスフンドがおすすめです
+Dialogue: 3,0:17:16.19,0:17:24.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:17:22.85,0:17:30.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}飼うなら、犬？猫？
+Dialogue: 3,0:17:35.67,0:17:43.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:17:45.92,0:17:53.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1216,18,-576,18)}昔オンライン握手会でも見せたかも。（もう天国にいっちゃったけど）
+Dialogue: 3,0:17:47.52,0:17:55.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}かわいい！
+Dialogue: 3,0:17:50.94,0:17:58.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}見えてるよ〜
+Dialogue: 3,0:17:52.85,0:18:00.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}見えてなかった！
+Dialogue: 3,0:17:54.01,0:18:02.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}so small cute ne w
+Dialogue: 3,0:17:59.14,0:18:07.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}いいね
+Dialogue: 3,0:18:06.80,0:18:14.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}可愛い！チャージー？
+Dialogue: 3,0:18:07.50,0:18:15.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}c☆e
+Dialogue: 3,0:18:12.70,0:18:20.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,54,-36,54)}茶姬
+Dialogue: 3,0:18:13.87,0:18:21.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:18:29.35,0:18:37.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}buy at airport？
+Dialogue: 3,0:18:35.48,0:18:43.48,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}お茶のお姫様！
+Dialogue: 3,0:18:36.83,0:18:44.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}ジャージーかと思った。
+Dialogue: 3,0:18:38.72,0:18:46.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}爺?
+Dialogue: 3,0:18:42.79,0:18:50.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}お姫様だね
+Dialogue: 3,0:18:44.68,0:18:52.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}ちゃー爺
+Dialogue: 3,0:18:48.03,0:18:56.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}はーちゃんGEE！
+Dialogue: 3,0:18:52.19,0:19:00.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}遥香姫👸🏻
+Dialogue: 3,0:18:52.64,0:19:00.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,72,-198,72)}はーちゃん姫かわいい💕
+Dialogue: 3,0:19:04.94,0:19:12.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:19:20.22,0:19:28.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:19:23.72,0:19:31.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,36,-414,36)}はーちゃんがアジアの文化をどんどん紹介してよ！
+Dialogue: 3,0:19:28.44,0:19:36.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:19:36.75,0:19:44.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}かわいい！
+Dialogue: 3,0:19:43.01,0:19:51.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}大発見（╹◡╹）
+Dialogue: 3,0:19:50.28,0:19:58.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}すごいね
+Dialogue: 3,0:19:53.00,0:20:01.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}CH☆EE日本にもできてほしい〜！
+Dialogue: 3,0:19:53.68,0:20:01.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}はーちゃん！どんどん紹介しよう！
+Dialogue: 3,0:19:55.13,0:20:03.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:19:56.97,0:20:04.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,90,-198,90)}日本に出来るの🗾🇯🇵？
+Dialogue: 3,0:19:58.50,0:20:06.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}はーちゃん代理店やるしか
+Dialogue: 3,0:20:08.51,0:20:16.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}見つけたマウント笑笑
+Dialogue: 3,0:20:10.75,0:20:18.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}了解です
+Dialogue: 3,0:20:15.05,0:20:23.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,54,-360,54)}チャージーJAPANの宣伝大使になろう！
+Dialogue: 3,0:20:16.45,0:20:24.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,72,-126,72)}ディスカバリー
+Dialogue: 3,0:20:17.28,0:20:25.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1144,18,-504,18)}can drink at japan already？🤔
+Dialogue: 3,0:20:27.13,0:20:35.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1162,18,-522,18)}Hachan ambassador of c☆e hehe
+Dialogue: 3,0:20:37.42,0:20:45.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:20:41.29,0:20:49.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,36,-252,36)}super c☆e fans
+Dialogue: 3,0:20:46.21,0:20:54.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}目薬入れる？口紅入れる？
+Dialogue: 3,0:20:46.66,0:20:54.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}商売に
+Dialogue: 3,0:20:48.03,0:20:56.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1234,72,-594,72)}2年前のはーちゃんはマウント取ったりしなかったから成長を感じた笑笑
+Dialogue: 3,0:20:50.05,0:20:58.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}soon ne😗
+Dialogue: 3,0:20:56.11,0:21:04.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,18,-306,18)}tomorrow go drink
+Dialogue: 3,0:20:57.22,0:21:05.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:21:08.59,0:21:16.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}リップも入るね
+Dialogue: 3,0:21:13.54,0:21:21.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}サイズ感が可愛いねー
+Dialogue: 3,0:21:14.47,0:21:22.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1360,54,-720,54)}Hachan can drink C☆e at Japan soon? Hehe
+Dialogue: 3,0:21:18.95,0:21:26.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}どんどん入る(笑)
+Dialogue: 3,0:21:19.06,0:21:27.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,72,-198,72)}cantik nehh
+Dialogue: 3,0:21:22.44,0:21:30.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}nicerrrrr
+Dialogue: 3,0:21:24.43,0:21:32.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,54,-450,54)}インスタグラムにも投稿してよ！ハッシュタグ付きで！
+Dialogue: 3,0:21:24.50,0:21:32.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,90,-126,90)}目薬も入りそう
+Dialogue: 3,0:21:25.01,0:21:33.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,108,-252,108)}じじいのナイスアイデア(笑)
+Dialogue: 3,0:21:34.25,0:21:42.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}saya nak juga
+Dialogue: 3,0:21:40.60,0:21:48.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:21:41.93,0:21:49.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,54,-18,54)}.
+Dialogue: 3,0:21:44.05,0:21:52.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}喉の薬も入れといたら？
+Dialogue: 3,0:21:48.88,0:21:56.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}可愛い
+Dialogue: 3,0:21:51.49,0:21:59.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}アバター欲しい
+Dialogue: 3,0:22:02.89,0:22:10.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:22:06.24,0:22:14.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,36,-396,36)}はーちゃんが投稿したら、日本中に広がるかも！
+Dialogue: 3,0:22:08.43,0:22:16.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}スリランカって、遠い？
+Dialogue: 3,0:22:17.58,0:22:25.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}ワニを頭に🐊
+Dialogue: 3,0:22:21.18,0:22:29.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}スリランカ一人で行ったの？
+Dialogue: 3,0:22:27.78,0:22:35.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,18,-360,18)}ダンシングオールデーみたいだったんだよね
+Dialogue: 3,0:22:29.41,0:22:37.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}ない
+Dialogue: 3,0:22:33.15,0:22:41.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,54,-216,54)}海外の結婚式参加は凄い！
+Dialogue: 3,0:22:37.68,0:22:45.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}確かに！
+Dialogue: 3,0:22:41.78,0:22:49.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}インドの下の島？
+Dialogue: 3,0:22:45.01,0:22:53.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}インド洋に浮かぶスリランカ
+Dialogue: 3,0:22:51.51,0:22:59.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}日本人のお友達？
+Dialogue: 3,0:22:52.26,0:23:00.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}ハワイには
+Dialogue: 3,0:23:02.45,0:23:10.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1324,18,-684,18)}How Hachan met friend from Sri Lanka?~
+Dialogue: 3,0:23:04.86,0:23:12.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}凄い経験！
+Dialogue: 3,0:23:05.67,0:23:13.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}すごい経験！
+Dialogue: 3,0:23:06.81,0:23:14.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}♪。.:＊・゜♪。.:＊・゜
+Dialogue: 3,0:23:08.43,0:23:16.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,90,-324,90)}はーちゃん、また髪を長く伸ばしない？
+Dialogue: 3,0:23:09.45,0:23:17.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:23:09.69,0:23:17.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}凄いね
+Dialogue: 3,0:23:09.88,0:23:17.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,144,-72,144)}そうだね
+Dialogue: 3,0:23:10.65,0:23:18.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}なんで頭にワニを乗せたんですか？
+Dialogue: 3,0:23:14.16,0:23:22.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}衣装が素敵でしたよ
+Dialogue: 3,0:23:14.24,0:23:22.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}ずっとおどるんでしょーーー
+Dialogue: 3,0:23:27.15,0:23:35.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,18,-306,18)}マレーシアで知り合った友人かしら？
+Dialogue: 3,0:23:31.29,0:23:39.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,36,-270,36)}ワニや海ガメの写真にビックリ！
+Dialogue: 3,0:23:32.18,0:23:40.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,54,-450,54)}日本の結婚式とは違って本当にみんなが楽しむ感じよね
+Dialogue: 3,0:23:37.68,0:23:45.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}ノリでのせれるのすごい！
+Dialogue: 3,0:23:39.84,0:23:47.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:23:43.60,0:23:51.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}スリランカも紅茶のイメージ
+Dialogue: 3,0:23:47.10,0:23:55.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,18,-414,18)}スリランカまで11〜15時間もかかるんだね✈️
+Dialogue: 3,0:24:04.68,0:24:12.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:24:14.34,0:24:22.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}スリランカ、カレーも美味しそう！
+Dialogue: 3,0:24:17.20,0:24:25.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,36,-270,36)}AKBの、RIVER、歌った？
+Dialogue: 3,0:24:17.99,0:24:25.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:24:18.46,0:24:26.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}大冒険だね〜
+Dialogue: 3,0:24:48.56,0:24:56.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}世界は広い！
+Dialogue: 3,0:24:52.09,0:25:00.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}１島買ってきた？🤣
+Dialogue: 3,0:25:02.47,0:25:10.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:25:09.25,0:25:17.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}商売か
+Dialogue: 3,0:25:10.42,0:25:18.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}海外羨ましいです。
+Dialogue: 3,0:25:12.27,0:25:20.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:25:22.62,0:25:30.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}シナモンオイルってどう使うの？
+Dialogue: 3,0:25:25.90,0:25:33.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:25:36.87,0:25:44.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:25:37.58,0:25:45.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}出し物？
+Dialogue: 3,0:25:40.52,0:25:48.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}ワニランド😂
+Dialogue: 3,0:25:44.93,0:25:52.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}鰐島🐊
+Dialogue: 3,0:25:52.84,0:26:00.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}一島、一店舗！アウトレットみたい！
+Dialogue: 3,0:26:03.10,0:26:11.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}噛まれなかった？
+Dialogue: 3,0:26:04.59,0:26:12.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}ウミガメの島もあったの？
+Dialogue: 3,0:26:06.38,0:26:14.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,54,-18,54)}🐊
+Dialogue: 3,0:26:08.94,0:26:16.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}めっちゃ簡単に乗せられてる笑
+Dialogue: 3,0:26:25.35,0:26:33.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,18,-360,18)}のんちゃんだったら大喜びだね←知らんけど
+Dialogue: 3,0:26:25.64,0:26:33.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,36,-252,36)}噛まれそうで怖くなかったの？
+Dialogue: 3,0:26:30.63,0:26:38.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1108,54,-468,54)}段階踏んでたから、頭の時はちょっと余裕そうだったね🐊
+Dialogue: 3,0:26:36.63,0:26:44.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}Hachan so br☆eee
+Dialogue: 3,0:26:39.50,0:26:47.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}面白かったで済んでるのがすぎょい😅
+Dialogue: 3,0:26:39.81,0:26:47.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}楽しそう！
+Dialogue: 3,0:26:41.34,0:26:49.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,72,-342,72)}ワニの感触は？ ゴツゴツしてるイメージ
+Dialogue: 3,0:26:44.17,0:26:52.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,90,-198,90)}☆くられそうで怖いです
+Dialogue: 3,0:26:50.60,0:26:58.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:26:52.16,0:27:00.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:26:52.23,0:27:00.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}「庭にはワニがいる」、早口言葉
+Dialogue: 3,0:26:55.32,0:27:03.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}buaya
+Dialogue: 3,0:27:02.97,0:27:10.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}ぬしw
+Dialogue: 3,0:27:03.13,0:27:11.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}亀仙人？
+Dialogue: 3,0:27:10.66,0:27:18.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,54,-432,54)}そっか！17期生の畠山のんちゃんが爬虫類大好き！
+Dialogue: 3,0:27:17.13,0:27:25.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}なるほど
+Dialogue: 3,0:27:18.65,0:27:26.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,36,-432,36)}ヨーロッパでのハト腕に乗せるのと同じ感じですね。
+Dialogue: 3,0:27:25.62,0:27:33.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:28:08.77,0:28:16.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,18,-540,18)}はいよっ！って動物たち急に渡してくるのが海外のノリだよね〜笑
+Dialogue: 3,0:28:18.14,0:28:26.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}最小限の説明なのが面白い笑笑
+Dialogue: 3,0:28:21.82,0:28:29.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}ウミガメの人工ふ化施設かな
+Dialogue: 3,0:28:24.01,0:28:32.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}雑用？
+Dialogue: 3,0:28:31.16,0:28:39.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}あれよあれよと！(笑)
+Dialogue: 3,0:28:31.25,0:28:39.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}なぞ作業(笑)
+Dialogue: 3,0:28:32.04,0:28:40.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:28:32.60,0:28:40.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}多分笑
+Dialogue: 3,0:28:38.86,0:28:46.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,90,-162,90)}ワニ🐊とウミガメ🐢
+Dialogue: 3,0:28:56.16,0:29:04.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}保護施設みたいな感じ？
+Dialogue: 3,0:28:57.41,0:29:05.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:28:57.88,0:29:05.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}保護施設？
+Dialogue: 3,0:29:01.77,0:29:09.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}ウミガメ保護かな
+Dialogue: 3,0:29:03.64,0:29:11.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,90,-126,90)}保護施設かな？
+Dialogue: 3,0:29:05.99,0:29:13.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}いいね
+Dialogue: 3,0:29:06.69,0:29:14.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,36,-252,36)}きっと御利益ありそうですね。
+Dialogue: 3,0:29:13.73,0:29:21.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:29:16.28,0:29:24.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}なるほどねー
+Dialogue: 3,0:29:21.88,0:29:29.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:29:31.00,0:29:39.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:29:38.09,0:29:46.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}ウミガメの鳴き声聞けた？
+Dialogue: 3,0:29:41.64,0:29:49.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}コロンボ周辺の島々だったの？
+Dialogue: 3,0:29:50.07,0:29:58.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,18,-378,18)}きっと、はーちゃんに恩返しに来てくれる！🐢
+Dialogue: 3,0:29:50.98,0:29:58.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}熱中症にならなかった？
+Dialogue: 3,0:29:56.85,0:30:04.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,54,-306,54)}タートルと、トータスって、違いは？
+Dialogue: 3,0:30:04.58,0:30:12.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}ゲジゲジ！
+Dialogue: 3,0:30:11.27,0:30:19.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,36,-18,36)}🐢
+Dialogue: 3,0:30:12.28,0:30:20.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,54,-360,54)}selamat malam Hachan
+Dialogue: 3,0:30:18.51,0:30:26.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}ゲジ怖い
+Dialogue: 3,0:30:19.17,0:30:27.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,72,-198,72)}サンダルだとパニックw
+Dialogue: 3,0:30:20.04,0:30:28.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}海にいるやつだ！
+Dialogue: 3,0:30:20.39,0:30:28.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}たくさん貴重な体験をしてますね
+Dialogue: 3,0:30:25.50,0:30:33.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}インセクト
+Dialogue: 3,0:30:37.35,0:30:45.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}ちょうちょ
+Dialogue: 3,0:30:38.03,0:30:46.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}毒はないみたい
+Dialogue: 3,0:30:39.29,0:30:47.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}ただの(笑)
+Dialogue: 3,0:30:42.22,0:30:50.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}．ゲジゲジw
+Dialogue: 3,0:30:42.94,0:30:50.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:30:49.03,0:30:57.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}バタフライベイビー！蝶々の赤ちゃん！
+Dialogue: 3,0:30:49.36,0:30:57.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}蝶々？
+Dialogue: 3,0:30:49.39,0:30:57.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}うまい！
+Dialogue: 3,0:31:01.90,0:31:09.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}そうか
+Dialogue: 3,0:31:02.69,0:31:10.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,36,-252,36)}毛虫はかぶれることあるからね
+Dialogue: 3,0:31:10.27,0:31:18.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}はーちゃん、タフになったね～！
+Dialogue: 3,0:31:10.36,0:31:18.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}環境に順応しやすいってことね
+Dialogue: 3,0:31:11.36,0:31:19.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,36,-288,36)}流されやすいはーちゃん（╹◡╹）
+Dialogue: 3,0:31:13.13,0:31:21.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,72,-540,72)}ウミガメってクラッシュみたいに日本語話すのでは？←知らんけど
+Dialogue: 3,0:31:20.11,0:31:28.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}適応力高い
+Dialogue: 3,0:31:31.92,0:31:39.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}タフネスアイドル！
+Dialogue: 3,0:31:32.60,0:31:40.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}順応性が高い
+Dialogue: 3,0:31:50.93,0:31:58.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,18,-378,18)}はーちゃんのしなやかさと言ってもいいかもね
+Dialogue: 3,0:31:51.22,0:31:59.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,36,-540,36)}「すぐに周りに合わせます、黒須はるかでっす」キャッチフレーズ
+Dialogue: 3,0:32:00.44,0:32:08.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}適応力が高いと思う
+Dialogue: 3,0:32:22.46,0:32:30.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}流されやすい→順能力、適応力がある！
+Dialogue: 3,0:32:40.70,0:32:48.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}フレンドリーだったかな？
+Dialogue: 3,0:32:42.20,0:32:50.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:32:44.13,0:32:52.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}アテンド
+Dialogue: 3,0:32:53.71,0:33:01.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}世話好きか
+Dialogue: 3,0:33:01.10,0:33:09.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}おさだ
+Dialogue: 3,0:33:02.96,0:33:10.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,18,-414,18)}nice radio show so good
+Dialogue: 3,0:33:04.43,0:33:12.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}オサダさん！(笑)
+Dialogue: 3,0:33:04.79,0:33:12.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}オサダさん
+Dialogue: 3,0:33:05.33,0:33:13.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:33:05.47,0:33:13.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,108,-90,108)}おさださん
+Dialogue: 3,0:33:20.24,0:33:28.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}so nicerrrr
+Dialogue: 3,0:33:41.44,0:33:49.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:33:43.23,0:33:51.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}世話好きなオサダさんww
+Dialogue: 3,0:34:00.34,0:34:08.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:34:05.57,0:34:13.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}わたしも　優しいはず
+Dialogue: 3,0:34:05.73,0:34:13.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}優しいのね
+Dialogue: 3,0:34:13.17,0:34:21.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは~
+Dialogue: 3,0:34:17.73,0:34:25.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}聞きた～い！
+Dialogue: 3,0:34:38.90,0:34:46.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}首振り人形みたいな
+Dialogue: 3,0:34:40.90,0:34:48.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}疑問？みたいな感じよね
+Dialogue: 3,0:34:45.59,0:34:53.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}スリランカカレー　大好きです!!
+Dialogue: 3,0:34:46.35,0:34:54.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:34:46.67,0:34:54.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんばんは！
+Dialogue: 3,0:35:00.30,0:35:08.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}スリランカははいわかりました的な
+Dialogue: 3,0:35:11.57,0:35:19.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}クロース！
+Dialogue: 3,0:35:18.18,0:35:26.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}勉強に
+Dialogue: 3,0:35:31.88,0:35:39.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}オッケー！
+Dialogue: 3,0:35:37.67,0:35:45.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}OK
+Dialogue: 3,0:35:38.52,0:35:46.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1216,54,-576,54)}ジェスチャーが真逆な国聞いたことあるけど、スリランカはそうなんだ
+Dialogue: 3,0:35:44.72,0:35:52.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}はい、喜んで、なんだね。
+Dialogue: 3,0:35:51.66,0:35:59.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}肯定の表情なのねーー
+Dialogue: 3,0:35:52.30,0:36:00.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}すごいよ！オサダさん！
+Dialogue: 3,0:35:55.39,0:36:03.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}かわいいw
+Dialogue: 3,0:36:08.84,0:36:16.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}くろすちゃんひさしぶり！！！
+Dialogue: 3,0:36:10.83,0:36:18.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:36:14.84,0:36:22.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:36:18.83,0:36:26.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}日本の会釈的な？
+Dialogue: 3,0:36:28.22,0:36:36.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}良いねとか？
+Dialogue: 3,0:36:29.22,0:36:37.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}大きくうなづく
+Dialogue: 3,0:36:36.13,0:36:44.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}日本のジェスチャー→おじぎ
+Dialogue: 3,0:36:44.15,0:36:52.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}髪切ってた！今きました！
+Dialogue: 3,0:36:53.76,0:37:01.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:36:56.75,0:37:04.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1252,36,-612,36)}海外でクロース🙅‍♀️ってするとどんな反応されるのかな〜？（╹◡╹）
+Dialogue: 3,0:36:57.98,0:37:05.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}コマネチ
+Dialogue: 3,0:37:29.53,0:37:37.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}ギャルピース
+Dialogue: 3,0:37:32.35,0:37:40.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}すしざんまい
+Dialogue: 3,0:37:41.64,0:37:49.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,18,-432,18)}photo time？😂many poseeee
+Dialogue: 3,0:37:42.64,0:37:50.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,36,-396,36)}ウルトラマンの「スペシウム光線」とか！(笑)
+Dialogue: 3,0:37:47.13,0:37:55.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,54,-378,54)}結婚式、余興でダンスしてたけど楽しかった？
+Dialogue: 3,0:37:48.56,0:37:56.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,72,-216,72)}ボホマ  ストゥーティ♪
+Dialogue: 3,0:37:56.06,0:38:04.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}ギャルでは
+Dialogue: 3,0:37:59.89,0:38:07.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}夕飯食べたの?
+Dialogue: 3,0:38:01.22,0:38:09.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,54,-180,54)}夜ご飯まだなのー⁉️
+Dialogue: 3,0:38:03.44,0:38:11.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}ゲッツ！
+Dialogue: 3,0:38:12.37,0:38:20.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}お茶立てポーズ
+Dialogue: 3,0:38:14.93,0:38:22.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:38:15.26,0:38:23.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}スリランカ何日ぐらいいたの？
+Dialogue: 3,0:38:37.60,0:38:45.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}うれしいたけ
+Dialogue: 3,0:38:55.98,0:39:03.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}メイクさんやスタッフさんにもするの？
+Dialogue: 3,0:39:03.28,0:39:11.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1342,36,-702,36)}than☆ Hachan so happy to see you wkwkwk
+Dialogue: 3,0:39:04.65,0:39:12.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}かわいいね
+Dialogue: 3,0:39:07.92,0:39:15.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}ハートは世界の共通語！
+Dialogue: 3,0:39:08.19,0:39:16.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}握手会で、ちょうだいーーーー
+Dialogue: 3,0:39:15.84,0:39:23.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}してるイメージある！
+Dialogue: 3,0:39:19.87,0:39:27.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}活字で言う絵文字的な？
+Dialogue: 3,0:39:21.90,0:39:29.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,54,-378,54)}自分も褒めてくれた上司に毎日それやってます
+Dialogue: 3,0:39:25.94,0:39:33.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,18,-360,18)}劇場のお見送りでメンバーよくやってくれる
+Dialogue: 3,0:39:29.50,0:39:37.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1126,36,-486,36)}はーともらえるとうれしいよね。今度握手会でくださいまし
+Dialogue: 3,0:40:26.62,0:40:34.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}日本より英語が☆ないのかね？
+Dialogue: 3,0:40:28.05,0:40:36.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:40:31.00,0:40:39.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}すごいーーー
+Dialogue: 3,0:40:33.89,0:40:41.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,72,-234,72)}めっちゃいいリアクション。
+Dialogue: 3,0:40:34.22,0:40:42.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,90,-270,90)}シンハラ語、タミル語が有名だね
+Dialogue: 3,0:40:34.53,0:40:42.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,108,-72,108)}ハートは
+Dialogue: 3,0:40:37.68,0:40:45.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}💓で通じる
+Dialogue: 3,0:40:38.43,0:40:46.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:40:45.89,0:40:53.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:40:46.54,0:40:54.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}ジェスチャーで伝わると嬉しいよね！
+Dialogue: 3,0:40:48.01,0:40:56.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}世界のハートをクロス！
+Dialogue: 3,0:40:48.35,0:40:56.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,72,-162,72)}🫶無敵説（╹◡╹）
+Dialogue: 3,0:41:04.27,0:41:12.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}ボディーランゲージ
+Dialogue: 3,0:41:17.60,0:41:25.60,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:41:21.21,0:41:29.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}みんなで「ハートマーク」で幸せに！
+Dialogue: 3,0:41:24.25,0:41:32.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,54,-342,54)}コミニュケーション上手になったんですね
+Dialogue: 3,0:41:36.23,0:41:44.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1108,18,-468,18)}クロース🙅‍♀️もボディーランゲージになるのかな？笑
+Dialogue: 3,0:41:50.19,0:41:58.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:41:52.00,0:42:00.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:41:54.58,0:42:02.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}いいね
+Dialogue: 3,0:42:18.74,0:42:26.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}シンプルは一番よ。
+Dialogue: 3,0:42:27.08,0:42:35.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}そうか！シンプルイズベスト！
+Dialogue: 3,0:42:36.07,0:42:44.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:42:38.97,0:42:46.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}日本語とか教えたの？
+Dialogue: 3,0:42:39.00,0:42:47.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,54,-540,54)}そららも、ジェスチャー大きいよね～、劇場のMCトークのときー
+Dialogue: 3,0:43:02.69,0:43:10.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:43:19.18,0:43:27.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:43:22.73,0:43:30.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,36,-18,36)}ね
+Dialogue: 3,0:43:24.26,0:43:32.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1306,54,-666,54)}はーちゃん、2年前より良い意味で自己主張するようになったなぁって気がする！
+Dialogue: 3,0:43:47.56,0:43:55.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}miss u hachan
+Dialogue: 3,0:43:47.77,0:43:55.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}6/20いきまーす！
+Dialogue: 3,0:43:53.91,0:44:01.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,54,-342,54)}Deviとかもみんな使ってたよne〜！
+Dialogue: 3,0:44:00.50,0:44:08.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,18,-432,18)}はーちゃんはアクティブさポジティブさが増したよね
+Dialogue: 3,0:44:04.34,0:44:12.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,36,-360,36)}many heart poserrr☺️
+Dialogue: 3,0:44:05.62,0:44:13.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}miss u Hachan 🌻
+Dialogue: 3,0:44:10.59,0:44:18.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:44:12.46,0:44:20.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}so cute
+Dialogue: 3,0:44:13.55,0:44:21.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,72,-324,72)}miss you a lot 🥹🌻✨
+Dialogue: 3,0:44:18.28,0:44:26.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}kawaii
+Dialogue: 3,0:44:28.01,0:44:36.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}Hachan chomellllll
+Dialogue: 3,0:44:33.29,0:44:41.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,36,-396,36)}アップテンションと柱NIGHTのお話しして〜
+Dialogue: 3,0:44:33.50,0:44:41.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}cutieeeee
+Dialogue: 3,0:44:34.69,0:44:42.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,72,-378,72)}today japan also hot?
+Dialogue: 3,0:44:34.71,0:44:42.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,90,-342,90)}え！はーちゃんの握手会が受付中だって！
+Dialogue: 3,0:44:34.99,0:44:42.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,108,-18,108)}雨
+Dialogue: 3,0:44:43.01,0:44:51.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}rainy day
+Dialogue: 3,0:44:48.72,0:44:56.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,36,-342,36)}Malaysia hot too :(
+Dialogue: 3,0:44:51.55,0:44:59.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1144,18,-504,18)}is it because almost summer?
+Dialogue: 3,0:45:01.02,0:45:09.02,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,18,-414,18)}昨日より気温が10℃も下がってた今日のお天気💦
+Dialogue: 3,0:45:01.81,0:45:09.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,36,-432,36)}Malaysia super hot again
+Dialogue: 3,0:45:05.51,0:45:13.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}TIFにKLPが来るみたいですね
+Dialogue: 3,0:45:09.11,0:45:17.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}good rest?
+Dialogue: 3,0:45:09.19,0:45:17.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}sleep？
+Dialogue: 3,0:45:10.31,0:45:18.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}panas gila
+Dialogue: 3,0:45:11.74,0:45:19.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,90,-378,90)}職場、今月までエアコン禁止だから暑かった💦
+Dialogue: 3,0:45:13.73,0:45:21.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}Malaysia hot hot
+Dialogue: 3,0:45:20.46,0:45:28.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,18,-306,18)}ラジオとかき氷のお話お願いします。
+Dialogue: 3,0:45:30.94,0:45:38.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1450,18,-810,18)}Malaysia is hot...and then raining suddenly w
+Dialogue: 3,0:45:35.26,0:45:43.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,36,-396,36)}ストレンジャーシングス、最後まで見たんだーー
+Dialogue: 3,0:45:43.49,0:45:51.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,18,-360,18)}今日は湿度高くて、事務所ではドライしてた
+Dialogue: 3,0:45:48.66,0:45:56.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,36,-324,36)}暑かったり寒かったり、最近、大変～！
+Dialogue: 3,0:45:51.27,0:45:59.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,54,-342,54)}そう！はーちゃんママは暑がりなイメージ
+Dialogue: 3,0:45:55.24,0:46:03.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}ラジオ聴いたよ
+Dialogue: 3,0:46:05.92,0:46:13.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}はーい
+Dialogue: 3,0:46:06.56,0:46:14.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}きいたよ
+Dialogue: 3,0:46:06.77,0:46:14.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}☺️👍
+Dialogue: 3,0:46:07.70,0:46:15.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}聞いたよ〜😊
+Dialogue: 3,0:46:12.58,0:46:20.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}聴いたよ
+Dialogue: 3,0:46:12.96,0:46:20.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}はーい
+Dialogue: 3,0:46:13.19,0:46:21.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,126,-144,126)}リピートしてます
+Dialogue: 3,0:46:14.01,0:46:22.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}聞きました
+Dialogue: 3,0:46:14.06,0:46:22.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,144,-90,144)}聴きました
+Dialogue: 3,0:46:17.91,0:46:25.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,36,-270,36)}え！radikoで間に合う！？
+Dialogue: 3,0:46:18.66,0:46:26.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1432,54,-792,54)}still h☆e radio show again?  I love the show
+Dialogue: 3,0:46:19.63,0:46:27.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:46:22.63,0:46:30.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:46:23.25,0:46:31.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,90,-270,90)}listen already～
+Dialogue: 3,0:46:30.35,0:46:38.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}ラジコで
+Dialogue: 3,0:46:33.03,0:46:41.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}ラジコ！無料アプリ！
+Dialogue: 3,0:46:39.00,0:46:47.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1234,36,-594,36)}アップテンションのチュロスではきなこ味を食べてみたいと思いました。
+Dialogue: 3,0:46:46.58,0:46:54.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}ラジコ！
+Dialogue: 3,0:46:48.30,0:46:56.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}YouTubeで(小声)
+Dialogue: 3,0:46:51.16,0:46:59.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,54,-432,54)}アップテンションの収録場所が違かったのはなんで？
+Dialogue: 3,0:46:53.59,0:47:01.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,72,-306,72)}ズキペディアでメール採用はーちゃん
+Dialogue: 3,0:46:56.10,0:47:04.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:46:56.54,0:47:04.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}MNL48が☆した気分はど☆すか？
+Dialogue: 3,0:47:00.23,0:47:08.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:47:09.47,0:47:17.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}聴きまーす
+Dialogue: 3,0:47:11.09,0:47:19.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,36,-396,36)}Nack５ではーちゃん番組できればいいよね。
+Dialogue: 3,0:47:24.33,0:47:32.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}sudah listen
+Dialogue: 3,0:47:27.73,0:47:35.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,36,-288,36)}MNL48が☆した気分はど☆すか
+Dialogue: 3,0:47:33.23,0:47:41.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1162,18,-522,18)}「ラジ男(らじお)」に対する「ラジ子(らじこ)」なのよ～！
+Dialogue: 3,0:47:33.44,0:47:41.44,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:47:34.42,0:47:42.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,72,-216,72)}すごく聴きやすかったです
+Dialogue: 3,0:47:35.11,0:47:43.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,90,-198,90)}久しぶりで良かったです
+Dialogue: 3,0:47:38.70,0:47:46.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,36,-378,36)}はーちゃんの回からスタジオ変わったみたいね
+Dialogue: 3,0:47:40.43,0:47:48.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:47:42.76,0:47:50.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1126,18,-486,18)}already listen. so much fun
+Dialogue: 3,0:47:50.71,0:47:58.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}柱Nightk
+Dialogue: 3,0:48:01.11,0:48:09.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:48:19.61,0:48:27.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,18,-396,18)}そうだ日本に帰ってきてから、お料理してるの？
+Dialogue: 3,0:48:54.32,0:49:02.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}すごい！勉強家！
+Dialogue: 3,0:49:00.83,0:49:08.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}お願いいたします
+Dialogue: 3,0:49:01.10,0:49:09.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1162,54,-522,54)}柱Nightの翌日にもうずっきーとかき氷と麻辣湯行ったん？
+Dialogue: 3,0:49:05.12,0:49:13.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}日本でも、車のライセンス、取ってーー
+Dialogue: 3,0:49:17.66,0:49:25.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}ずっきーと
+Dialogue: 3,0:49:21.31,0:49:29.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:49:23.06,0:49:31.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}ずっきーと
+Dialogue: 3,0:49:48.04,0:49:56.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}絶対スタッフさんに高評価だよね
+Dialogue: 3,0:49:48.91,0:49:56.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}初見です！
+Dialogue: 3,0:49:55.80,0:50:03.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}みんなすごい！
+Dialogue: 3,0:49:59.20,0:50:07.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,18,-540,18)}ずっきーあんまり☆ないイメージだったけど、全く印象が変わった
+Dialogue: 3,0:50:01.66,0:50:09.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:50:08.78,0:50:16.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}髪色もね
+Dialogue: 3,0:50:09.49,0:50:17.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,54,-360,54)}はるかとずきちゃんは、空気感が似てるよね
+Dialogue: 3,0:50:20.27,0:50:28.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}はーずきナイスコンビだったね🌻🎀
+Dialogue: 3,0:50:26.38,0:50:34.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:50:34.52,0:50:42.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}緑の背景！
+Dialogue: 3,0:50:41.81,0:50:49.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1072,36,-432,36)}いつもずっきーとは仲良し姉妹みたいでほんわかする
+Dialogue: 3,0:50:42.22,0:50:50.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}絆が深まっているんだ！
+Dialogue: 3,0:51:11.47,0:51:19.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:51:12.05,0:51:20.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}ずっきーはドラマ主演も決まったしね
+Dialogue: 3,0:51:24.15,0:51:32.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,18,-450,18)}行こうっていうのがすぐに実行できたのはすばらしい。
+Dialogue: 3,0:51:37.93,0:51:45.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}迷ったら両方ってやつね
+Dialogue: 3,0:51:38.06,0:51:46.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}優柔不断な2人
+Dialogue: 3,0:51:41.30,0:51:49.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,54,-324,54)}こんばんは。日曜の昼公演当選しました
+Dialogue: 3,0:51:52.01,0:52:00.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}翌日行動はビックリした😂
+Dialogue: 3,0:52:13.96,0:52:21.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}はーちゃん辛いの大丈夫なんだ
+Dialogue: 3,0:52:14.68,0:52:22.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}なるは
+Dialogue: 3,0:52:18.85,0:52:26.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,54,-180,54)}なるさんの口調似てた
+Dialogue: 3,0:52:18.89,0:52:26.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:52:20.46,0:52:28.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1306,90,-666,90)}i thought hachan can eat more spicier
+Dialogue: 3,0:52:24.96,0:52:32.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}待ち時間0はラッキーだね！
+Dialogue: 3,0:52:35.10,0:52:43.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,18,-342,18)}麻辣湯のおすすめトッピング知りたい❣️
+Dialogue: 3,0:52:36.94,0:52:44.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}みんな仲良し！
+Dialogue: 3,0:52:37.47,0:52:45.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}spicy pan mee
+Dialogue: 3,0:52:44.96,0:52:52.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1252,18,-612,18)}best time to hang out with friends
+Dialogue: 3,0:52:54.79,0:53:02.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,18,-396,18)}jalan jalan cari makan
+Dialogue: 3,0:53:04.78,0:53:12.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}お話しありがとうございました。
+Dialogue: 3,0:53:15.40,0:53:23.40,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}楽しい旅だね！
+Dialogue: 3,0:53:21.08,0:53:29.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}ごーらー
+Dialogue: 3,0:53:21.27,0:53:29.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}ふわふわのかき氷は初めて？
+Dialogue: 3,0:53:24.86,0:53:32.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,18,-18,18)}し
+Dialogue: 3,0:53:26.35,0:53:34.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}もちろんw
+Dialogue: 3,0:53:34.26,0:53:42.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}ゴーヤ？
+Dialogue: 3,0:53:38.33,0:53:46.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}強羅～　じゃないか
+Dialogue: 3,0:53:43.17,0:53:51.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,18,-378,18)}ゴーラー→かきごーらー→かき氷が好きな人達
+Dialogue: 3,0:53:49.46,0:53:57.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:53:56.96,0:54:04.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}達人
+Dialogue: 3,0:54:11.79,0:54:19.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,18,-450,18)}頭キンキンにならないんだね、ずっきーとなるさんは。
+Dialogue: 3,0:54:14.57,0:54:22.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,36,-270,36)}急いで食べると頭痛くならない？
+Dialogue: 3,0:54:17.41,0:54:25.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:54:25.76,0:54:33.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}あまたズッキんとならないのかな？
+Dialogue: 3,0:54:30.70,0:54:38.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}プロ！すごいぜ！(笑)
+Dialogue: 3,0:54:40.53,0:54:48.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}かき氷ニキ
+Dialogue: 3,0:54:40.74,0:54:48.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}ずっきーはプロなのか
+Dialogue: 3,0:54:45.80,0:54:53.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}かき氷そのもの！(笑)
+Dialogue: 3,0:55:08.26,0:55:16.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}さすがw
+Dialogue: 3,0:55:08.65,0:55:16.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:55:09.25,0:55:17.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}メンバーかき氷好き過ぎ問題🤣
+Dialogue: 3,0:55:11.87,0:55:19.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}面白いね
+Dialogue: 3,0:55:15.00,0:55:23.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,90,-18,90)}笑
+Dialogue: 3,0:55:18.11,0:55:26.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:55:21.95,0:55:29.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:55:22.36,0:55:30.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,54,-18,54)}笑
+Dialogue: 3,0:55:23.72,0:55:31.72,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}かわいい！
+Dialogue: 3,0:55:25.16,0:55:33.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,90,-180,90)}歩くかき氷＝なるさん
+Dialogue: 3,0:55:32.82,0:55:40.82,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}うまい！
+Dialogue: 3,0:55:35.32,0:55:43.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,36,-270,36)}彼女こそが「かき氷」だ！(笑)
+Dialogue: 3,0:55:40.68,0:55:48.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,54,-180,54)}2年間飽きてないって
+Dialogue: 3,0:55:53.46,0:56:01.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:55:58.77,0:56:06.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}確かに
+Dialogue: 3,0:56:04.73,0:56:12.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}かき氷道ですね。
+Dialogue: 3,0:56:30.48,0:56:38.48,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:56:44.96,0:56:52.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}すごいっ
+Dialogue: 3,0:56:55.86,0:57:03.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}takoyaki 好吃吗
+Dialogue: 3,0:56:57.23,0:57:05.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}嬉しいお誘い！
+Dialogue: 3,0:57:04.50,0:57:12.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1216,18,-576,18)}japan malatang same as Malaysia?
+Dialogue: 3,0:57:16.10,0:57:24.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}麻辣湯(まーらーたん)！
+Dialogue: 3,0:57:20.26,0:57:28.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,36,-378,36)}minum air dulu Hachan
+Dialogue: 3,0:57:24.94,0:57:32.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}ずっきーは誘うのが上手いね
+Dialogue: 3,0:57:26.88,0:57:34.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}ラッキーですね
+Dialogue: 3,0:57:29.19,0:57:37.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:57:53.76,0:58:01.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}pan mee 好吃吗
+Dialogue: 3,0:58:06.43,0:58:14.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,18,-540,18)}こないだ劇場公演の帰り、新幹線の中で麻辣湯食べてる女子がいた
+Dialogue: 3,0:58:06.62,0:58:14.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}おつかれさまです
+Dialogue: 3,0:58:11.45,0:58:19.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}まーらーたんグループもあるのか
+Dialogue: 3,0:58:15.79,0:58:23.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}malatang好吃吗？
+Dialogue: 3,0:58:16.98,0:58:24.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}ウケるww
+Dialogue: 3,0:58:44.23,0:58:52.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}麻辣湯、好きな具材とかあった？
+Dialogue: 3,0:58:45.92,0:58:53.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}ラッキーずっきーデイ！
+Dialogue: 3,0:58:50.15,0:58:58.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}很好吃～
+Dialogue: 3,0:58:51.59,0:58:59.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}很好吃
+Dialogue: 3,0:58:53.88,0:59:01.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}哈哈
+Dialogue: 3,0:58:54.13,0:59:02.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:59:03.68,0:59:11.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:59:13.81,0:59:21.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}僕も食べてみたいな
+Dialogue: 3,0:59:14.69,0:59:22.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}キクラゲ？
+Dialogue: 3,0:59:17.24,0:59:25.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,54,-288,54)}セダップ　だっけ、おいしいって。
+Dialogue: 3,0:59:19.74,0:59:27.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,72,-36,72)}花花
+Dialogue: 3,0:59:22.00,0:59:30.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}白クラゲ、初めて聞いた
+Dialogue: 3,0:59:33.33,0:59:41.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:59:44.06,0:59:52.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}「きくらげ」はキノコだよ～！
+Dialogue: 3,0:59:44.13,0:59:52.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}木耳栄養あるよね
+Dialogue: 3,1:00:16.13,1:00:24.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1270,18,-630,18)}今度ディズニーいってもバズライトイヤー アストロブラスターもう無いね～
+Dialogue: 3,1:00:16.38,1:00:24.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}ちゅるちゅる系好きね〜
+Dialogue: 3,1:00:28.00,1:00:36.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}はーちゃん得意の空芯菜？
+Dialogue: 3,1:00:32.86,1:00:40.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}h☆ent eat？😂
+Dialogue: 3,1:00:35.22,1:00:43.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}たくさん喋ってくれたもの～！
+Dialogue: 3,1:00:36.59,1:00:44.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,1:00:36.84,1:00:44.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,72,-360,72)}ok Hachan makan dulu
+Dialogue: 3,1:00:43.81,1:00:51.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}later makan apa ?
+Dialogue: 3,1:00:46.50,1:00:54.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}ずっきーはきのこ類苦手なんだよね
+Dialogue: 3,1:00:50.00,1:00:58.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,54,-180,54)}ずっきーも好きなのか
+Dialogue: 3,1:00:52.69,1:01:00.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}吃什么
+Dialogue: 3,1:01:00.64,1:01:08.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}Hungry tooooo
+Dialogue: 3,1:01:00.70,1:01:08.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}吃什么？
+Dialogue: 3,1:01:01.87,1:01:09.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}君は満腹でもハーングリー。
+Dialogue: 3,1:01:10.50,1:01:18.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}ずっきーは焼き肉好き
+Dialogue: 3,1:01:14.07,1:01:22.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}饿了
+Dialogue: 3,1:01:20.21,1:01:28.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,1:01:27.48,1:01:35.48,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}愛佳 ?
+Dialogue: 3,1:01:40.54,1:01:48.54,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}hungry love
+Dialogue: 3,1:01:56.93,1:02:04.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}ありがとう！(笑)
+Dialogue: 3,1:02:04.01,1:02:12.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,36,-180,36)}男前だなあ、まなか。
+Dialogue: 3,1:02:05.33,1:02:13.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}田口の卒業公演が決まったね
+Dialogue: 3,1:02:13.22,1:02:21.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}まなかちゃんっ
+Dialogue: 3,1:02:15.48,1:02:23.48,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}みんな大好き！まなかちゃん！
+Dialogue: 3,1:02:17.81,1:02:25.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,54,-144,54)}くるるん元気かな
+Dialogue: 3,1:02:26.32,1:02:34.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}faster go eat
+Dialogue: 3,1:02:26.90,1:02:34.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,1:02:29.43,1:02:37.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}あの子特有の言い方
+Dialogue: 3,1:02:32.92,1:02:40.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1342,72,-702,72)}C☆e Hachan miniman kesukaan Hachan 🌹🌻☀️
+Dialogue: 3,1:02:42.58,1:02:50.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}白鳥さりいちゃんは今月末、、、
+Dialogue: 3,1:02:51.68,1:02:59.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}its time to eat
+Dialogue: 3,1:02:51.96,1:02:59.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}hungry love
+Dialogue: 3,1:02:52.98,1:03:00.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}まほぴょんも卒業か
+Dialogue: 3,1:03:03.69,1:03:11.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,1:03:03.89,1:03:11.89,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1162,36,-522,36)}it's time to sing hungry love
+Dialogue: 3,1:03:09.40,1:03:17.40,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,54,-342,54)}はーちゃんはまだまだまだいてちょーだい
+Dialogue: 3,1:03:10.88,1:03:18.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}今や16期も大ベテランですね
+Dialogue: 3,1:03:17.19,1:03:25.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}えりぃ
+Dialogue: 3,1:03:19.74,1:03:27.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,1:03:25.26,1:03:33.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,18,-360,18)}まほぴょんと一緒にたくさん出てあげて～！
+Dialogue: 3,1:03:35.23,1:03:43.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}笑笑
+Dialogue: 3,1:03:38.68,1:03:46.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}綾瀬はーちゃん、こんばんはーちゃん
+Dialogue: 3,1:03:40.17,1:03:48.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,54,-252,54)}どういう励まし方なの、(笑)
+Dialogue: 3,1:03:40.37,1:03:48.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}おーい(笑
+Dialogue: 3,1:03:40.97,1:03:48.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}まほぴょん笑
+Dialogue: 3,1:03:42.34,1:03:50.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}圧？w
+Dialogue: 3,1:03:45.08,1:03:53.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}なんちゅう後輩や！？(笑)
+Dialogue: 3,1:03:47.98,1:03:55.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}まほぴょんかわいい 笑
+Dialogue: 3,1:03:49.26,1:03:57.26,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,1:04:02.28,1:04:10.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}へぇーーー
+Dialogue: 3,1:04:20.65,1:04:28.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}無理ちゃぶり 笑
+Dialogue: 3,1:04:26.93,1:04:34.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,36,-360,36)}カーテン閉まってる向こ☆円陣してたんだね
+Dialogue: 3,1:04:35.90,1:04:43.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}いいねえ
+Dialogue: 3,1:04:39.59,1:04:47.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}いいね
+Dialogue: 3,1:04:41.55,1:04:49.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}いいね👍👍👍
+Dialogue: 3,1:04:53.88,1:05:01.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}愉快なお姉さん達である。(笑)
+Dialogue: 3,1:05:07.86,1:05:15.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}ww
+Dialogue: 3,1:05:19.22,1:05:27.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}おー！
+Dialogue: 3,1:05:22.69,1:05:30.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}もっと前から言ってよね～
+Dialogue: 3,1:05:26.06,1:05:34.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,1:05:31.84,1:05:39.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}美人だよ
+Dialogue: 3,1:05:32.57,1:05:40.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1468,36,-828,36)}え！なんかさ！お友達みんなに、はーちゃんマレーシアでアイライン濃くなった？って言われる！！！
+Dialogue: 3,1:05:38.34,1:05:46.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,1:05:56.36,1:06:04.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1396,18,-756,18)}自己紹介の後、はーちゃんが以上、〇〇なメンバー8名でお送りします、の〇〇が好きです。
+Dialogue: 3,1:06:01.00,1:06:09.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}アドバイス多め笑笑
+Dialogue: 3,1:06:28.36,1:06:36.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}ゆきたんとの絡みは熱いね！
+Dialogue: 3,1:06:28.93,1:06:36.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,36,-360,36)}ゆきたんも麻辣湯(まーらーたん)大好き！
+Dialogue: 3,1:06:31.34,1:06:39.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}ゆきたんに
+Dialogue: 3,1:06:31.86,1:06:39.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,72,-252,72)}♪。.:＊・゜♪。.:＊・゜
+Dialogue: 3,1:07:21.23,1:07:29.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}6月はゆきたんとの共演多いよね
+Dialogue: 3,1:07:25.96,1:07:33.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}はーちゃんはシール集めしてますか？
+Dialogue: 3,1:07:34.28,1:07:42.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}マレーシア人は
+Dialogue: 3,1:07:39.84,1:07:47.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,1:07:40.27,1:07:48.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}まなかどんだけえらいの？(笑)
+Dialogue: 3,1:07:53.06,1:08:01.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1108,18,-468,18)}メイクもいろんな引き出し(テク)増えると楽しいよね♪
+Dialogue: 3,1:07:55.93,1:08:03.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,36,-324,36)}ほぼノーメイクだったんかい！？(笑)
+Dialogue: 3,1:08:02.05,1:08:10.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,18,-396,18)}はーちゃんはもとがいいから、化粧薄目でもOK
+Dialogue: 3,1:08:10.65,1:08:18.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}wwww
+Dialogue: 3,1:08:10.75,1:08:18.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}www
+Dialogue: 3,1:08:14.93,1:08:22.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1018,54,-378,54)}愛佳は、はーちゃんに全て残したいんだよね😭
+Dialogue: 3,1:08:27.25,1:08:35.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}まなか、いいやつだなぁ
+Dialogue: 3,1:08:39.93,1:08:47.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}巻物みたいな化粧道具まだ使ってるの？
+Dialogue: 3,1:08:51.41,1:08:59.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1054,18,-414,18)}まなかちゃんは絶対にAKB48に必要な人です。
+Dialogue: 3,1:09:31.41,1:09:39.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}シールこさきにあげたら喜びそう
+Dialogue: 3,1:09:44.56,1:09:52.56,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}ゆいち！
+Dialogue: 3,1:10:00.16,1:10:08.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}ゆいちサバサバしてそう
+Dialogue: 3,1:10:00.47,1:10:08.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,36,-270,36)}巻き物の件　有名なのでは？笑笑
+Dialogue: 3,1:10:03.22,1:10:11.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,54,-36,54)}ww
+Dialogue: 3,1:10:07.08,1:10:15.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,72,-270,72)}まほぴょんに比べたら余裕じゃ？
+Dialogue: 3,1:10:12.51,1:10:20.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}ゆいちとダンス動画を撮って～！
+Dialogue: 3,1:10:16.90,1:10:24.90,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}後輩に甘えるのかわいい 笑
+Dialogue: 3,1:10:21.91,1:10:29.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,1:10:43.08,1:10:51.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1180,18,-540,18)}まほぴょんは楽屋をオタク部屋にしちゃうっていってなかったっけ
+Dialogue: 3,1:10:46.77,1:10:54.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}こ、こんばんは
+Dialogue: 3,1:10:51.55,1:10:59.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}大賀さーちゃん！
+Dialogue: 3,1:10:54.93,1:11:02.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,1:11:01.45,1:11:09.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}さーちゃんはいい子そう
+Dialogue: 3,1:11:11.09,1:11:19.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,1:11:13.55,1:11:21.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}大賀さきは
+Dialogue: 3,1:11:48.52,1:11:56.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}面倒見が良さそうに見えます
+Dialogue: 3,1:11:49.18,1:11:57.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,36,-324,36)}ドラ３の子もはーさんって言ってたよね
+Dialogue: 3,1:11:59.84,1:12:07.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}はーさん&さーちゃん！
+Dialogue: 3,1:12:31.59,1:12:39.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,1:12:41.30,1:12:49.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(928,18,-288,18)}、、、俺の右手がうずくぜ？(笑)
+Dialogue: 3,1:12:55.51,1:13:03.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}母音の問題かな？
+Dialogue: 3,1:13:06.93,1:13:14.93,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}はーちゃん！さーちゃん！あいちゃん！
+Dialogue: 3,1:13:09.08,1:13:17.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1324,36,-684,36)}はーちゃんが変なこと言ったらさーちゃんはちゃんとツッコミ入れてくれるから安心
+Dialogue: 3,1:13:09.99,1:13:17.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,1:13:11.47,1:13:19.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}せりちゃん
+Dialogue: 3,1:13:23.70,1:13:31.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,18,-180,18)}たくさん食べてね～！
+Dialogue: 3,1:13:26.37,1:13:34.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}コフ
+Dialogue: 3,1:13:28.51,1:13:36.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,54,-234,54)}ごはんたべて頂戴。お刺身？
+Dialogue: 3,1:13:29.80,1:13:37.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}晩御飯クイズは？
+Dialogue: 3,1:13:32.00,1:13:40.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}以上、綾瀬はっちゃんでした！
+Dialogue: 3,1:13:35.06,1:13:43.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}晩御飯何食べるの？
+Dialogue: 3,1:13:36.08,1:13:44.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,90,-126,90)}晩ごはんクイズ
+Dialogue: 3,1:13:38.95,1:13:46.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}生牡蠣
+Dialogue: 3,1:13:50.96,1:13:58.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,18,-360,18)}dinner h☆ent decide？
+Dialogue: 3,1:13:51.14,1:13:59.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}楽しみね🥰
+Dialogue: 3,1:13:57.92,1:14:05.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(982,54,-342,54)}仕事帰ってきてからでも見れて良かった😭
+Dialogue: 3,1:13:59.01,1:14:07.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}黒酢炒飯
+Dialogue: 3,1:14:02.21,1:14:10.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}懐かしい！晩ごはんクイズ！
+Dialogue: 3,1:14:04.64,1:14:12.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,72,-162,72)}おすすめ晩御飯は🙈
+Dialogue: 3,1:14:12.06,1:14:20.06,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}晩御飯クイズ　と　テ☆占い　懐かしい
+Dialogue: 3,1:14:12.28,1:14:20.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}おやすみなさーい
+Dialogue: 3,1:14:13.96,1:14:21.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,1:14:14.38,1:14:22.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,72,-234,72)}faster go eat
+Dialogue: 3,1:14:18.53,1:14:26.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,90,-126,90)}ありがとうね😃
+Dialogue: 3,1:14:26.81,1:14:34.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,18,-396,18)}コメント読んでくれてありがとうございました。
+Dialogue: 3,1:14:27.12,1:14:35.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}はーちゃんこそ養生してね
+Dialogue: 3,1:14:30.24,1:14:38.24,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}久しぶりに、はーちゃん見ました
+Dialogue: 3,1:14:31.92,1:14:39.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}配信ありがとん！
+Dialogue: 3,1:14:35.63,1:14:43.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}はーちゃん〜
+Dialogue: 3,1:14:36.32,1:14:44.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}ば〜い！
+Dialogue: 3,1:14:40.35,1:14:48.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,1:15:03.37,1:15:11.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}thank you
+Dialogue: 3,1:15:10.04,1:15:18.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,1:15:11.66,1:15:19.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}miss you Hachan
+Dialogue: 3,1:15:32.09,1:15:40.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,1:15:34.51,1:15:42.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,36,-144,36)}配信ありがとう⚡
+Dialogue: 3,1:15:47.05,1:15:55.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}ありがと～
+Dialogue: 3,1:15:48.62,1:15:56.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,36,-450,36)}selamat petang cik haruka
+Dialogue: 3,1:15:55.20,1:16:03.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}terima kasi
+Dialogue: 3,1:16:03.67,1:16:11.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1090,18,-450,18)}テレマカシ。はーちゃん早く体調よくなりますように。
+Dialogue: 3,1:16:04.02,1:16:12.02,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}皆様、パチパチパチパチ！
+Dialogue: 3,1:16:06.55,1:16:14.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}88888888888
+Dialogue: 3,1:16:08.10,1:16:16.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}☆re^^
+Dialogue: 3,1:16:25.17,1:16:33.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}888888888888
+Dialogue: 3,1:16:25.23,1:16:33.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,36,-162,36)}配信ありがとう！😊
+Dialogue: 3,1:16:28.55,1:16:36.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,54,-162,54)}パチパチパチパチ！
+Dialogue: 3,1:16:30.31,1:16:38.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,72,-126,72)}配信ありがとう
+Dialogue: 3,1:16:37.67,1:16:45.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}hatenzun sugoii
+Dialogue: 3,1:16:39.86,1:16:47.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}また楽しみにしてますよ
+Dialogue: 3,1:16:40.35,1:16:48.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,54,-270,54)}配信、ありがとうございました！
+Dialogue: 3,1:16:41.80,1:16:49.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,72,-126,72)}配信ありがと😊
+Dialogue: 3,1:16:41.94,1:16:49.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}配信ありがとう！
+Dialogue: 3,1:16:42.95,1:16:50.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,108,-144,108)}配信ありがとうー
+Dialogue: 3,1:16:43.79,1:16:51.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1360,126,-720,126)}今日も可愛くてありがとう❣️❣️❣️ニコニコなお顔沢山みれて幸せだた➰➰❣️❣️
+Dialogue: 3,1:16:44.15,1:16:52.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,144,-234,144)}配信ありがとうございました
+Dialogue: 3,1:16:44.42,1:16:52.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,162,-54,162)}去吃饭
+Dialogue: 3,1:16:44.94,1:16:52.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,180,-126,180)}8888888
+Dialogue: 3,1:16:45.38,1:16:53.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1036,198,-396,198)}コメント読んでくれてありがとうございました。
+Dialogue: 3,1:16:45.70,1:16:53.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,18,-324,18)}配信ありがとう🌻　ゆっくり休んでね！
+Dialogue: 3,1:16:50.19,1:16:58.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}ありがとう！
+Dialogue: 3,1:16:52.39,1:17:00.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}行きます‼️
+Dialogue: 3,1:16:55.23,1:17:03.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}晚安
+Dialogue: 3,1:16:55.69,1:17:03.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,72,-216,72)}握手会、お話会ワクワク♪
+Dialogue: 3,1:16:59.18,1:17:07.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}再见
+Dialogue: 3,1:16:59.87,1:17:07.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,90,-360,90)}え！握手会&オンラインお話会が受付中！？
+Dialogue: 3,1:17:06.10,1:17:14.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}谢谢
+Dialogue: 3,1:17:09.79,1:17:17.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}☆re 谢谢妳
+Dialogue: 3,1:17:11.71,1:17:19.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,1:17:18.94,1:17:26.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}みんなでチェックだ～！
+Dialogue: 3,1:17:19.47,1:17:27.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,36,-54,36)}谢谢你
+Dialogue: 3,1:17:31.22,1:17:39.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,18,-234,18)}配信ありがとうございました
+Dialogue: 3,1:17:40.45,1:17:48.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}matane~＞＜
+Dialogue: 3,1:17:40.67,1:17:48.67,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(946,36,-306,36)}はーちゃん１日お疲れ様でした^_^
+Dialogue: 3,1:17:41.32,1:17:49.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,54,-36,54)}谢谢
+Dialogue: 3,1:17:41.91,1:17:49.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,72,-270,72)}はーちゃんが一番かわいいよ～。
+Dialogue: 3,1:17:42.77,1:17:50.77,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}ゆっくり休んでね
+Dialogue: 3,1:17:43.38,1:17:51.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,108,-126,108)}楽しかった～！
+Dialogue: 3,1:17:45.51,1:17:53.51,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,126,-36,126)}晚安
+Dialogue: 3,1:17:47.30,1:17:55.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,144,-198,144)}ありがとうございました
+Dialogue: 3,1:17:47.64,1:17:55.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}バイバイ👋🏻
+Dialogue: 3,1:17:49.50,1:17:57.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}楽しかったです
+Dialogue: 3,1:17:49.97,1:17:57.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}またね！
+Dialogue: 3,1:17:51.19,1:17:59.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}ありがとう～！
+Dialogue: 3,1:17:51.71,1:17:59.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,72,-360,72)}arigatou hachan~🥹🫶🏻🌻
+Dialogue: 3,1:17:51.78,1:17:59.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,90,-144,90)}配信ありがとう〜
+Dialogue: 3,1:17:52.65,1:18:00.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,108,-36,108)}再见
+Dialogue: 3,1:17:57.41,1:18:05.41,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,126,-162,126)}おやすみなさいませ
+Dialogue: 3,1:18:00.70,1:18:08.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,18,-198,18)}ありがとうございました
+Dialogue: 3,1:18:01.32,1:18:09.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}去吃饭咯
+Dialogue: 3,1:18:02.37,1:18:10.37,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,54,-126,54)}シーユースーン
+Dialogue: 3,1:18:03.63,1:18:11.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,72,-54,72)}お？！
+Dialogue: 3,1:18:05.97,1:18:13.97,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,90,-198,90)}鼻と喉が治りますように
+Dialogue: 3,1:18:06.38,1:18:14.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,108,-90,108)}やったー！
+Dialogue: 3,1:18:06.75,1:18:14.75,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,126,-90,126)}え！明日！
+Dialogue: 3,1:18:08.96,1:18:16.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}おお？
+Dialogue: 3,1:18:10.91,1:18:18.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}待ってたよ！！
+Dialogue: 3,1:18:12.13,1:18:20.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}🥹🫶🏻🌻✨
+Dialogue: 3,1:18:12.35,1:18:20.35,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,72,-144,72)}やったね楽しみ〜
+Dialogue: 3,1:18:15.16,1:18:23.16,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,90,-90,90)}おやすみ～
+Dialogue: 3,1:18:15.20,1:18:23.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,108,-72,108)}は～い！
+Dialogue: 3,1:18:15.73,1:18:23.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,126,-126,126)}お疲れ様でした
+Dialogue: 3,1:18:16.07,1:18:24.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,144,-198,144)}はーい。はーちゃんもね
+Dialogue: 3,1:18:16.18,1:18:24.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,162,-72,162)}またね～
+Dialogue: 3,1:18:17.11,1:18:25.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,18,-162,18)}おやすみ、またねー
+Dialogue: 3,1:18:17.91,1:18:25.91,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,180,-126,180)}おやすみなさい
+Dialogue: 3,1:18:20.17,1:18:28.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,36,-36,36)}晚安
+Dialogue: 3,1:18:20.61,1:18:28.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}おやすみ〜
+Dialogue: 3,1:18:21.45,1:18:29.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}おやすみー
+Dialogue: 3,1:18:21.78,1:18:29.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,198,-126,198)}ありがとう～！
+Dialogue: 3,1:18:22.05,1:18:30.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,216,-90,216)}おやすみ～
+Dialogue: 3,1:18:22.08,1:18:30.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,234,-90,234)}おやすみ〜
+Dialogue: 3,1:18:23.12,1:18:31.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,252,-90,252)}おやすみ〜
+Dialogue: 3,1:18:23.14,1:18:31.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,270,-126,270)}おやすみんぼう
+Dialogue: 3,1:18:23.39,1:18:31.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,90,-54,90)}またね
+Dialogue: 3,1:18:23.70,1:18:31.70,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,108,-126,108)}おやすみなさい
+Dialogue: 3,1:18:23.76,1:18:31.76,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,126,-36,126)}再见
+Dialogue: 3,1:18:24.09,1:18:32.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,144,-90,144)}おやすみ💤
+Dialogue: 3,1:18:25.04,1:18:33.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,162,-126,162)}おやすみなさい
+Dialogue: 3,1:18:25.61,1:18:33.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}おやすみなさい
+Dialogue: 3,1:18:27.28,1:18:35.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,180,-162,180)}おやすみなんしょ~
+Dialogue: 3,1:18:27.34,1:18:35.34,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,288,-126,288)}おやすみなさい
+Dialogue: 3,1:18:29.03,1:18:37.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}おやすみニャさい～！🐾
+Dialogue: 3,1:18:30.20,1:18:38.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,54,-198,54)}ウィなんちゃらかな？😅
+Dialogue: 3,1:18:31.81,1:18:39.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,72,-180,72)}おやすみんみんぜみ〜
+Dialogue: 3,1:18:34.07,1:18:42.07,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}おやすみ～
+Dialogue: 3,1:18:35.80,1:18:43.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}ば〜い！
+Dialogue: 3,1:18:36.59,1:18:44.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,108,-198,108)}love you~＞＜
+Dialogue: 3,1:18:38.31,1:18:46.31,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,36,-72,36)}グッナイ
+Dialogue: 3,1:18:40.29,1:18:48.29,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}byebye
+Dialogue: 3,1:18:41.86,1:18:49.86,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}バイバイ
