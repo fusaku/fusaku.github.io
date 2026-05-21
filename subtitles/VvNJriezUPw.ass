@@ -1,0 +1,66 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんばんは！
+Dialogue: 3,0:00:12.65,0:00:20.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:13.03,0:00:21.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,54,-36,54)}お！
+Dialogue: 3,0:00:13.23,0:00:21.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:13.42,0:00:21.42,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}話してみてー
+Dialogue: 3,0:00:13.78,0:00:21.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:15.01,0:00:23.01,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:00:15.21,0:00:23.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:00:15.61,0:00:23.61,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}こんばんは！
+Dialogue: 3,0:00:15.88,0:00:23.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,180,-108,180)}こんばんは！
+Dialogue: 3,0:00:17.20,0:00:25.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,198,-108,198)}こんばんは！
+Dialogue: 3,0:00:17.21,0:00:25.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,216,-108,216)}こんばんは！
+Dialogue: 3,0:00:17.95,0:00:25.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,234,-36,234)}やほ
+Dialogue: 3,0:00:18.13,0:00:26.13,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,252,-108,252)}こんばんは！
+Dialogue: 3,0:00:19.21,0:00:27.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,270,-72,270)}どうかな
+Dialogue: 3,0:00:19.23,0:00:27.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,288,-108,288)}こんばんは！
+Dialogue: 3,0:00:19.52,0:00:27.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,306,-126,306)}きこえないかも
+Dialogue: 3,0:00:19.94,0:00:27.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,324,-90,324)}かわいい！
+Dialogue: 3,0:00:21.19,0:00:29.19,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,18,-126,18)}こんばんは～。
+Dialogue: 3,0:00:21.71,0:00:29.71,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,36,-198,36)}あづちゃん！こんばんは
+Dialogue: 3,0:00:21.83,0:00:29.83,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}もお1度
+Dialogue: 3,0:00:22.57,0:00:30.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}まだだめー
+Dialogue: 3,0:00:23.02,0:00:31.02,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,90,-162,90)}聞こえない?たぶん
+Dialogue: 3,0:00:23.40,0:00:31.40,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,108,-162,108)}きこえないやんけ！
+Dialogue: 3,0:00:23.59,0:00:31.59,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,126,-144,126)}ちゃんと声出して
+Dialogue: 3,0:00:23.88,0:00:31.88,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんばんは！
+Dialogue: 3,0:00:24.33,0:00:32.33,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,162,-72,162)}きこえん
+Dialogue: 3,0:00:24.45,0:00:32.45,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,180,-234,180)}声聞こえない(　߹꒳߹ )
+Dialogue: 3,0:00:24.66,0:00:32.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,342,-108,342)}聞こえなーい
+Dialogue: 3,0:00:24.84,0:00:32.84,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,360,-90,360)}きこえへん
+Dialogue: 3,0:00:24.99,0:00:32.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,198,-72,198)}あかん笑
+Dialogue: 3,0:00:25.08,0:00:33.08,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,216,-36,216)}無音
+Dialogue: 3,0:00:25.12,0:00:33.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(820,234,-180,234)}まだ声聞こえないww
+Dialogue: 3,0:00:25.36,0:00:33.36,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,252,-90,252)}聞こえない
+Dialogue: 3,0:00:25.73,0:00:33.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,270,-108,270)}だめーーーえ
+Dialogue: 3,0:00:25.98,0:00:33.98,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,288,-54,288)}声なし
+Dialogue: 3,0:00:26.09,0:00:34.09,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,306,-36,306)}ダメ
+Dialogue: 3,0:00:26.28,0:00:34.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,324,-324,324)}聞こえない！！！！！！！！！！！！！
+Dialogue: 3,0:00:26.30,0:00:34.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,18,-144,18)}聞こえない。。。
+Dialogue: 3,0:00:26.47,0:00:34.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:26.79,0:00:34.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}きこえない～
+Dialogue: 3,0:00:27.03,0:00:35.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:27.15,0:00:35.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}あれれ？
+Dialogue: 3,0:00:27.27,0:00:35.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:27.39,0:00:35.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,126,-144,126)}まだだめかもーー
+Dialogue: 3,0:00:27.92,0:00:35.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,144,-36,144)}あれ
+Dialogue: 3,0:00:28.46,0:00:36.46,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}聞こえない😆
+Dialogue: 3,0:00:28.85,0:00:36.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,180,-126,180)}聞こえないー笑
+Dialogue: 3,0:00:29.25,0:00:37.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,342,-162,342)}再起動してみてーー
+Dialogue: 3,0:00:29.27,0:00:37.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,360,-108,360)}こんばんは！
+Dialogue: 3,0:00:29.32,0:00:37.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,198,-72,198)}あじゅ〜
+Dialogue: 3,0:00:29.57,0:00:37.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,216,-90,216)}聞こえない
+Dialogue: 3,0:00:30.66,0:00:38.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(784,234,-144,234)}あかん聞こえへん
+Dialogue: 3,0:00:30.80,0:00:38.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,252,-72,252)}ダメだね
