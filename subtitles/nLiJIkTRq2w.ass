@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,18,-252,18)}selamat petang
+Dialogue: 3,0:00:12.05,0:00:20.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}まっくらです
+Dialogue: 3,0:00:16.11,0:00:24.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,54,-54,54)}今来た
+Dialogue: 3,0:00:16.17,0:00:24.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,72,-126,72)}外からですか？
+Dialogue: 3,0:00:17.00,0:00:25.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんにちは〜
+Dialogue: 3,0:00:17.63,0:00:25.63,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:17.73,0:00:25.73,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,126,-54,126)}えーん
+Dialogue: 3,0:00:18.23,0:00:26.23,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}ラジオ配信だ
+Dialogue: 3,0:00:19.94,0:00:27.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(964,162,-324,162)}Black screen oh no
+Dialogue: 3,0:00:22.04,0:00:30.04,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,18,-36,18)}暗っ
+Dialogue: 3,0:00:22.81,0:00:30.81,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}ラジオ配信みたいになっとる
+Dialogue: 3,0:00:24.32,0:00:32.32,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
