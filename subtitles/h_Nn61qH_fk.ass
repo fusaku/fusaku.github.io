@@ -1,0 +1,46 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:14.96,0:00:22.96,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんにちは！
+Dialogue: 3,0:00:15.78,0:00:23.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんにちは！
+Dialogue: 3,0:00:16.69,0:00:24.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんにちは！
+Dialogue: 3,0:00:17.57,0:00:25.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんにちは！
+Dialogue: 3,0:00:17.80,0:00:25.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,90,-72,90)}なるほど
+Dialogue: 3,0:00:18.22,0:00:26.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,108,-54,108)}あらら
+Dialogue: 3,0:00:23.47,0:00:31.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}なんのドラマか気になる🫣
+Dialogue: 3,0:00:24.43,0:00:32.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんにちは！
+Dialogue: 3,0:00:27.58,0:00:35.58,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんにちは！
+Dialogue: 3,0:00:28.43,0:00:36.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんにちは！
+Dialogue: 3,0:00:29.47,0:00:37.47,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんにちは！
+Dialogue: 3,0:00:29.99,0:00:37.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんにちは！
+Dialogue: 3,0:00:33.39,0:00:41.39,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(910,18,-270,18)}昨日、日本で地震がありました。
+Dialogue: 3,0:00:37.69,0:00:45.69,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんにちは！
+Dialogue: 3,0:00:37.85,0:00:45.85,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんにちは！
+Dialogue: 3,0:00:38.95,0:00:46.95,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,72,-72,72)}カワイイ
+Dialogue: 3,0:00:39.87,0:00:47.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}こんにちは！
+Dialogue: 3,0:00:41.52,0:00:49.52,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんにちは！
+Dialogue: 3,0:00:41.57,0:00:49.57,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(1000,108,-360,108)}アーカイブ見ながら、在宅ワークしてた👍👍
+Dialogue: 3,0:00:43.62,0:00:51.62,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(892,126,-252,126)}♪。.:＊・゜♪。.:＊・゜
+Dialogue: 3,0:00:43.94,0:00:51.94,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,144,-126,144)}今日休みで良☆
+Dialogue: 3,0:00:47.17,0:00:55.17,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(874,36,-234,36)}はるpyon、こんにちは～
+Dialogue: 3,0:00:50.53,0:00:58.53,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんにちは！
+Dialogue: 3,0:00:52.14,0:01:00.14,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんにちは！
+Dialogue: 3,0:00:56.68,0:01:04.68,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんにちは！
+Dialogue: 3,0:00:56.80,0:01:04.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(658,72,-18,72)}ん
+Dialogue: 3,0:01:00.18,0:01:08.18,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,18,-108,18)}こんにちは！
+Dialogue: 3,0:01:00.50,0:01:08.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,54,-72,54)}見えてる
+Dialogue: 3,0:01:00.92,0:01:08.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}みえとるよー
+Dialogue: 3,0:01:02.15,0:01:10.15,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(838,108,-198,108)}こっちは問題ないよー！
+Dialogue: 3,0:01:04.02,0:01:12.02,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}見えてるよー
+Dialogue: 3,0:01:04.25,0:01:12.25,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,144,-108,144)}こんにちは！
+Dialogue: 3,0:01:04.87,0:01:12.87,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}見えてます
+Dialogue: 3,0:01:05.49,0:01:13.49,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,72,-90,72)}見えてます
