@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:25.10,0:00:33.10,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,18,-216,18)}Telop: 【お昼！】
+Dialogue: 3,0:00:28.66,0:00:36.66,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,36,-90,36)}こんにちは
+Dialogue: 3,0:00:29.65,0:00:37.65,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,54,-90,54)}むおやでw
+Dialogue: 3,0:00:36.11,0:00:44.11,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}聴こえない
+Dialogue: 3,0:00:36.64,0:00:44.64,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(802,72,-162,72)}聞こえないような？
+Dialogue: 3,0:00:40.30,0:00:48.30,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(766,36,-126,36)}音が聞こえない
+Dialogue: 3,0:00:46.27,0:00:54.27,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(730,18,-90,18)}聞こえない
