@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: danmakuFont, MS PGothic, 18, &H00FFFFFF, &H00FFFFFF, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 0.00, 0.00, 1, 1, 0, 2, 20, 20, 20, 0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 3,0:00:12.00,0:00:20.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,18,-72,18)}声出て☆
+Dialogue: 3,0:00:12.21,0:00:20.21,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,36,-108,36)}こんばんは！
+Dialogue: 3,0:00:14.80,0:00:22.80,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:15.03,0:00:23.03,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:16.05,0:00:24.05,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,90,-108,90)}サイレント？
+Dialogue: 3,0:00:18.99,0:00:26.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,108,-108,108)}こんばんは！
+Dialogue: 3,0:00:19.38,0:00:27.38,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
+Dialogue: 3,0:00:21.00,0:00:29.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,18,-54,18)}声がw
+Dialogue: 3,0:00:21.22,0:00:29.22,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,36,-216,36)}今日もとびっきり可愛い🩷
+Dialogue: 3,0:00:21.78,0:00:29.78,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(676,144,-36,144)}あれ
+Dialogue: 3,0:00:22.00,0:00:30.00,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,162,-108,162)}こんばんは！
+Dialogue: 3,0:00:22.79,0:00:30.79,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,180,-108,180)}こんばんは！
+Dialogue: 3,0:00:23.12,0:00:31.12,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,54,-108,54)}こんばんは！
+Dialogue: 3,0:00:23.20,0:00:31.20,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,72,-108,72)}こんばんは！
+Dialogue: 3,0:00:23.50,0:00:31.50,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,198,-108,198)}こんばんは！
+Dialogue: 3,0:00:24.28,0:00:32.28,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(694,90,-54,90)}声は？
+Dialogue: 3,0:00:24.43,0:00:32.43,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,216,-108,216)}こんばんは！
+Dialogue: 3,0:00:26.55,0:00:34.55,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(856,234,-216,234)}今日もメガネが可愛いです
+Dialogue: 3,0:00:26.74,0:00:34.74,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,252,-108,252)}こんばんは！
+Dialogue: 3,0:00:27.99,0:00:35.99,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(712,108,-72,108)}無音さん
+Dialogue: 3,0:00:28.92,0:00:36.92,danmakuFont,,0000,0000,0000,,{\alpha&H1A&\move(748,126,-108,126)}こんばんは！
