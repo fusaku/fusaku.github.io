@@ -368,11 +368,6 @@ function onCategoryClick(type, value, element) {
   }
 
   applyFilters();
-
-  // 移动端选择后自动收起抽屉
-  if (window.innerWidth <= 768) {
-    setTimeout(closeSidebar, 200);
-  }
 }
 
 // 新增函数：应用所有筛选条件
@@ -510,9 +505,6 @@ function bindEvents() {
   if (clearFiltersBtn) {
     clearFiltersBtn.addEventListener('click', () => {
       clearActiveNav();
-      if (window.innerWidth <= 768) {
-        closeSidebar();
-      }
     });
   }
 
