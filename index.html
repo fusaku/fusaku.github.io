@@ -10,8 +10,17 @@
 
 <body>
 
+  <!-- 侧边栏遮罩层（移动端抽屉打开时使用） -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
   <aside id="sidebar">
-    <h2 data-i18n="navigation.categories">分类导航</h2>
+    <div class="sidebar-header">
+      <h2 data-i18n="navigation.categories">分类导航</h2>
+      <button id="sidebar-close" class="sidebar-close-btn" aria-label="Close sidebar">✕</button>
+    </div>
+    <div id="clear-filter-container" style="display: none; margin-bottom: 16px;">
+      <button id="clear-filters-btn" class="clear-filters-btn" data-i18n="navigation.clearFilter">清除全部筛选</button>
+    </div>
     <section>
       <strong data-i18n="navigation.byYear">按年分类</strong>
       <ul id="yearList">
@@ -33,8 +42,16 @@
   </aside>
 
   <main id="main-content">
-    <h1 data-i18n="siteTitle">视频分享主页</h1>
+    <div class="main-header">
+      <button id="menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation">
+        <span class="menu-icon">☰</span>
+        <span data-i18n="navigation.categories">分类导航</span>
+        <span id="active-filter-badge" class="filter-badge" style="display: none;"></span>
+      </button>
+      <h1 data-i18n="siteTitle">视频分享主页</h1>
+    </div>
     <input type="text" id="filter" data-i18n-placeholder="search.placeholder" placeholder="输入关键词过滤视频..." />
+    <div id="active-filter-tags" class="active-filter-tags" style="display: none;"></div>
     <div id="video-grid"></div>
     <div id="loading">
       <div class="loading-spinner"></div>

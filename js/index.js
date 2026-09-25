@@ -22,6 +22,27 @@ const videoGrid = document.getElementById('video-grid');
 const loading = document.getElementById('loading');
 const errorDiv = document.getElementById('error');
 const mainContent = document.getElementById('main-content');
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
+const menuToggleBtn = document.getElementById('menu-toggle');
+const sidebarCloseBtn = document.getElementById('sidebar-close');
+const clearFilterContainer = document.getElementById('clear-filter-container');
+const clearFiltersBtn = document.getElementById('clear-filters-btn');
+const activeFilterBadge = document.getElementById('active-filter-badge');
+const activeFilterTags = document.getElementById('active-filter-tags');
+
+// 移动端抽屉控制
+function openSidebar() {
+  if (sidebar) sidebar.classList.add('open');
+  if (sidebarOverlay) sidebarOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSidebar() {
+  if (sidebar) sidebar.classList.remove('open');
+  if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
 
 // 初始化多语言
 async function initializeI18n() {
@@ -252,8 +273,54 @@ function showError(message) {
   hideLoading();
 }
 
+// 更新筛选状态UI（徽章、标签条、清除按钮）
+function updateFilterUI() {
+  const activeFilters = [];
+  if (currentFilters.year) {
+    activeFilters.push({ type: 'year', label: `${currentFilters.year}${window.i18n.t('date.year', '年')}` });
+  }
+  if (currentFilters.month) {
+    const monthKey = currentFilters.month.padStart(2, '0');
+    const monthName = window.i18n.t(`months.${monthKey}`, `${parseInt(currentFilters.month)}月`);
+    activeFilters.push({ type: 'month', label: monthName });
+  }
+  if (currentFilters.tag) {
+    activeFilters.push({ type: 'tag', label: currentFilters.tag });
+  }
+
+  // 手机端分类按钮上的数字徽章
+  if (activeFilterBadge) {
+    if (activeFilters.length > 0) {
+      activeFilterBadge.textContent = activeFilters.length;
+      activeFilterBadge.style.display = 'inline-block';
+    } else {
+      activeFilterBadge.style.display = 'none';
+    }
+  }
+
+  // 侧边栏内的清除筛选按钮
+  if (clearFilterContainer) {
+    clearFilterContainer.style.display = (activeFilters.length > 0 || currentFilters.search) ? 'block' : 'none';
+  }
+
+  // 顶部筛选胶囊条
+  if (activeFilterTags) {
+    if (activeFilters.length > 0) {
+      activeFilterTags.style.display = 'flex';
+      activeFilterTags.innerHTML = activeFilters.map(f => `
+        <span class="active-tag-chip">
+          <span>${f.label}</span>
+          <span class="remove-chip" data-type="${f.type}">✕</span>
+        </span>
+      `).join('');
+    } else {
+      activeFilterTags.style.display = 'none';
+      activeFilterTags.innerHTML = '';
+    }
+  }
+}
+
 // 清除导航栏激活状态
-// 替换现有的 clearActiveNav 函数
 function clearActiveNav() {
   document.querySelectorAll('#sidebar li.active').forEach(li => li.classList.remove('active'));
   currentFilters = {
@@ -264,6 +331,7 @@ function clearActiveNav() {
   };
   filterInput.value = '';
   filteredVideos = [...allVideos];
+  updateFilterUI();
   resetAndLoad();
 }
 
@@ -282,6 +350,11 @@ function onCategoryClick(type, value, element) {
   }
 
   applyFilters();
+
+  // 移动端选择后自动收起抽屉
+  if (window.innerWidth <= 768) {
+    setTimeout(closeSidebar, 200);
+  }
 }
 
 // 新增函数：应用所有筛选条件
@@ -322,6 +395,7 @@ function applyFilters() {
     return true;
   });
 
+  updateFilterUI();
   resetAndLoad();
 }
 
@@ -335,9 +409,11 @@ function handleSearch() {
 function handleScroll() {
   if (isLoading) return; // 如果正在加载，直接退出，防止重复触发
 
-  const scrollTop = mainContent.scrollTop;
-  const scrollHeight = mainContent.scrollHeight;
-  const clientHeight = mainContent.clientHeight;
+  // 兼容桌面端内部容器滚动与移动端整页自然滚动
+  const isWindowScroll = window.innerWidth <= 768;
+  const scrollTop = isWindowScroll ? (window.pageYOffset || document.documentElement.scrollTop) : mainContent.scrollTop;
+  const scrollHeight = isWindowScroll ? document.documentElement.scrollHeight : mainContent.scrollHeight;
+  const clientHeight = isWindowScroll ? window.innerHeight : mainContent.clientHeight;
 
   // 这里的 400 是预加载距离，让用户还没到底就开始加载，体验更流畅
   if (scrollTop + clientHeight >= scrollHeight - 400) {
@@ -391,14 +467,51 @@ function bindEvents() {
     }
   });
 
-  // 滚动加载事件
-  mainContent.addEventListener('scroll', handleScroll);
+  // 滚动加载事件 (桌面端与移动端双向监听)
+  mainContent.addEventListener('scroll', throttle(handleScroll, 200));
+  window.addEventListener('scroll', throttle(handleScroll, 200));
+
+  // 移动端抽屉导航控制
+  if (menuToggleBtn) {
+    menuToggleBtn.addEventListener('click', openSidebar);
+  }
+  if (sidebarCloseBtn) {
+    sidebarCloseBtn.addEventListener('click', closeSidebar);
+  }
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  }
+  if (clearFiltersBtn) {
+    clearFiltersBtn.addEventListener('click', () => {
+      clearActiveNav();
+      if (window.innerWidth <= 768) {
+        closeSidebar();
+      }
+    });
+  }
+
+  // 顶部筛选标签点击移除
+  if (activeFilterTags) {
+    activeFilterTags.addEventListener('click', (e) => {
+      const removeBtn = e.target.closest('.remove-chip');
+      if (removeBtn) {
+        const type = removeBtn.dataset.type;
+        currentFilters[type] = null;
+        document.querySelectorAll(`#${type}List li.active`).forEach(li => li.classList.remove('active'));
+        applyFilters();
+      }
+    });
+  }
 
   // 键盘快捷键
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && filterInput.value) {
-      filterInput.value = '';
-      handleSearch();
+    if (e.key === 'Escape') {
+      if (sidebar && sidebar.classList.contains('open')) {
+        closeSidebar();
+      } else if (filterInput.value) {
+        filterInput.value = '';
+        handleSearch();
+      }
     } else if (e.key === '/' && e.target !== filterInput) {
       e.preventDefault();
       filterInput.focus();

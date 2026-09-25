@@ -7,7 +7,8 @@
     "categories": "分类导航",
     "byYear": "按年分类",
     "byMonth": "按月分类", 
-    "byTag": "按标签分类"
+    "byTag": "按标签分类",
+    "clearFilter": "清除全部筛选"
   },
   
   "months": {

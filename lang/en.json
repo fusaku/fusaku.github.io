@@ -7,7 +7,8 @@
     "categories": "Categories",
     "byYear": "By Year",
     "byMonth": "By Month",
-    "byTag": "By Tag"
+    "byTag": "By Tag",
+    "clearFilter": "Clear Filters"
   },
   
   "months": {
