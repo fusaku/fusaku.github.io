@@ -7,6 +7,7 @@ let updateInterval = null;
 let loadingTimeout = null;
 let usingFallback = false;
 let apiReady = false;
+window.playbackState = { rate: 1.0 };
 // 新增：字幕行占用管理和移动计算
 let activeSubtitleAreas = new Map(); // Map<subId, {x, y, width, height, endTime}>
 // 新增：跟踪每行字幕的移动速度

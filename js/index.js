@@ -292,14 +292,11 @@ function applyFilters() {
       return false;
     }
 
-    // 月份筛选
+    // 月份筛选 (从 YYYY-MM-DD 直接截取，避免 new Date 在西半球时区产生一天偏差)
     if (currentFilters.month) {
-      if (!video.date) return false;
-      const vDate = new Date(video.date);
-      // 获取月份 (0-11)，需要 +1，并转为字符串比较
-      const vMonth = (vDate.getMonth() + 1).toString();
-      // 比较：确保 "8" 和 "08" 都能匹配 (将两者都转为数字或都转为无前导零字符串)
-      if (parseInt(vMonth) !== parseInt(currentFilters.month)) {
+      if (!video.date || video.date.length < 7) return false;
+      const vMonth = parseInt(video.date.substring(5, 7), 10);
+      if (vMonth !== parseInt(currentFilters.month, 10)) {
         return false;
       }
     }

@@ -88,6 +88,24 @@ function bindEvents() {
   });
 }
 
+function checkLandscapeMode() {
+  const isMobile = window.innerWidth <= 926;
+  const isLandscapeOrientation = window.innerWidth > window.innerHeight;
+  const isShortHeight = window.innerHeight <= 428;
+  return isMobile && isLandscapeOrientation && isShortHeight;
+}
+
+function hideHeader() {
+  const header = document.getElementById('header');
+  if (header && isLandscape) {
+    header.classList.remove('show');
+  }
+  if (headerTimeout) {
+    clearTimeout(headerTimeout);
+    headerTimeout = null;
+  }
+}
+
 // 处理屏幕方向变化 - iPhone Safari 特殊处理
 function handleOrientationChange() {
   // 延迟检查，确保屏幕尺寸变化完成

@@ -315,8 +315,8 @@ function findNonOverlappingPosition(textWidth, textHeight, containerWidth, conta
 // 改进的字幕加载
 async function loadSubtitles(videoId) {
   const video = document.querySelector('video');
-  if (video && !window.playbackRateListenerSetup) {
-    setupPlaybackRateListener(); // 直接挂载，不需要 wait
+  if (video && typeof setupPlaybackRateListener === 'function' && !window.playbackRateListenerSetup) {
+    setupPlaybackRateListener();
     window.playbackRateListenerSetup = true;
   }
   try {
@@ -603,10 +603,9 @@ function displayCurrentSubtitle(currentTime) {
     subtitleElements.delete(subId);
     processedSubtitles.delete(subId); // 清理已处理记录，允许重新播放
 
-    // 清理区域记录
-    activeSubtitleAreas.delete(subId);
-    // 清理速度记录
+    // 清理速度记录与区域记录
     const area = activeSubtitleAreas.get(subId);
+    activeSubtitleAreas.delete(subId);
     if (area && area.line !== undefined) {
       // 检查这一行是否还有其他活跃字幕
       const hasOtherActiveOnLine = Array.from(activeSubtitleAreas.values())
