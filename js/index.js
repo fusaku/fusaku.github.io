@@ -33,6 +33,7 @@ const activeFilterTags = document.getElementById('active-filter-tags');
 const backToTopBtn = document.getElementById('back-to-top-btn');
 const fabMenuBtn = document.getElementById('fab-menu-btn');
 const fabFilterBadge = document.getElementById('fab-filter-badge');
+const searchClearBtn = document.getElementById('search-clear-btn');
 
 // 移动端抽屉控制
 function openSidebar() {
@@ -188,18 +189,39 @@ function createVideoItem(video) {
   // 格式化日期
   const dateStr = video.date ? new Date(video.date).toLocaleDateString(window.i18n.currentLang) : '';
 
-  // 获取 YouTube 缩略图 (mqdefault 是中等质量，加载快)
-  // 如果你想更清晰，可以用 'hqdefault.jpg'，但 'mqdefault.jpg' 即使有黑边也能保证加载
-  const thumbnailUrl = `https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`;
+  // 获取第一条标签（若有）
+  const primaryTag = (video.tags && video.tags.length > 0) ? video.tags[0] : '';
 
-  // 注意：这里把 iframe 换成了 img，并移除了 fetchYouTubeTitle 的调用
+  // 获取 YouTube 缩略图
+  const thumbnailUrl = `https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`;
+  const safeTitle = (video.title || window.i18n.t('video.untitled', '无标题视频')).replace(/"/g, '&quot;');
+
   div.innerHTML = `
     <div class="video-thumbnail">
-      <img src="${thumbnailUrl}" alt="${video.title}" loading="lazy">
-      <div class="play-icon">▶</div>
+      <img src="${thumbnailUrl}" alt="${safeTitle}" loading="lazy">
+      <div class="thumbnail-scrim"></div>
+      <div class="play-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="6 3 20 12 6 21 6 3"></polygon>
+        </svg>
+      </div>
+      ${primaryTag ? `<span class="thumbnail-tag">${primaryTag}</span>` : ''}
     </div>
-    <div class="video-title" title="${video.title}">${video.title || window.i18n.t('video.untitled', '无标题视频')}</div>
-    ${dateStr ? `<div class="video-date">${dateStr}</div>` : ''}
+    <div class="video-info">
+      <h3 class="video-title" title="${safeTitle}">${safeTitle}</h3>
+      <div class="video-meta">
+        ${dateStr ? `
+          <span class="video-date">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            ${dateStr}
+          </span>` : ''}
+      </div>
+    </div>
   `;
 
   // 点击整个卡片跳转
@@ -348,6 +370,9 @@ function clearActiveNav() {
     search: ''
   };
   filterInput.value = '';
+  if (searchClearBtn) {
+    searchClearBtn.style.display = 'none';
+  }
   filteredVideos = [...allVideos];
   updateFilterUI();
   resetAndLoad();
@@ -415,6 +440,9 @@ function applyFilters() {
 // 搜索过滤
 function handleSearch() {
   currentFilters.search = filterInput.value.trim();
+  if (searchClearBtn) {
+    searchClearBtn.style.display = filterInput.value ? 'flex' : 'none';
+  }
   applyFilters();
 }
 
@@ -467,6 +495,14 @@ function throttle(func, limit) {
 function bindEvents() {
   // 搜索框事件
   filterInput.addEventListener('input', handleSearch);
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener('click', () => {
+      filterInput.value = '';
+      searchClearBtn.style.display = 'none';
+      handleSearch();
+      filterInput.focus();
+    });
+  }
 
   // 分类导航事件
   document.getElementById('yearList').addEventListener('click', e => {
@@ -543,6 +579,7 @@ function bindEvents() {
         closeSidebar();
       } else if (filterInput.value) {
         filterInput.value = '';
+        if (searchClearBtn) searchClearBtn.style.display = 'none';
         handleSearch();
       }
     } else if (e.key === '/' && e.target !== filterInput) {

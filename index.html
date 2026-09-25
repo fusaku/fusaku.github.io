@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="siteTitle">视频分享主页</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260925_04">
+  <link rel="stylesheet" href="css/styles.css?v=20260925_06">
+  <script src="js/theme.js?v=20260925_06"></script>
 </head>
 
 <body>
@@ -19,7 +20,13 @@
       <button id="sidebar-close" class="sidebar-close-btn" aria-label="Close sidebar">✕</button>
     </div>
     <div id="clear-filter-container" style="display: none; margin-bottom: 16px;">
-      <button id="clear-filters-btn" class="clear-filters-btn" data-i18n="navigation.clearFilter">清除全部筛选</button>
+      <button id="clear-filters-btn" class="clear-filters-btn" data-i18n="navigation.clearFilter">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="1 4 1 10 7 10"></polyline>
+          <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+        </svg>
+        <span data-i18n="navigation.clearFilter">清除全部筛选</span>
+      </button>
     </div>
     <section>
       <strong data-i18n="navigation.byYear">按年分类</strong>
@@ -43,20 +50,60 @@
 
   <main id="main-content">
     <div class="main-header">
-      <button id="menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation">
-        <span class="menu-icon">☰</span>
-        <span data-i18n="navigation.categories">分类导航</span>
-        <span id="active-filter-badge" class="filter-badge" style="display: none;"></span>
-      </button>
-      <h1 data-i18n="siteTitle">视频分享主页</h1>
+      <div class="header-left">
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation">
+          <span class="menu-icon">☰</span>
+          <span data-i18n="navigation.categories">分类导航</span>
+          <span id="active-filter-badge" class="filter-badge" style="display: none;"></span>
+        </button>
+        <h1 data-i18n="siteTitle">视频分享主页</h1>
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="切换主题" title="切换暗色/浅色模式">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-    <input type="text" id="filter" data-i18n-placeholder="search.placeholder" placeholder="输入关键词过滤视频..." />
+
+    <!-- 现代 Command 风格搜索栏 -->
+    <div class="search-bar-wrapper">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="filter" data-i18n-placeholder="search.placeholder" placeholder="输入关键词过滤视频..." autocomplete="off" />
+      <button id="search-clear-btn" class="search-clear-btn" aria-label="Clear search" style="display: none;">✕</button>
+      <div class="search-shortcut-badge"><kbd>/</kbd></div>
+    </div>
+
     <div id="active-filter-tags" class="active-filter-tags" style="display: none;"></div>
     <div id="video-grid"></div>
-    <div id="loading">
-      <div class="loading-spinner"></div>
-      <span data-i18n="loading.text">加载中...</span>
+
+    <!-- 现代骨架屏加载区域 -->
+    <div id="loading" class="skeleton-container">
+      <div class="skeleton-grid">
+        <div class="skeleton-card"><div class="skeleton-thumb shimmer"></div><div class="skeleton-line shimmer title"></div><div class="skeleton-line shimmer date"></div></div>
+        <div class="skeleton-card"><div class="skeleton-thumb shimmer"></div><div class="skeleton-line shimmer title"></div><div class="skeleton-line shimmer date"></div></div>
+        <div class="skeleton-card"><div class="skeleton-thumb shimmer"></div><div class="skeleton-line shimmer title"></div><div class="skeleton-line shimmer date"></div></div>
+        <div class="skeleton-card"><div class="skeleton-thumb shimmer"></div><div class="skeleton-line shimmer title"></div><div class="skeleton-line shimmer date"></div></div>
+        <div class="skeleton-card"><div class="skeleton-thumb shimmer"></div><div class="skeleton-line shimmer title"></div><div class="skeleton-line shimmer date"></div></div>
+        <div class="skeleton-card"><div class="skeleton-thumb shimmer"></div><div class="skeleton-line shimmer title"></div><div class="skeleton-line shimmer date"></div></div>
+      </div>
     </div>
+
     <div id="error" data-i18n="error.dataLoadFailed">数据加载失败，请稍后重试</div>
   </main>
 
@@ -66,6 +113,22 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="12" y1="19" x2="12" y2="5"></line>
         <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+    <button id="fab-theme-btn" class="fab-btn fab-theme-btn theme-toggle-btn" aria-label="切换主题" title="切换暗色/浅色模式">
+      <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
       </svg>
     </button>
     <button id="fab-menu-btn" class="fab-btn fab-menu-btn" aria-label="分类导航" title="分类导航">
@@ -78,8 +141,8 @@
     </button>
   </div>
 
-  <script src="js/i18n.js?v=20260925_05"></script>
-  <script src="js/index.js?v=20260925_05"></script>
+  <script src="js/i18n.js?v=20260925_06"></script>
+  <script src="js/index.js?v=20260925_06"></script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token": "d4fe6009f81743d7a64c418b9094caea"}'></script>
