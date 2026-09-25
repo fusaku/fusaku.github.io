@@ -2,8 +2,8 @@
 
 // 全局变量
 let allVideos = [];
-const batchSize = 15;
-const displayStep = 12;
+const batchSize = 30;
+const displayStep = 30;
 let filteredVideos = [];
 let loadedBatches = 0;
 let displayedCount = 0;
@@ -120,6 +120,8 @@ async function loadVideoData() {
     // 如果文件太小没触发 batchSize 逻辑，则在这里进行最终渲染
     if (!initialRenderDone) {
       resetAndLoad();
+    } else {
+      checkAndFillScreen();
     }
     
     hideLoading();
@@ -243,12 +245,8 @@ function loadNextBatch() {
 // 显示更多视频
 // 显示更多视频 (优化版：使用 DocumentFragment 减少重绘)
 function showMoreVideos() {
-  const totalLoadedVideos = loadedBatches * batchSize;
-
   // 检查是否还有数据
   if (displayedCount >= filteredVideos.length) return;
-  // 检查是否超过当前批次限制（如果是一次性加载全部则不需要这行，但保留逻辑也没错）
-  // 注意：由于我们移除了 setTimeout，逻辑可以简化，只要有数据就渲染
 
   const nextCount = Math.min(displayedCount + displayStep, filteredVideos.length);
 
@@ -270,6 +268,23 @@ function showMoreVideos() {
   displayedCount = nextCount;
 }
 
+// 自动检测并铺满屏幕（大屏/超宽屏自适应防空行）
+function checkAndFillScreen() {
+  if (displayedCount >= filteredVideos.length) return;
+
+  const scrollTop = mainContent.scrollTop || window.pageYOffset || 0;
+  const clientHeight = mainContent.clientHeight || window.innerHeight;
+  const scrollHeight = Math.max(mainContent.scrollHeight || 0, document.documentElement.scrollHeight || 0);
+
+  // 如果内容高度还未充分布满（距离底部不足 400px），自动再加载一批卡片
+  if (scrollTop + clientHeight >= scrollHeight - 400) {
+    loadNextBatch().then(() => {
+      showMoreVideos();
+      setTimeout(checkAndFillScreen, 60);
+    });
+  }
+}
+
 // 重置并加载
 function resetAndLoad() {
   videoGrid.innerHTML = "";
@@ -277,12 +292,13 @@ function resetAndLoad() {
   displayedCount = 0;
 
   if (filteredVideos.length === 0) {
-    videoGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: #999; padding: 40px; font-size: 16px;">${window.i18n.t('search.noResults', '没有找到相关视频')}</div>`;
+    videoGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 60px 20px; font-size: 16px;">${window.i18n.t('search.noResults', '没有找到相关视频')}</div>`;
     return;
   }
 
   loadNextBatch().then(() => {
     showMoreVideos();
+    checkAndFillScreen();
   });
 }
 
