@@ -148,12 +148,18 @@ function loadFallbackData() {
 function generateCategories() {
   const years = [...new Set(allVideos.map(v => v.date?.substring(0, 4)).filter(Boolean))].sort().reverse();
   const months = [...new Set(allVideos.map(v => v.date?.substring(5, 7)).filter(Boolean))].sort();
-  const tags = [...new Set(allVideos.flatMap(v => v.tags || []))].sort();
+  let tags = [...new Set(allVideos.flatMap(v => v.tags || []))].sort();
+
+  // 将「橋本陽菜」固定在标签列表第一位
+  const primaryTag = '橋本陽菜';
+  if (tags.includes(primaryTag)) {
+    tags = [primaryTag, ...tags.filter(t => t !== primaryTag)];
+  }
 
   // 生成年份导航
   const yearList = document.getElementById('yearList');
   yearList.innerHTML = years.map(year =>
-    `<li data-filter="${year}">${year}${window.i18n.t('date.year', '年')}</li>`
+    `<li data-filter="${year}" class="${currentFilters.year === year ? 'active' : ''}">${year}${window.i18n.t('date.year', '年')}</li>`
   ).join('');
 
   // 生成月份导航
@@ -161,13 +167,13 @@ function generateCategories() {
   monthList.innerHTML = months.map(month => {
     const monthKey = month.padStart(2, '0');
     const monthName = window.i18n.t(`months.${monthKey}`, `${parseInt(month)}月`);
-    return `<li data-filter="${month}">${monthName}</li>`;
+    return `<li data-filter="${month}" class="${currentFilters.month === month ? 'active' : ''}">${monthName}</li>`;
   }).join('');
 
   // 生成标签导航
   const tagList = document.getElementById('tagList');
   tagList.innerHTML = tags.map(tag =>
-    `<li data-filter="${tag}">${tag}</li>`
+    `<li data-filter="${tag}" class="${currentFilters.tag === tag ? 'active' : ''}">${tag}</li>`
   ).join('');
 }
 
