@@ -150,9 +150,9 @@ function generateCategories() {
   const months = [...new Set(allVideos.map(v => v.date?.substring(5, 7)).filter(Boolean))].sort();
   let tags = [...new Set(allVideos.flatMap(v => v.tags || []))].sort();
 
-  // 将「橋本陽菜」固定在标签列表第一位
+  // 将「橋本陽菜」强制固定在标签列表第一位
   const primaryTag = '橋本陽菜';
-  if (tags.includes(primaryTag)) {
+  if (tags.length > 0) {
     tags = [primaryTag, ...tags.filter(t => t !== primaryTag)];
   }
 
