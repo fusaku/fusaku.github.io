@@ -707,6 +707,13 @@ body {
   color: var(--text-muted);
 }
 
+.scroll-sentinel {
+  height: 20px;
+  width: 100%;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 /* 骨架屏加载动效 */
 .skeleton-container {
   width: 100%;

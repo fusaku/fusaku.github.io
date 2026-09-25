@@ -34,6 +34,7 @@ const backToTopBtn = document.getElementById('back-to-top-btn');
 const fabMenuBtn = document.getElementById('fab-menu-btn');
 const fabFilterBadge = document.getElementById('fab-filter-badge');
 const searchClearBtn = document.getElementById('search-clear-btn');
+const scrollSentinel = document.getElementById('scroll-sentinel');
 
 // 移动端抽屉控制
 function openSidebar() {
@@ -489,22 +490,57 @@ function handleScroll() {
       loadNextBatch().then(() => {
         showMoreVideos();
         isLoading = false; // 解锁
+
+        // 核心修复：当高速滚轮滑到底部时，新卡片插入后可能依然处于底部，立即重新检查并连续加载！
+        requestAnimationFrame(() => {
+          handleScroll();
+        });
       });
     }
   }
 }
 
-function throttle(func, limit) {
-  let inThrottle;
-  return function () {
-    const args = arguments;
-    const context = this;
-    if (!inThrottle) {
-      func.apply(context, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+// 现代节流函数：包含 leading（立即执行）与 trailing（末尾收尾执行），绝不漏掉滚轮停在底部的最后一次触发
+function throttle(func, wait) {
+  let timeout = null;
+  let previous = 0;
+  return function (...args) {
+    const now = Date.now();
+    const remaining = wait - (now - previous);
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      previous = now;
+      func.apply(this, args);
+    } else if (!timeout) {
+      timeout = setTimeout(() => {
+        previous = Date.now();
+        timeout = null;
+        func.apply(this, args);
+      }, remaining);
     }
-  }
+  };
+}
+
+// 底部视口交叉感知（IntersectionObserver），即使高速滚动瞬间跳到底部也能 100% 触发
+function initIntersectionObserver() {
+  if (!('IntersectionObserver' in window)) return;
+  if (!scrollSentinel) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        handleScroll();
+      }
+    }
+  }, {
+    rootMargin: '600px 0px 600px 0px',
+    threshold: 0
+  });
+
+  observer.observe(scrollSentinel);
 }
 
 // 事件绑定
@@ -539,10 +575,15 @@ function bindEvents() {
     }
   });
 
-  // 滚动加载事件 (桌面端与移动端全局捕获监听)
-  mainContent.addEventListener('scroll', throttle(handleScroll, 100));
-  window.addEventListener('scroll', throttle(handleScroll, 100), true);
-  document.addEventListener('scroll', throttle(handleScroll, 100), true);
+  // 滚动加载事件 (桌面端与移动端全局捕获监听 + 滚轮高速监听)
+  mainContent.addEventListener('scroll', throttle(handleScroll, 80));
+  window.addEventListener('scroll', throttle(handleScroll, 80), true);
+  document.addEventListener('scroll', throttle(handleScroll, 80), true);
+  mainContent.addEventListener('wheel', throttle(handleScroll, 80), { passive: true });
+  window.addEventListener('wheel', throttle(handleScroll, 80), { passive: true });
+
+  // 初始化视口观察器
+  initIntersectionObserver();
 
   // 移动端抽屉导航控制
   if (menuToggleBtn) {
