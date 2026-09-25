@@ -411,19 +411,17 @@ function handleSearch() {
   applyFilters();
 }
 
-// 滚动加载处理
+// 滚动加载处理 (瀑布流自动加载)
 function handleScroll() {
   if (isLoading) return; // 如果正在加载，直接退出，防止重复触发
 
-  // 兼容桌面端内部容器滚动与移动端整页自然滚动
-  const isWindowScroll = window.innerWidth <= 768;
-  const scrollTop = isWindowScroll ? (window.pageYOffset || document.documentElement.scrollTop) : mainContent.scrollTop;
-  const scrollHeight = isWindowScroll ? document.documentElement.scrollHeight : mainContent.scrollHeight;
-  const clientHeight = isWindowScroll ? window.innerHeight : mainContent.clientHeight;
+  // 获取真实滚动距离、可视高度与总高度（支持容器滚动与窗口滚动双模式）
+  const scrollTop = mainContent.scrollTop || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  const clientHeight = mainContent.clientHeight || window.innerHeight;
+  const scrollHeight = Math.max(mainContent.scrollHeight || 0, document.documentElement.scrollHeight || 0, document.body.scrollHeight || 0);
 
-  // 这里的 400 是预加载距离，让用户还没到底就开始加载，体验更流畅
-  if (scrollTop + clientHeight >= scrollHeight - 400) {
-
+  // 预加载距离设为 600px，让瀑布流更早触发，无缝衔接体验
+  if (scrollTop + clientHeight >= scrollHeight - 600) {
     // 如果还有未显示的视频
     if (displayedCount < filteredVideos.length) {
       isLoading = true; // 上锁
@@ -473,9 +471,10 @@ function bindEvents() {
     }
   });
 
-  // 滚动加载事件 (桌面端与移动端双向监听)
-  mainContent.addEventListener('scroll', throttle(handleScroll, 200));
-  window.addEventListener('scroll', throttle(handleScroll, 200));
+  // 滚动加载事件 (桌面端与移动端全局捕获监听)
+  mainContent.addEventListener('scroll', throttle(handleScroll, 100));
+  window.addEventListener('scroll', throttle(handleScroll, 100), true);
+  document.addEventListener('scroll', throttle(handleScroll, 100), true);
 
   // 移动端抽屉导航控制
   if (menuToggleBtn) {
