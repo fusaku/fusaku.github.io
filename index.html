@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="siteTitle">视频分享主页</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260925_03">
+  <link rel="stylesheet" href="css/styles.css?v=20260925_04">
 </head>
 
 <body>
@@ -60,8 +60,26 @@
     <div id="error" data-i18n="error.dataLoadFailed">数据加载失败，请稍后重试</div>
   </main>
 
-  <script src="js/i18n.js?v=20260925_03"></script>
-  <script src="js/index.js?v=20260925_03"></script>
+  <!-- 右下角悬浮操作按钮组 (FAB) -->
+  <div id="fab-container" class="fab-container">
+    <button id="back-to-top-btn" class="fab-btn fab-top-btn" aria-label="回到顶部" title="回到顶部">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+    <button id="fab-menu-btn" class="fab-btn fab-menu-btn" aria-label="分类导航" title="分类导航">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span id="fab-filter-badge" class="filter-badge" style="display: none;"></span>
+    </button>
+  </div>
+
+  <script src="js/i18n.js?v=20260925_04"></script>
+  <script src="js/index.js?v=20260925_04"></script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token": "d4fe6009f81743d7a64c418b9094caea"}'></script>

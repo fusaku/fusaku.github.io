@@ -541,6 +541,77 @@ body {
   /* 防止字幕超出屏幕 */
 }
 
+/* 悬浮操作按钮组 (FAB) */
+.fab-container {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.fab-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  outline: none;
+}
+
+.fab-btn:hover {
+  background: #1890ff;
+  color: #ffffff;
+  border-color: #1890ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(24, 144, 255, 0.35);
+}
+
+.fab-btn:active {
+  transform: scale(0.92);
+}
+
+/* 回到顶部按钮：未向下滚动时隐藏 */
+.fab-top-btn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.8);
+  pointer-events: none;
+}
+
+.fab-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* 桌面端：左侧边栏常驻，所以隐藏悬浮菜单按钮，仅留回到顶部 */
+.fab-menu-btn {
+  display: none;
+  background: #1890ff;
+  color: #ffffff;
+  border-color: #1890ff;
+}
+
+.fab-menu-btn:hover {
+  background: #40a9ff;
+}
+
 /* 添加手机端字幕样式 */
 @media (max-width: 768px) {
 
@@ -691,6 +762,43 @@ body {
     padding: 10px 14px;
     font-size: 15px;
     margin-bottom: 6px;
+  }
+
+  /* 移动端悬浮操作按钮组 (FAB) */
+  .fab-container {
+    right: 16px;
+    bottom: 20px;
+    gap: 10px;
+  }
+
+  .fab-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* 移动端显示悬浮分类菜单按钮 */
+  .fab-menu-btn {
+    display: flex;
+  }
+
+  /* 悬浮菜单按钮上的筛选徽章 */
+  #fab-filter-badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: #ff4d4f;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 4px;
+    border-radius: 9px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    border: 2px solid #fff;
+    box-sizing: border-box;
   }
 
   /* 播放页面 */

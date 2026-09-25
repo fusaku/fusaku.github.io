@@ -30,6 +30,9 @@ const clearFilterContainer = document.getElementById('clear-filter-container');
 const clearFiltersBtn = document.getElementById('clear-filters-btn');
 const activeFilterBadge = document.getElementById('active-filter-badge');
 const activeFilterTags = document.getElementById('active-filter-tags');
+const backToTopBtn = document.getElementById('back-to-top-btn');
+const fabMenuBtn = document.getElementById('fab-menu-btn');
+const fabFilterBadge = document.getElementById('fab-filter-badge');
 
 // 移动端抽屉控制
 function openSidebar() {
@@ -294,13 +297,22 @@ function updateFilterUI() {
     activeFilters.push({ type: 'tag', label: currentFilters.tag });
   }
 
-  // 手机端分类按钮上的数字徽章
+  // 手机端分类按钮及悬浮按钮上的数字徽章
+  const filterCount = activeFilters.length;
   if (activeFilterBadge) {
-    if (activeFilters.length > 0) {
-      activeFilterBadge.textContent = activeFilters.length;
+    if (filterCount > 0) {
+      activeFilterBadge.textContent = filterCount;
       activeFilterBadge.style.display = 'inline-block';
     } else {
       activeFilterBadge.style.display = 'none';
+    }
+  }
+  if (fabFilterBadge) {
+    if (filterCount > 0) {
+      fabFilterBadge.textContent = filterCount;
+      fabFilterBadge.style.display = 'inline-block';
+    } else {
+      fabFilterBadge.style.display = 'none';
     }
   }
 
@@ -411,14 +423,23 @@ function handleSearch() {
   applyFilters();
 }
 
-// 滚动加载处理 (瀑布流自动加载)
+// 滚动加载处理 (瀑布流自动加载 & 悬浮按钮状态)
 function handleScroll() {
-  if (isLoading) return; // 如果正在加载，直接退出，防止重复触发
-
   // 获取真实滚动距离、可视高度与总高度（支持容器滚动与窗口滚动双模式）
   const scrollTop = mainContent.scrollTop || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
   const clientHeight = mainContent.clientHeight || window.innerHeight;
   const scrollHeight = Math.max(mainContent.scrollHeight || 0, document.documentElement.scrollHeight || 0, document.body.scrollHeight || 0);
+
+  // 控制“回到顶部”悬浮按钮显示/隐藏 (滚动超过 300px 显示)
+  if (backToTopBtn) {
+    if (scrollTop > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }
+
+  if (isLoading) return; // 如果正在加载，直接退出，防止重复触发
 
   // 预加载距离设为 600px，让瀑布流更早触发，无缝衔接体验
   if (scrollTop + clientHeight >= scrollHeight - 600) {
@@ -493,6 +514,21 @@ function bindEvents() {
         closeSidebar();
       }
     });
+  }
+
+  // 右下角悬浮按钮事件 (回到顶部与分类菜单)
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      if (mainContent) {
+        mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+  if (fabMenuBtn) {
+    fabMenuBtn.addEventListener('click', openSidebar);
   }
 
   // 顶部筛选标签点击移除
