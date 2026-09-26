@@ -568,7 +568,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 22px;
-  flex: 1;
+  align-content: start;
 }
 
 .video-item {
@@ -579,6 +579,7 @@ body {
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
+  height: fit-content;
   cursor: pointer;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
   position: relative;
@@ -725,6 +726,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 22px;
+  align-content: start;
 }
 
 .skeleton-card {
@@ -733,6 +735,7 @@ body {
   overflow: hidden;
   border: 1px solid var(--border-color);
   padding-bottom: 16px;
+  height: fit-content;
 }
 
 .skeleton-thumb {
