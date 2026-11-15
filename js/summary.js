@@ -38,6 +38,21 @@ function showSummaryButton() {
   }
 }
 
+// 动态按需懒加载 Marked.js 库（节省首屏关键网络带宽，仅在用户首次展开AI总结时加载）
+function ensureMarkedLoaded() {
+  if (typeof marked !== 'undefined') return Promise.resolve();
+  return new Promise((resolve) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+    script.onload = () => resolve();
+    script.onerror = () => {
+      console.warn('Failed to load marked.min.js, fallback to plain text.');
+      resolve();
+    };
+    document.head.appendChild(script);
+  });
+}
+
 // 切换总结展开/收起
 async function toggleSummary() {
   const button = document.getElementById('summary-button');
@@ -58,8 +73,13 @@ async function toggleSummary() {
     contentDiv.classList.add('expanded');
     button.classList.add('expanded');
 
-    // 加载总结内容
-    summaryContent = await loadSummaryContent(currentVideoId);
+    // 动态确保 marked 库就绪（按需懒加载）与内容拉取并行
+    const [_, content] = await Promise.all([
+      ensureMarkedLoaded(),
+      loadSummaryContent(currentVideoId)
+    ]);
+
+    summaryContent = content;
 
     // 显示内容
     if (typeof marked !== 'undefined') {

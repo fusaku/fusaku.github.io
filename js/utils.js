@@ -43,16 +43,40 @@ function retryLoad() {
   location.reload();
 }
 
-// 获取视频标题
+// 获取视频标题（带多级本地缓存与超时防卡死保护）
 async function fetchVideoTitle(videoId) {
+  if (!videoId) return window.i18n.t('player.videoPlay', '视频播放');
+
+  // 1. 优先从会话缓存或本地持久缓存中获取，0 毫秒秒开
   try {
-    const res = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`);
+    const cached = sessionStorage.getItem('video_title_' + videoId) || localStorage.getItem('video_title_' + videoId);
+    if (cached) {
+      console.log('Video title loaded from cache instantly:', cached);
+      return cached;
+    }
+  } catch (e) {}
+
+  // 2. 网络请求兜底（设置 2.5s 超时，防止第三方 noembed 卡死整个页面）
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 2500);
+    const res = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`, {
+      signal: controller.signal
+    });
+    clearTimeout(timer);
+
     if (res.ok) {
       const data = await res.json();
-      return data.title || window.i18n.t('player.videoPlay', '视频播放');
+      if (data.title) {
+        try {
+          localStorage.setItem('video_title_' + videoId, data.title);
+        } catch (e) {}
+        return data.title;
+      }
     }
   } catch (error) {
-    console.error('Failed to fetch video title:', error);
+    console.warn('Notice: Failed or timed out fetching video title from noembed:', error);
   }
+
   return window.i18n.t('player.videoPlay', '视频播放');
 }

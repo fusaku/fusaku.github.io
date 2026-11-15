@@ -39,6 +39,10 @@ function animateSubtitleManual(element) {
   const currentX = startX + (endX - startX) * Math.min(progress, 1);
   const currentY = startY + (endY - startY) * Math.min(progress, 1);
 
+  // 记录内存坐标，供碰撞检测快速读取，避免触发 getComputedStyle 重排
+  element.dataset.currentX = currentX;
+  element.dataset.currentY = currentY;
+
   element.style.transition = 'none';
   element.style.left = `${currentX}px`;
   element.style.top = `${currentY}px`;
@@ -198,9 +202,15 @@ function checkHorizontalOverlap(startX, y, textWidth, textHeight, padding, line,
       // 同一行，获取前一个字幕的当前位置
       const previousSubElement = subtitleElements.get(subId);
       if (previousSubElement && previousSubElement.parentNode) {
-        // 获取前一个字幕的当前左边缘位置
-        const computedStyle = window.getComputedStyle(previousSubElement);
-        const currentLeft = parseFloat(computedStyle.left) || parseFloat(previousSubElement.style.left) || area.x;
+        // 性能优化：优先读取内存坐标，消除 window.getComputedStyle 引发的整页强制重排（Reflow）
+        let currentLeft;
+        if (previousSubElement.dataset && previousSubElement.dataset.currentX !== undefined) {
+          currentLeft = parseFloat(previousSubElement.dataset.currentX);
+        } else if (previousSubElement.style.left) {
+          currentLeft = parseFloat(previousSubElement.style.left);
+        } else {
+          currentLeft = parseFloat(window.getComputedStyle(previousSubElement).left) || area.x;
+        }
 
         // 计算左边缘与屏幕右边缘的距离
         const distanceFromRightEdge = startX - currentLeft; // startX 就是屏幕右边缘
@@ -352,6 +362,41 @@ async function loadSubtitles(videoId) {
   }
 }
 
+// 二分查找算法：极速检索当前时间点需显示的字幕，时间复杂度从 O(N) 降至 O(log N)
+function findCurrentSubtitles(subtitlesList, currentTime) {
+  if (!subtitlesList || subtitlesList.length === 0) return [];
+
+  let low = 0;
+  let high = subtitlesList.length - 1;
+  let firstPossibleIndex = 0;
+
+  // 寻找满足 sub.start <= currentTime 的最近上界
+  while (low <= high) {
+    const mid = (low + high) >> 1;
+    if (subtitlesList[mid].start <= currentTime) {
+      firstPossibleIndex = mid;
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+
+  // 从当前位置向前扫描（字幕通常在10秒内结束）
+  const result = [];
+  for (let i = firstPossibleIndex; i >= 0; i--) {
+    const sub = subtitlesList[i];
+    // 如果开始时间早于当前时间 20 秒以上，前面的更不可能在当前显示，直接退出循环
+    if (currentTime - sub.start > 20) {
+      break;
+    }
+    if (currentTime >= sub.start && currentTime <= sub.end) {
+      result.unshift(sub);
+    }
+  }
+
+  return result;
+}
+
 // 字幕显示函数
 function displayCurrentSubtitle(currentTime) {
   const padding = 15;
@@ -381,10 +426,8 @@ function displayCurrentSubtitle(currentTime) {
   }
   displayCurrentSubtitle.lastTime = currentTime;
 
-  // 获取当前应该显示的字幕
-  const currentSubs = subtitles.filter(sub =>
-    currentTime >= sub.start && currentTime <= sub.end
-  );
+  // 性能优化：使用二分查找算法，取代每 100ms 遍历 1600+ 行全量数组
+  const currentSubs = findCurrentSubtitles(subtitles, currentTime);
 
   // 创建当前应该显示的字幕ID集合
   const currentSubIds = new Set();
@@ -421,10 +464,11 @@ function displayCurrentSubtitle(currentTime) {
       // 标记为活跃字幕
       activeSubtitles.add(subId);
 
-      // 创建字幕元素
+      // 创建字幕元素（启用 GPU 硬件加速提示）
       const div = document.createElement('div');
       div.className = 'danmaku-subtitle';
       div.dataset.subtitleId = subId;
+      div.style.willChange = 'left, top';
       div.dataset.startTime = sub.start;
       div.dataset.endTime = sub.end;
       div.dataset.animationStartTime = currentTime;

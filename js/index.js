@@ -227,8 +227,13 @@ function createVideoItem(video) {
     </div>
   `;
 
-  // 点击整个卡片跳转
+  // 点击整个卡片跳转（顺带缓存标题，让播放页 0 毫秒秒开）
   div.addEventListener('click', () => {
+    try {
+      if (video.title) {
+        sessionStorage.setItem('video_title_' + video.id, video.title);
+      }
+    } catch (e) {}
     window.location.href = `player.html?v=${video.id}`;
   });
 

@@ -13,7 +13,22 @@ async function initializePage() {
     }
 
     console.log('Initializing page for video:', currentVideoId);
+
+    // 0毫秒立即渲染缓存标题（消除“加载中...”闪烁）
+    try {
+      const immediateTitle = sessionStorage.getItem('video_title_' + currentVideoId) || localStorage.getItem('video_title_' + currentVideoId);
+      if (immediateTitle) {
+        document.getElementById('video-title').textContent = immediateTitle;
+        document.title = `${immediateTitle} - ${window.i18n.t('player.videoPlay', '视频播放')}`;
+      }
+    } catch (e) {}
+
     updateLoadingStatus(window.i18n.t('loading.videoInfo', '加载视频信息...'));
+
+    // 性能优化：将 YouTube API 预加载与页面数据获取并行并发进行
+    const ytApiPromise = loadYouTubeAPI().catch(err => {
+      console.warn('YouTube API preloading notice:', err);
+    });
 
     // 并行加载视频标题和字幕
     const [title] = await Promise.all([
@@ -28,12 +43,12 @@ async function initializePage() {
     // 检查是否需要触发问答门禁（仅桥本阳菜的视频，其他成员不受影响）
     if (window.QuizGate && window.QuizGate.isLocked(currentVideoId, title)) {
       window.QuizGate.showGate(currentVideoId, title, () => {
-        startVideoPlayback();
+        startVideoPlayback(ytApiPromise);
       });
       return;
     }
 
-    startVideoPlayback();
+    startVideoPlayback(ytApiPromise);
 
   } catch (err) {
     console.error('Page initialization error:', err);
@@ -42,13 +57,20 @@ async function initializePage() {
 }
 
 // 真正加载与启动播放器
-async function startVideoPlayback() {
+async function startVideoPlayback(ytApiPromise) {
   updateLoadingStatus(window.i18n.t('loading.ytApi', '加载YouTube API...'));
 
   try {
-    await loadYouTubeAPI();
+    if (ytApiPromise) {
+      await ytApiPromise;
+    } else {
+      await loadYouTubeAPI();
+    }
+
     if (apiReady) {
       initializeYouTubePlayer();
+    } else {
+      setTimeout(() => tryFallbackPlayer(), 1000);
     }
   } catch (error) {
     console.error('YouTube API loading failed:', error);
