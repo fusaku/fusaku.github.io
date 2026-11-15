@@ -2,7 +2,7 @@
 function onYouTubeIframeAPIReady() {
   console.log('YouTube API ready');
   apiReady = true;
-  if (currentVideoId) {
+  if (currentVideoId && (!window.QuizGate || !window.QuizGate.isLocked(currentVideoId))) {
     initializeYouTubePlayer();
   }
 }
@@ -29,6 +29,12 @@ function onPlayerError(event) {
 function initializeYouTubePlayer() {
   if (!apiReady || !currentVideoId) {
     console.log('API or video ID not ready');
+    return;
+  }
+
+  // 问答未解锁时绝不创建播放器
+  if (window.QuizGate && window.QuizGate.isLocked(currentVideoId)) {
+    console.log('Video is locked by Quiz Gate. Skipping initializeYouTubePlayer.');
     return;
   }
 

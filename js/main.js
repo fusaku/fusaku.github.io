@@ -25,21 +25,34 @@ async function initializePage() {
     document.getElementById('video-title').textContent = title;
     document.title = `${title} - ${window.i18n.t('player.videoPlay', '视频播放')}`;
 
-    updateLoadingStatus(window.i18n.t('loading.ytApi', '加载YouTube API...'));
-
-    try {
-      await loadYouTubeAPI();
-      if (apiReady) {
-        initializeYouTubePlayer();
-      }
-    } catch (error) {
-      console.error('YouTube API loading failed:', error);
-      setTimeout(() => tryFallbackPlayer(), 1000);
+    // 检查是否需要触发问答门禁（仅桥本阳菜的视频，其他成员不受影响）
+    if (window.QuizGate && window.QuizGate.isLocked(currentVideoId, title)) {
+      window.QuizGate.showGate(currentVideoId, title, () => {
+        startVideoPlayback();
+      });
+      return;
     }
+
+    startVideoPlayback();
 
   } catch (err) {
     console.error('Page initialization error:', err);
     showError(err.message);
+  }
+}
+
+// 真正加载与启动播放器
+async function startVideoPlayback() {
+  updateLoadingStatus(window.i18n.t('loading.ytApi', '加载YouTube API...'));
+
+  try {
+    await loadYouTubeAPI();
+    if (apiReady) {
+      initializeYouTubePlayer();
+    }
+  } catch (error) {
+    console.error('YouTube API loading failed:', error);
+    setTimeout(() => tryFallbackPlayer(), 1000);
   }
 }
 

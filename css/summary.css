@@ -2,9 +2,10 @@
 
 /* 总结按钮容器 */
 #video-actions {
+  width: 100%;
   max-width: 1200px;
   margin: 20px auto 0;
-  padding: 0 20px;
+  padding: 0;
   display: none; /* 默认隐藏，检查后显示 */
   box-sizing: border-box;
 }
@@ -103,8 +104,9 @@
 /* 移动端适配 */
 @media (max-width: 768px) {
   #video-actions {
+    width: 100%;
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0;
     margin: 12px auto 0;
   }
 
