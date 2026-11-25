@@ -1,5 +1,5 @@
-// 桥本阳菜视频问答门禁 (Quiz Gate)
-// 仅针对桥本阳菜的视频：确认是否为粉丝。回答“是”则解锁观看，回答“否”则返回。
+// 桥本阳菜视频专属粉丝确认门禁 (Quiz Gate Direct Choice)
+// 仅针对桥本阳菜的视频：在视频画面上直接确认是否为粉丝。选择“是”直接解锁播放，选择“否”则保持锁定。
 
 const QUIZ_CONFIG = {
   // 目标成员匹配关键词（标题中包含任一即可）
@@ -8,7 +8,7 @@ const QUIZ_CONFIG = {
   // 是否在当前浏览器会话中记住已解锁状态
   rememberSession: true,
 
-  // 问答配置
+  // 确认配置
   quiz: {
     question: {
       'zh-CN': '你是 橋本 陽菜 的粉丝吗？',
@@ -27,26 +27,6 @@ const QUIZ_CONFIG = {
     noButton: {
       text: { 'zh-CN': '否', 'ja': 'いいえ', 'en': 'No' },
       subtext: { 'zh-CN': '无法观看', 'ja': '視聴しない', 'en': 'Cannot watch' }
-    },
-    lockedTitle: {
-      'zh-CN': '🔒 粉丝专属确认',
-      'ja': '🔒 ファン限定確認',
-      'en': '🔒 Fan Confirmation'
-    },
-    lockedDesc: {
-      'zh-CN': '本视频为 橋本 陽菜 专属内容，点击下方按钮确认后即可观看。',
-      'ja': 'この動画は 橋本 陽菜 専用コンテンツです。下のボタンから確認後に視聴できます。',
-      'en': 'This video is exclusive to Hashimoto Haruna. Confirm to watch.'
-    },
-    unlockButtonText: {
-      'zh-CN': '确认粉丝身份后观看',
-      'ja': 'ファン確認をして視聴',
-      'en': 'Confirm Fan to Watch'
-    },
-    modalTitle: {
-      'zh-CN': '粉丝确认',
-      'ja': 'ファン確認',
-      'en': 'Fan Confirmation'
     },
     rejectText: {
       'zh-CN': '非粉丝无法观看本视频。',
@@ -120,9 +100,9 @@ function isQuizLocked(videoId, title) {
   return false;
 }
 
-// 初始化并展示问答门禁
+// 初始化并展示直接选择门禁
 function showQuizGate(videoId, title, onUnlockedCallback) {
-  console.log('Video locked by Quiz Gate:', videoId, title);
+  console.log('Video locked by Quiz Gate (Direct Choice):', videoId, title);
 
   // 隐藏原本的 loading 动画
   const originalLoading = document.getElementById('loading');
@@ -130,45 +110,12 @@ function showQuizGate(videoId, title, onUnlockedCallback) {
     originalLoading.classList.add('hidden');
   }
 
-  // 1. 创建视频区域内的“锁定覆盖层”
-  createLockedOverlay(onOpenModal);
-
-  // 2. 创建弹窗 DOM
-  createQuizModal(onUnlockedSuccess);
-
-  function onOpenModal() {
-    const backdrop = document.getElementById('quiz-modal-backdrop');
-    if (backdrop) {
-      backdrop.classList.remove('hidden');
-      const feedback = document.getElementById('quiz-feedback');
-      if (feedback) feedback.className = 'quiz-feedback';
-    }
-  }
-
-  function onUnlockedSuccess() {
-    markVideoUnlockedInSession(videoId);
-    lockedStateCache.set(videoId, false);
-
-    // 移除锁定覆盖层与弹窗
-    const overlay = document.getElementById('video-locked-overlay');
-    if (overlay) overlay.remove();
-
-    const backdrop = document.getElementById('quiz-modal-backdrop');
-    if (backdrop) backdrop.remove();
-
-    // 恢复原本的 loading 并启动播放
-    if (originalLoading) {
-      originalLoading.classList.remove('hidden');
-    }
-
-    if (typeof onUnlockedCallback === 'function') {
-      onUnlockedCallback();
-    }
-  }
+  // 直接在视频容器内创建确认卡片（无需二次弹窗）
+  createDirectChoiceOverlay(videoId, originalLoading, onUnlockedCallback);
 }
 
-// 在视频容器内创建锁定卡片
-function createLockedOverlay(onOpenModal) {
+// 在视频容器内创建内嵌确认卡片
+function createDirectChoiceOverlay(videoId, originalLoading, onUnlockedCallback) {
   const existing = document.getElementById('video-locked-overlay');
   if (existing) existing.remove();
 
@@ -179,110 +126,65 @@ function createLockedOverlay(onOpenModal) {
   overlay.id = 'video-locked-overlay';
   overlay.className = 'video-locked-overlay';
 
-  overlay.innerHTML = `
-    <div class="locked-icon-wrapper">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-      </svg>
-    </div>
-    <div class="locked-title">${getQuizI18nText(QUIZ_CONFIG.quiz.lockedTitle)}</div>
-    <div class="locked-desc">${getQuizI18nText(QUIZ_CONFIG.quiz.lockedDesc)}</div>
-    <button id="btn-unlock-quiz" class="btn-unlock-quiz">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-      </svg>
-      <span>${getQuizI18nText(QUIZ_CONFIG.quiz.unlockButtonText)}</span>
-    </button>
-  `;
-
-  wrapper.appendChild(overlay);
-
-  document.getElementById('btn-unlock-quiz').addEventListener('click', onOpenModal);
-}
-
-// 创建问答弹窗
-function createQuizModal(onUnlockedSuccess, onReject) {
-  const existing = document.getElementById('quiz-modal-backdrop');
-  if (existing) existing.remove();
-
-  const backdrop = document.createElement('div');
-  backdrop.id = 'quiz-modal-backdrop';
-  backdrop.className = 'quiz-modal-backdrop hidden';
-
   const yesBtnText = getQuizI18nText(QUIZ_CONFIG.quiz.yesButton.text);
   const yesBtnSubtext = getQuizI18nText(QUIZ_CONFIG.quiz.yesButton.subtext);
   const noBtnText = getQuizI18nText(QUIZ_CONFIG.quiz.noButton.text);
   const noBtnSubtext = getQuizI18nText(QUIZ_CONFIG.quiz.noButton.subtext);
 
-  backdrop.innerHTML = `
-    <div class="quiz-modal-card">
-      <div class="quiz-modal-header">
-        <h3>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-          </svg>
-          <span>${getQuizI18nText(QUIZ_CONFIG.quiz.modalTitle)}</span>
-        </h3>
-        <button id="quiz-modal-close" class="quiz-modal-close" aria-label="Close">&times;</button>
+  overlay.innerHTML = `
+    <div class="locked-card">
+      <div class="locked-icon-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
       </div>
-      <div class="quiz-modal-body">
-        <h4 class="quiz-question-text">${getQuizI18nText(QUIZ_CONFIG.quiz.question)}</h4>
-        <p class="quiz-sub-desc">${getQuizI18nText(QUIZ_CONFIG.quiz.subDesc)}</p>
-        <div class="quiz-choice-group">
-          <button id="btn-quiz-no" class="quiz-choice-btn btn-choice-no">
-            <span class="choice-icon">❌</span>
-            <span class="choice-text">${noBtnText}</span>
-            <span class="choice-subtext">${noBtnSubtext}</span>
-          </button>
-          <button id="btn-quiz-yes" class="quiz-choice-btn btn-choice-yes">
-            <span class="choice-icon">💖</span>
-            <span class="choice-text">${yesBtnText}</span>
-            <span class="choice-subtext">${yesBtnSubtext}</span>
-          </button>
-        </div>
-        <div id="quiz-feedback" class="quiz-feedback"></div>
+      <h3 class="locked-question">${getQuizI18nText(QUIZ_CONFIG.quiz.question)}</h3>
+      <p class="locked-desc">${getQuizI18nText(QUIZ_CONFIG.quiz.subDesc)}</p>
+      <div class="quiz-choice-group">
+        <button id="btn-quiz-no" class="quiz-choice-btn btn-choice-no" type="button">
+          <span class="choice-icon">❌</span>
+          <span class="choice-text">${noBtnText}</span>
+          <span class="choice-subtext">${noBtnSubtext}</span>
+        </button>
+        <button id="btn-quiz-yes" class="quiz-choice-btn btn-choice-yes" type="button">
+          <span class="choice-icon">💖</span>
+          <span class="choice-text">${yesBtnText}</span>
+          <span class="choice-subtext">${yesBtnSubtext}</span>
+        </button>
       </div>
+      <div id="quiz-feedback" class="quiz-feedback"></div>
     </div>
   `;
 
-  document.body.appendChild(backdrop);
+  wrapper.appendChild(overlay);
 
-  const closeBtn = document.getElementById('quiz-modal-close');
   const yesBtn = document.getElementById('btn-quiz-yes');
   const noBtn = document.getElementById('btn-quiz-no');
   const feedback = document.getElementById('quiz-feedback');
 
-  function closeModal() {
-    backdrop.classList.add('hidden');
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-  backdrop.addEventListener('click', (e) => {
-    if (e.target === backdrop) closeModal();
-  });
-
-  // 监听 ESC 键关闭
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !backdrop.classList.contains('hidden')) {
-      closeModal();
-    }
-  });
-
-  // 点击“是”：验证成功并解锁播放
+  // 点击“是”：直接解锁并开始加载播放
   yesBtn.addEventListener('click', () => {
     feedback.className = 'quiz-feedback success';
     feedback.textContent = getQuizI18nText(QUIZ_CONFIG.quiz.successText);
     yesBtn.disabled = true;
     noBtn.disabled = true;
 
+    markVideoUnlockedInSession(videoId);
+    lockedStateCache.set(videoId, false);
+
     setTimeout(() => {
-      onUnlockedSuccess();
-    }, 500);
+      overlay.remove();
+      if (originalLoading) {
+        originalLoading.classList.remove('hidden');
+      }
+      if (typeof onUnlockedCallback === 'function') {
+        onUnlockedCallback();
+      }
+    }, 400);
   });
 
-  // 点击“否”：不做处理，关闭弹窗，保持视频锁定无法观看
+  // 点击“否”：直接提示无法观看，保持锁定
   noBtn.addEventListener('click', () => {
     feedback.className = 'quiz-feedback reject';
     feedback.textContent = getQuizI18nText(QUIZ_CONFIG.quiz.rejectText);
@@ -290,7 +192,6 @@ function createQuizModal(onUnlockedSuccess, onReject) {
     noBtn.disabled = true;
 
     setTimeout(() => {
-      closeModal();
       yesBtn.disabled = false;
       noBtn.disabled = false;
     }, 800);
